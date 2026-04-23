@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MenuItem Id="0"
+		  Name="Industry"
+		  Title="Root"
+		  Level="0" >
+	<MenuItem Id="1"
+			  Name="Pipelines"
+			  Title="流水管道"
+			  Level="1"
+			  ItemType="Item"
+			  IconKind="LineScan"
+			  IsCacheable="True"
+			  ModuleName="HamburgerMenuSideBarTabModule"
+		      ViewName="Aksl.Modules.HamburgerMenuSideBarTab.Views.HamburgerMenuSideBarTabHubView,Aksl.Modules.HamburgerMenuSideBarTab"
+		      IsNextNavigation="False"
+			  NavigationName="Pipelines">
+	</MenuItem>
+	<MenuItem Id="1"
+			  Name="Thermometers"
+			  Title="温度计"
+			  Level="1"
+			  ItemType="Item"
+			  IconKind="ThermometerAlert"
+			  ModuleName=""
+			  ViewName=""
+			  NavigationName="Thermometers">
+	</MenuItem>
+	<MenuItem Id="1"
+			  Name="CoolingTowers"
+			  Title="冷却"
+			  Level="1"
+			  ItemType="Item"
+			  IconKind="TowerFire"
+			  ModuleName=""
+			  ViewName=""
+			  NavigationName="CoolingTowers">
+	</MenuItem>
+	<MenuItem Id="1"
+			  Name="AirCompressers"
+			  Title="空气压缩"
+			  Level="1"
+			  ItemType="Item"
+			  IconKind="Compress"
+			  ModuleName=""
+			  ViewName=""
+			  NavigationName="AirCompressers">
+	</MenuItem>
+</MenuItem>
+
+

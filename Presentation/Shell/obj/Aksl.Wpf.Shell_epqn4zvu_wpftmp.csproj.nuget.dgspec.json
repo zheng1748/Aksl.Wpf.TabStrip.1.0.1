@@ -1,0 +1,1224 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Shell\\Aksl.Wpf.Shell.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Infrastructure\\Aksl.Infrastructure\\Aksl.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Infrastructure\\Aksl.Infrastructure\\Aksl.Infrastructure.csproj",
+        "projectName": "Aksl.Infrastructure",
+        "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Infrastructure\\Aksl.Infrastructure\\Aksl.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\zheng\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Infrastructure\\Aksl.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\zheng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows8.0": {
+            "targetAlias": "net8.0-windows8.0",
+            "projectReferences": {
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Core\\Prism.Core.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Core\\Prism.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0-windows8.0": {
+          "targetAlias": "net8.0-windows8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\Account\\Account.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\Account\\Account.csproj",
+        "projectName": "Aksl.Modules.Account",
+        "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\Account\\Account.csproj",
+        "packagesPath": "C:\\Users\\zheng\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\Account\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\zheng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows8.0": {
+            "targetAlias": "net8.0-windows8.0",
+            "projectReferences": {
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Infrastructure\\Aksl.Infrastructure\\Aksl.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Infrastructure\\Aksl.Infrastructure\\Aksl.Infrastructure.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Aksl.Toolkit.Controls\\Aksl.Toolkit.Controls.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Aksl.Toolkit.Controls\\Aksl.Toolkit.Controls.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Aksl.Toolkit\\Aksl.Toolkit.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Aksl.Toolkit\\Aksl.Toolkit.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Core\\Prism.Core.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Core\\Prism.Core.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Unity.Wpf\\Prism.Unity.Wpf.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Unity.Wpf\\Prism.Unity.Wpf.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Wpf\\Prism.Wpf.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Wpf\\Prism.Wpf.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0-windows8.0": {
+          "targetAlias": "net8.0-windows8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\HomeView\\HomeView.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\HomeView\\HomeView.csproj",
+        "projectName": "Aksl.Modules.Home",
+        "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\HomeView\\HomeView.csproj",
+        "packagesPath": "C:\\Users\\zheng\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\HomeView\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\zheng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows8.0": {
+            "targetAlias": "net8.0-windows8.0",
+            "projectReferences": {
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Infrastructure\\Aksl.Infrastructure\\Aksl.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Infrastructure\\Aksl.Infrastructure\\Aksl.Infrastructure.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Aksl.Toolkit.Controls\\Aksl.Toolkit.Controls.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Aksl.Toolkit.Controls\\Aksl.Toolkit.Controls.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Aksl.Toolkit\\Aksl.Toolkit.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Aksl.Toolkit\\Aksl.Toolkit.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Core\\Prism.Core.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Core\\Prism.Core.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Unity.Wpf\\Prism.Unity.Wpf.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Unity.Wpf\\Prism.Unity.Wpf.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Wpf\\Prism.Wpf.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Wpf\\Prism.Wpf.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0-windows8.0": {
+          "targetAlias": "net8.0-windows8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\Industry\\AirCompresserView\\AirCompresserView.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\Industry\\AirCompresserView\\AirCompresserView.csproj",
+        "projectName": "Aksl.Modules.AirCompresser",
+        "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\Industry\\AirCompresserView\\AirCompresserView.csproj",
+        "packagesPath": "C:\\Users\\zheng\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\Industry\\AirCompresserView\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\zheng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows8.0": {
+            "targetAlias": "net8.0-windows8.0",
+            "projectReferences": {
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Infrastructure\\Aksl.Infrastructure\\Aksl.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Infrastructure\\Aksl.Infrastructure\\Aksl.Infrastructure.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Aksl.Toolkit.Controls\\Aksl.Toolkit.Controls.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Aksl.Toolkit.Controls\\Aksl.Toolkit.Controls.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Aksl.Toolkit\\Aksl.Toolkit.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Aksl.Toolkit\\Aksl.Toolkit.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Core\\Prism.Core.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Core\\Prism.Core.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Unity.Wpf\\Prism.Unity.Wpf.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Unity.Wpf\\Prism.Unity.Wpf.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Wpf\\Prism.Wpf.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Wpf\\Prism.Wpf.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0-windows8.0": {
+          "targetAlias": "net8.0-windows8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\Industry\\CoolingTowerView\\CoolingTowerView.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\Industry\\CoolingTowerView\\CoolingTowerView.csproj",
+        "projectName": "Aksl.Modules.CoolingTower",
+        "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\Industry\\CoolingTowerView\\CoolingTowerView.csproj",
+        "packagesPath": "C:\\Users\\zheng\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\Industry\\CoolingTowerView\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\zheng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows8.0": {
+            "targetAlias": "net8.0-windows8.0",
+            "projectReferences": {
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Infrastructure\\Aksl.Infrastructure\\Aksl.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Infrastructure\\Aksl.Infrastructure\\Aksl.Infrastructure.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Aksl.Toolkit.Controls\\Aksl.Toolkit.Controls.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Aksl.Toolkit.Controls\\Aksl.Toolkit.Controls.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Aksl.Toolkit\\Aksl.Toolkit.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Aksl.Toolkit\\Aksl.Toolkit.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Core\\Prism.Core.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Core\\Prism.Core.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Unity.Wpf\\Prism.Unity.Wpf.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Unity.Wpf\\Prism.Unity.Wpf.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Wpf\\Prism.Wpf.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Wpf\\Prism.Wpf.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0-windows8.0": {
+          "targetAlias": "net8.0-windows8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\Industry\\PipelineView\\PipelineView.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\Industry\\PipelineView\\PipelineView.csproj",
+        "projectName": "Aksl.Modules.Pipeline",
+        "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\Industry\\PipelineView\\PipelineView.csproj",
+        "packagesPath": "C:\\Users\\zheng\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\Industry\\PipelineView\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\zheng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows8.0": {
+            "targetAlias": "net8.0-windows8.0",
+            "projectReferences": {
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Infrastructure\\Aksl.Infrastructure\\Aksl.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Infrastructure\\Aksl.Infrastructure\\Aksl.Infrastructure.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Aksl.Toolkit.Controls\\Aksl.Toolkit.Controls.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Aksl.Toolkit.Controls\\Aksl.Toolkit.Controls.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Aksl.Toolkit\\Aksl.Toolkit.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Aksl.Toolkit\\Aksl.Toolkit.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Core\\Prism.Core.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Core\\Prism.Core.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Unity.Wpf\\Prism.Unity.Wpf.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Unity.Wpf\\Prism.Unity.Wpf.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Wpf\\Prism.Wpf.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Wpf\\Prism.Wpf.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0-windows8.0": {
+          "targetAlias": "net8.0-windows8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\Industry\\ThermometerrView\\ThermometerView.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\Industry\\ThermometerrView\\ThermometerView.csproj",
+        "projectName": "Aksl.Modules.Thermometer",
+        "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\Industry\\ThermometerrView\\ThermometerView.csproj",
+        "packagesPath": "C:\\Users\\zheng\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\Industry\\ThermometerrView\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\zheng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows8.0": {
+            "targetAlias": "net8.0-windows8.0",
+            "projectReferences": {
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Infrastructure\\Aksl.Infrastructure\\Aksl.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Infrastructure\\Aksl.Infrastructure\\Aksl.Infrastructure.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Aksl.Toolkit.Controls\\Aksl.Toolkit.Controls.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Aksl.Toolkit.Controls\\Aksl.Toolkit.Controls.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Aksl.Toolkit\\Aksl.Toolkit.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Aksl.Toolkit\\Aksl.Toolkit.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Core\\Prism.Core.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Core\\Prism.Core.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Unity.Wpf\\Prism.Unity.Wpf.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Unity.Wpf\\Prism.Unity.Wpf.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Wpf\\Prism.Wpf.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Wpf\\Prism.Wpf.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0-windows8.0": {
+          "targetAlias": "net8.0-windows8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\SideBars\\HamburgerMenuSideBar\\HamburgerMenuSideBarTab.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\SideBars\\HamburgerMenuSideBar\\HamburgerMenuSideBarTab.csproj",
+        "projectName": "Aksl.Modules.HamburgerMenuSideBarTab",
+        "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\SideBars\\HamburgerMenuSideBar\\HamburgerMenuSideBarTab.csproj",
+        "packagesPath": "C:\\Users\\zheng\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\SideBars\\HamburgerMenuSideBar\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\zheng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows8.0": {
+            "targetAlias": "net8.0-windows8.0",
+            "projectReferences": {
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Infrastructure\\Aksl.Infrastructure\\Aksl.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Infrastructure\\Aksl.Infrastructure\\Aksl.Infrastructure.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Aksl.Toolkit.Controls\\Aksl.Toolkit.Controls.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Aksl.Toolkit.Controls\\Aksl.Toolkit.Controls.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Aksl.Toolkit\\Aksl.Toolkit.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Aksl.Toolkit\\Aksl.Toolkit.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Core\\Prism.Core.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Core\\Prism.Core.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Unity.Wpf\\Prism.Unity.Wpf.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Unity.Wpf\\Prism.Unity.Wpf.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Wpf\\Prism.Wpf.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Wpf\\Prism.Wpf.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0-windows8.0": {
+          "targetAlias": "net8.0-windows8.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "Microsoft.Xaml.Behaviors.Wpf": {
+              "target": "Package",
+              "version": "[1.1.77, )"
+            },
+            "Unity": {
+              "target": "Package",
+              "version": "[5.11.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Shell\\Aksl.Wpf.Shell.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Shell\\Aksl.Wpf.Shell.csproj",
+        "projectName": "Aksl.Wpf.Shell",
+        "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Shell\\Aksl.Wpf.Shell.csproj",
+        "packagesPath": "C:\\Users\\zheng\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Shell\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\zheng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows8.0": {
+            "targetAlias": "net8.0-windows8.0",
+            "projectReferences": {
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Infrastructure\\Aksl.Infrastructure\\Aksl.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Infrastructure\\Aksl.Infrastructure\\Aksl.Infrastructure.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\Account\\Account.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\Account\\Account.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\HomeView\\HomeView.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\HomeView\\HomeView.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\Industry\\AirCompresserView\\AirCompresserView.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\Industry\\AirCompresserView\\AirCompresserView.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\Industry\\CoolingTowerView\\CoolingTowerView.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\Industry\\CoolingTowerView\\CoolingTowerView.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\Industry\\PipelineView\\PipelineView.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\Industry\\PipelineView\\PipelineView.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\Industry\\ThermometerrView\\ThermometerView.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\Industry\\ThermometerrView\\ThermometerView.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\SideBars\\HamburgerMenuSideBar\\HamburgerMenuSideBarTab.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Presentation\\Modules\\SideBars\\HamburgerMenuSideBar\\HamburgerMenuSideBarTab.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Aksl.Toolkit.Controls\\Aksl.Toolkit.Controls.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Aksl.Toolkit.Controls\\Aksl.Toolkit.Controls.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Aksl.Toolkit\\Aksl.Toolkit.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Aksl.Toolkit\\Aksl.Toolkit.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Core\\Prism.Core.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Core\\Prism.Core.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Unity.Wpf\\Prism.Unity.Wpf.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Unity.Wpf\\Prism.Unity.Wpf.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Wpf\\Prism.Wpf.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Wpf\\Prism.Wpf.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0-windows8.0": {
+          "targetAlias": "net8.0-windows8.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "CommonServiceLocator": {
+              "target": "Package",
+              "version": "[2.0.7, )"
+            },
+            "LiveChartsCore.SkiaSharpView.WPF": {
+              "target": "Package",
+              "version": "[2.0.0-beta.90, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Logging.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Logging.Console": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Logging.Debug": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.Extensions.Options.ConfigurationExtensions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Xaml.Behaviors.Wpf": {
+              "target": "Package",
+              "version": "[1.1.77, )"
+            },
+            "Polly": {
+              "target": "Package",
+              "version": "[8.3.0, )"
+            },
+            "System.Buffers": {
+              "target": "Package",
+              "version": "[4.5.1, )"
+            },
+            "System.IO.Pipelines": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "System.Memory": {
+              "target": "Package",
+              "version": "[4.5.5, )"
+            },
+            "System.Threading.Channels": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "System.Threading.Tasks.Dataflow": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "System.Threading.Tasks.Extensions": {
+              "target": "Package",
+              "version": "[4.5.4, )"
+            },
+            "System.ValueTuple": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "Unity": {
+              "target": "Package",
+              "version": "[5.11.10, )"
+            },
+            "Unity.Container": {
+              "target": "Package",
+              "version": "[5.11.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Aksl.Toolkit.Controls\\Aksl.Toolkit.Controls.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Aksl.Toolkit.Controls\\Aksl.Toolkit.Controls.csproj",
+        "projectName": "Aksl.Toolkit.Controls",
+        "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Aksl.Toolkit.Controls\\Aksl.Toolkit.Controls.csproj",
+        "packagesPath": "C:\\Users\\zheng\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Aksl.Toolkit.Controls\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\zheng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Aksl.Toolkit\\Aksl.Toolkit.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Aksl.Toolkit\\Aksl.Toolkit.csproj",
+        "projectName": "Aksl.Toolkit",
+        "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Aksl.Toolkit\\Aksl.Toolkit.csproj",
+        "packagesPath": "C:\\Users\\zheng\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Aksl.Toolkit\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\zheng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Core\\Prism.Core.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Core\\Prism.Core.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Unity.Wpf\\Prism.Unity.Wpf.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Unity.Wpf\\Prism.Unity.Wpf.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Wpf\\Prism.Wpf.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Wpf\\Prism.Wpf.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "Microsoft.Xaml.Behaviors.Wpf": {
+              "target": "Package",
+              "version": "[1.1.77, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Core\\Prism.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Core\\Prism.Core.csproj",
+        "projectName": "Prism.Core",
+        "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Core\\Prism.Core.csproj",
+        "packagesPath": "C:\\Users\\zheng\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\zheng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Unity.Wpf\\Prism.Unity.Wpf.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Unity.Wpf\\Prism.Unity.Wpf.csproj",
+        "projectName": "Prism.Unity",
+        "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Unity.Wpf\\Prism.Unity.Wpf.csproj",
+        "packagesPath": "C:\\Users\\zheng\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Unity.Wpf\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\zheng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Core\\Prism.Core.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Core\\Prism.Core.csproj"
+              },
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Wpf\\Prism.Wpf.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Wpf\\Prism.Wpf.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "Unity.Container": {
+              "target": "Package",
+              "version": "[5.11.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Wpf\\Prism.Wpf.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Wpf\\Prism.Wpf.csproj",
+        "projectName": "Prism.Wpf",
+        "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Wpf\\Prism.Wpf.csproj",
+        "packagesPath": "C:\\Users\\zheng\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Wpf\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\zheng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {
+              "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Core\\Prism.Core.csproj": {
+                "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.HamburgerMenuSideBar\\Toolkits\\Prism Library\\Prism.Core\\Prism.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "Microsoft.Xaml.Behaviors.Wpf": {
+              "target": "Package",
+              "version": "[1.1.77, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

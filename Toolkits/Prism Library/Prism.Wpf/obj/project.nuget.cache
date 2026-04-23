@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "9BsXSo1R+Goz4rZe4rTY6kHHDElkWA8AunRDVczKoBkoIneqsO6ZqTbRmSza2YvbaakZWOVbo6WHwp55/ZSL7w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.TabStrip.1.0.1\\Toolkits\\Prism Library\\Prism.Wpf\\Prism.Wpf.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\zheng\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.77\\microsoft.xaml.behaviors.wpf.1.1.77.nupkg.sha512"
+  ],
+  "logs": []
+}

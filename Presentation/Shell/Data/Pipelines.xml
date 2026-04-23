@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MenuItem Id="0"
+          Name="Pipelines"  
+		  Title="Root"
+          Level="0">
+		<MenuItem Id="2"
+				  Name="PipelineTry"
+				  Title="流水管道测试"
+			      Level="2" 
+				  IsCacheable="True"
+			      IconKind="LineScan"
+				  ItemType="Item"
+				  ModuleName="PipelineModule"
+				  ViewName="Aksl.Modules.Pipeline.Views.PipelineHubView,Aksl.Modules.Pipeline"
+				  RequrePermissons="">
+		</MenuItem>
+		<MenuItem Id="2"
+				  Name="CoolingPieTry"
+				  Title="冷却风扇测试"
+				  Level="2"
+				 IsCacheable="True"
+				  IconKind="FanAuto"
+				  ItemType="Item"
+				  ModuleName="PipelineModule"
+				  ViewName="Aksl.Modules.Pipeline.Views.CoolingPieHubView,Aksl.Modules.Pipeline"
+				  RequrePermissons="">
+		</MenuItem>
+		<MenuItem Id="2"
+			      Name="PipelineSystem"
+			      Title="流水管道系统"
+			      Level="2"
+				  IconKind="LinkBox"
+			      ItemType="Item"
+				  IsCacheable="True"
+			      ModuleName="PipelineModule"
+			      ViewName="Aksl.Modules.Pipeline.Views.PipelineSystemHubView,Aksl.Modules.Pipeline"
+			      RequrePermissons="">
+		</MenuItem>
+</MenuItem>
+
+

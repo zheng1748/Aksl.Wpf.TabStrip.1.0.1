@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="Aksl.Modules.Account.Views.LoginStatusView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:materialDesign="clr-namespace:Aksl.Toolkit.Controls;assembly=Aksl.Toolkit.Controls"
+             xmlns:aksl="clr-namespace:Aksl.Toolkit.UI.Controls;assembly=Aksl.Toolkit"
+             mc:Ignorable="d"
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <UserControl.Resources>
+
+        <Style x:Key="signInButtonStyle"
+               TargetType="{x:Type Button}">
+            <Setter Property="Width"
+                    Value="{Binding Path=Content.Height,RelativeSource={RelativeSource Mode=Self}}" />
+            <Setter Property="Height"
+                    Value="{Binding Path=Content.Height,RelativeSource={RelativeSource Mode=Self}}" />
+            <Setter Property="ToolTip"
+                    Value="Sign In" />
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsSignIning}"
+                             Value="False">
+                    <Setter Property="Content"
+                            Value="{materialDesign:PackIcon Kind=AccountPlus,Size=25}" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding IsSignIning}"
+                             Value="True">
+                    <Setter Property="Content"
+                            Value="{materialDesign:PackIcon Kind=AccountPlusOutline,Size=25}" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+    <Grid Background="{StaticResource PrimaryThemeBrush}">
+
+        <aksl:WindowTitle Title="{Binding Path=Title,Mode=TwoWay}" />
+
+        <Grid x:Name="loginGrid"
+              Visibility="{Binding Path=IsAuthenticated,Converter={StaticResource booleanNegationToVisibilityConverter}}">
+            <Button x:Name="ButtonSignIn"
+                    Command="{Binding SignInCommand}"
+                    Style="{StaticResource signInButtonStyle}"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    Margin="0">
+            </Button>
+        </Grid>
+
+        <Grid x:Name="logoutGrid"
+              Visibility="{Binding Path=IsAuthenticated,Mode=OneWay,Converter={StaticResource booleanToVisibilityConverter}}">
+            <Button ToolTip="{Binding Path=UserName,Mode=OneWay}"
+                    Content="{materialDesign:PackIcon Kind=AccountOnline,Size=24}"
+                    Command="{Binding SignOutCommand}"
+                    Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    Margin="10,5,2,5" />
+        </Grid>
+    </Grid>
+</UserControl>

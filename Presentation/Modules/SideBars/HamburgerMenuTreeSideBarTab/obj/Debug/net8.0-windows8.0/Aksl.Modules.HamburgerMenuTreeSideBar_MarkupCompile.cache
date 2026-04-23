@@ -1,0 +1,20 @@
+﻿Aksl.Modules.HamburgerMenuTreeSideBar
+
+
+library
+C#
+.cs
+C:\Users\zheng\Documents\GitHub\Aksl.Wpf.HamburgerMenuTreeSideBar\Presentation\Modules\SideBars\HamburgerMenuTreeSideBarView\obj\Debug\net8.0-windows8.0\
+Aksl.Modules.HamburgerMenuTreeSideBar
+none
+false
+TRACE;DEBUG;NET;NET8_0;NETCOREAPP
+
+5-1058172950
+
+19-779335881
+208-600456979
+Tab\TabItemView.xaml;Tab\TabView .xaml;Views\HamburgerMenuTreeSideBarHubView.xaml;Views\TreeSideBarItemView.xaml;Views\TreeSideBarView.xaml;
+
+False
+

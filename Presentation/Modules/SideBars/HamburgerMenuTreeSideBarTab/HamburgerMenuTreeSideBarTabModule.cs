@@ -1,0 +1,38 @@
+﻿using Prism.Ioc;
+using Prism.Modularity;
+using Prism.Mvvm;
+
+using Unity;
+
+using Aksl.Modules.HamburgerMenuTreeSideBarTab.Views;
+using Aksl.Modules.HamburgerMenuTreeSideBarTab.ViewModels;
+
+namespace Aksl.Modules.HamburgerMenuTreeSideBarTab 
+{
+    public class HamburgerMenuTreeSideBarTabModule : IModule
+    {
+        #region Members
+        private readonly IUnityContainer _container;
+        #endregion
+
+        #region Constructors
+        public HamburgerMenuTreeSideBarTabModule(IUnityContainer container)
+        {
+            this._container = container;
+        }
+        #endregion
+
+        #region IModule
+        public void RegisterTypes(IContainerRegistry containerRegistry)
+        { 
+            containerRegistry.RegisterForNavigation<HamburgerMenuTreeSideBarTabHubView>();
+        }
+
+        public void OnInitialized(IContainerProvider containerProvider)
+        {
+            ViewModelLocationProvider.Register(typeof(HamburgerMenuTreeSideBarTabHubView).ToString(),
+                                               () => this._container.Resolve<HamburgerMenuTreeSideBarTabHubViewModel>());
+        }
+        #endregion
+    }
+}
