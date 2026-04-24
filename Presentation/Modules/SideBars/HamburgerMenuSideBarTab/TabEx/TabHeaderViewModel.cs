@@ -66,7 +66,7 @@ namespace Aksl.Tabs.ViewModels
                 newTabHeaderItemViewModel.RequestClose += this.OnTabHeaderItemRequestClose;
             }
 
-            AddPropertyChanged();
+           //AddPropertyChanged();
             void AddPropertyChanged()
             {
                 newTabHeaderItemViewModel.PropertyChanged += (sender, e) =>

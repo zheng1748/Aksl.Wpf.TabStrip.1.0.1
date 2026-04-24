@@ -30,7 +30,7 @@
         </Grid>
 
         <Separator Grid.Row="1"
-                   Margin="0,1,0,0"
+                   Margin="0,0,0,0"
                    Height="8"
                    HorizontalAlignment="Stretch"
                    BorderBrush="#193441" />

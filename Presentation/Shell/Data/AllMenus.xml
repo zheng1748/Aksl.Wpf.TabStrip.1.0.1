@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <MenuItem Id="0"
+		  Name="All" 
 		  Title="根"
-		  Name="All"
 		  Level="0" >
 	<MenuItem Id="1"
 			  Name="Home"
@@ -26,14 +26,14 @@
 			  NavigationName="Industry">
 	</MenuItem>
 	<MenuItem Id="0"
-			  Name="MiscsManager"
-			  Title="Miscs"
+			  Name="OthersManager"
+			  Title="Others"
 			  Level="1"
 			  IconKind="Draw"
 			  ItemType="Item"
 			  IsCacheable="True"
 			  ModuleName=""
 			  IsNextNavigation="True"
-			  NavigationName="Miscs">
+			  NavigationName="Others">
 	</MenuItem>
 </MenuItem>

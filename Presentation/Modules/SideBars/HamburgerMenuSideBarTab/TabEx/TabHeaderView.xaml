@@ -11,7 +11,7 @@
              d:DesignWidth="800">
     <UserControl.Resources>
 
-        <ItemsPanelTemplate x:Key="tabHeaderItemsPanelTemplate">
+        <!--<ItemsPanelTemplate x:Key="tabHeaderItemsPanelTemplate">
             <WrapPanel Width="Auto"
                        Orientation="Horizontal" />
         </ItemsPanelTemplate>
@@ -19,19 +19,19 @@
         <DataTemplate x:Key="tabHeaderDataTemplate"
                       DataType="{x:Type viewmodels:TabHeaderItemViewModel}">
             <views:TabHeaderItemView/>
-        </DataTemplate>
+        </DataTemplate>-->
 
-        <DataTemplate x:Key="menuDataTemplate"
+        <DataTemplate x:Key="tabHeaderDataTemplate"
                       DataType="{x:Type viewmodels:TabHeaderItemViewModel}">
             <views:TabHeaderItemView />
         </DataTemplate>
-        
-        <ItemsPanelTemplate x:Key="menuItemsTemplate">
+
+        <ItemsPanelTemplate x:Key="tabHeaderItemsTemplate">
             <WrapPanel Width="Auto"
                        Orientation="Horizontal" />
         </ItemsPanelTemplate>
 
-        <Style x:Key="menuListViewItemStyle"
+        <Style x:Key="tabHeaderListViewItemStyle"
                TargetType="{x:Type ListViewItem}">
             <Setter Property="IsSelected"
                     Value="{Binding IsSelected,Mode=TwoWay}" />
@@ -74,7 +74,7 @@
             </Setter>
         </Style>
 
-        <Style x:Key="menuListViewStyle"
+        <Style x:Key="tabHeaderListViewStyle"
                TargetType="{x:Type ListView}">
             <Setter Property="Template">
                 <Setter.Value>
@@ -100,14 +100,14 @@
                       Background="WhiteSmoke">
         </ItemsControl>
     </ScrollViewer>-->
-    <ListView x:Name="menusListView" Height="49"
-              ItemsSource="{Binding Path=ActiveTabHeaderItems}" 
-              Style="{StaticResource menuListViewStyle}"
-              ItemsPanel="{StaticResource menuItemsTemplate}"
-              ItemContainerStyle="{StaticResource menuListViewItemStyle}"
-              ItemTemplate="{StaticResource menuDataTemplate}"
+    <ListView
+              ItemsSource="{Binding Path=ActiveTabHeaderItems}"
+              Style="{StaticResource tabHeaderListViewStyle}"
+              ItemsPanel="{StaticResource tabHeaderItemsTemplate}"
+              ItemContainerStyle="{StaticResource tabHeaderListViewItemStyle}"
+              ItemTemplate="{StaticResource tabHeaderDataTemplate}"
               SelectionMode="Single"
-              SelectedItem="{Binding Path=SelectedMenuItemItem,Mode=TwoWay}"
+              SelectedItem="{Binding Path=SelectedTabHeaderItem,Mode=TwoWay}"
               VerticalAlignment="Center"
               Cursor="" />
 </UserControl>

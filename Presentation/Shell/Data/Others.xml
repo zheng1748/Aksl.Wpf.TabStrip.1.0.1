@@ -7,7 +7,7 @@
 			  Name="OrgChartTry"
 			  Title="OrgChart"
 			  Level="2"
-			 IsCacheable="True"
+			  IsCacheable="True"
 			  IconKind="OrganicOutline"
 			  ItemType="Item"
 			  ModuleName="OthersModule"
