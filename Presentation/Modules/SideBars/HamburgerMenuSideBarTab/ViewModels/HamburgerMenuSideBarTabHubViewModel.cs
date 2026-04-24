@@ -338,7 +338,7 @@ namespace Aksl.Modules.HamburgerMenuSideBarTab.ViewModels
                                 }
                                 else
                                 {
-                                   //TabViewModel.RetsetTabItem(tabInformation);
+                                    TabHubViewModel.RetsetTabItem(tabInformation);
                                 }
                             }
                             else

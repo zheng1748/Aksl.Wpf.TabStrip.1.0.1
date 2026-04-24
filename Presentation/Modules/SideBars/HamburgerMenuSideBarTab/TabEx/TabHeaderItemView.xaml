@@ -60,7 +60,7 @@
             <Setter Property="Visibility"
                     Value="{Binding Path=CloseTabButtonVisibility}" />
             <Setter Property="Margin"
-                    Value="0,0,10,0" />
+                    Value="0,0,10,2" />
             <Setter Property="Padding"
                     Value="0" />
             <Setter Property="Width"
@@ -124,12 +124,13 @@
             </Grid.ColumnDefinitions>
             <TextBlock Grid.Column="0" TextWrapping="Wrap"
                        VerticalAlignment="Center"
-                       Margin="5,1,0,0">
+                       Margin="5,0,0,2">
                   <Run Text="{Binding Path=Title,Mode=OneWay}"
                        FontSize="16" />
             </TextBlock >
-            <Button Grid.Column="2"
-                    Style="{StaticResource CloseTabButtonyle}">
+        <Button Grid.Column="2"
+                VerticalAlignment="Center"
+                Style="{StaticResource CloseTabButtonyle}">
             </Button>
         </Grid>
     <!--</Border>-->

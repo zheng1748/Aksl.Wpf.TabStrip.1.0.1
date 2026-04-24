@@ -45,11 +45,6 @@ namespace Aksl.Tabs.ViewModels
             {
                 if (sender is TabHeaderViewModel thvm)
                 {
-                    if (e.PropertyName == nameof(TabHeaderViewModel.IsRequestClose))
-                    {
-                        
-                    }
-
                     if (e.PropertyName == nameof(TabHeaderViewModel.SelectedTabHeaderItem))
                     {
                         if (thvm.SelectedTabHeaderItem is not null &&  thvm.SelectedTabHeaderItem.IsSelected)
@@ -87,14 +82,21 @@ namespace Aksl.Tabs.ViewModels
 
         public void SetTabItem(TabInformation tabInformation)
         {
-            TabHeaderViewModel.SetTabItem(tabInformation);
+            TabHeaderViewModel.SetTabHeaderItem(tabInformation);
 
-            TabContentViewModel.SetTabItem(tabInformation);
+            TabContentViewModel.SetTabContentItem(tabInformation);
+        }
+
+        public void RetsetTabItem(TabInformation tabInformation)
+        {
+            TabHeaderViewModel.RetsetTabItem(tabInformation);
+
+            TabContentViewModel.RetsetTabItem(tabInformation);
         }
 
         public bool IsActiveTabItem(TabInformation tabInformation)
         {
-            var isExists = TabHeaderViewModel.TabHeaderItems.Any(ti => ti.IsSelected && (IsEqualsNameOrTitle(ti.Name, tabInformation.Name) || IsEqualsNameOrTitle(ti.Title, tabInformation.Title)));
+            var isExists = TabHeaderViewModel.IsActiveTabItem(tabInformation);
 
             return isExists;
         }

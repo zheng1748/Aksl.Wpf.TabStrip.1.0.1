@@ -101,7 +101,7 @@
         </ItemsControl>
     </ScrollViewer>-->
     <ListView x:Name="menusListView" Height="49"
-              ItemsSource="{Binding Path=TabHeaderItems}" 
+              ItemsSource="{Binding Path=ActiveTabHeaderItems}" 
               Style="{StaticResource menuListViewStyle}"
               ItemsPanel="{StaticResource menuItemsTemplate}"
               ItemContainerStyle="{StaticResource menuListViewItemStyle}"

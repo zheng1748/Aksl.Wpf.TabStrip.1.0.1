@@ -23,7 +23,7 @@
 
     </UserControl.Resources>
 
-    <ItemsControl ItemsSource="{Binding Path=TabContentItems}"
+    <ItemsControl ItemsSource="{Binding Path=ActiveTabContentItems}"
                   ItemContainerStyle="{Binding Source={StaticResource tabContentItemsPanelTemplate}}"
                   ItemTemplate="{Binding Source={StaticResource tabContentDataTemplate}}"
                   Background="Transparent">
