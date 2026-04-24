@@ -124,8 +124,8 @@ namespace Aksl.Tabs.ViewModels
                 {
                     SelectedTabHeaderItem.IsSelected = false;
 
-                    nextTabHeaderItemViewModel.IsSelected = true;
                     SelectedTabHeaderItem = nextTabHeaderItemViewModel;
+                    SelectedTabHeaderItem.IsSelected = true;
                 }
             }
         }
@@ -184,10 +184,10 @@ namespace Aksl.Tabs.ViewModels
             }
             else
             {
-                var storeTabTabeaderItem = GetStoreTabHeaderItemViewModel(tabInformation);
-                if (storeTabTabeaderItem is not null)
+                var storeTTabHeaderItem = GetStoreTabHeaderItemViewModel(tabInformation);
+                if (storeTTabHeaderItem is not null)
                 {
-                    AddCore(storeTabTabeaderItem);
+                    AddCore(storeTTabHeaderItem);
                 }
             }
         }
@@ -201,29 +201,29 @@ namespace Aksl.Tabs.ViewModels
             }
             else
             {
-                var storeTabItemViewModel = GetStoreTabHeaderItemViewModel(tabInformation);
-                if (storeTabItemViewModel is not null)
+                var storeTabHeaderItem = GetStoreTabHeaderItemViewModel(tabInformation);
+                if (storeTabHeaderItem is not null)
                 {
-                    ActiveTabHeaderItems.Add(storeTabItemViewModel);
-                    storeTabItemViewModel.RequestClose += this.OnTabHeaderItemRequestClose;
+                    ActiveTabHeaderItems.Add(storeTabHeaderItem);
+                    storeTabHeaderItem.RequestClose += this.OnTabHeaderItemRequestClose;
 
-                    SetActiveTabHeaderItem(storeTabItemViewModel);
+                    SetActiveTabHeaderItem(storeTabHeaderItem);
                 }
             }
         }
 
         private TabHeaderItemViewModel GetActiveTabHeaderItemByInfo(TabInformation tabInformation)
         {
-            var activeTabHeaderItemViewModel = ActiveTabHeaderItems.FirstOrDefault(ti => IsEqualsNameOrTitle(ti.Name, tabInformation.Name) || IsEqualsNameOrTitle(ti.Title, tabInformation.Title));
+            var activeTabHeaderItem = ActiveTabHeaderItems.FirstOrDefault(ti => IsEqualsNameOrTitle(ti.Name, tabInformation.Name) || IsEqualsNameOrTitle(ti.Title, tabInformation.Title));
 
-            return activeTabHeaderItemViewModel;
+            return activeTabHeaderItem;
         }
 
         public TabHeaderItemViewModel GetStoreTabHeaderItemViewModel(TabInformation tabInformation)
         {
-            var storeTabHeaderItemViewModel = StoreTabHeaderItems.FirstOrDefault(ti => IsEqualsNameOrTitle(ti.Name, tabInformation.Name) || IsEqualsNameOrTitle(ti.Title, tabInformation.Title));
+            var storeTabHeaderItem = StoreTabHeaderItems.FirstOrDefault(ti => IsEqualsNameOrTitle(ti.Name, tabInformation.Name) || IsEqualsNameOrTitle(ti.Title, tabInformation.Title));
 
-            return storeTabHeaderItemViewModel;
+            return storeTabHeaderItem;
         }
 
         private TabHeaderItemViewModel GetNextActiveTabHeaderItemByInfo(TabInformation tabInformation)

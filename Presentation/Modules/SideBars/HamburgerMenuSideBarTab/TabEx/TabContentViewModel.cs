@@ -138,10 +138,10 @@ namespace Aksl.Tabs.ViewModels
             }
             else
             {
-                var storeTabItem = GetStoreTabContentItemViewModel(tabInformation);
-                if (storeTabItem is not null)
+                var storeTabContentItem = GetStoreTabContentItemViewModel(tabInformation);
+                if (storeTabContentItem is not null)
                 {
-                    AddCore(storeTabItem);
+                    AddCore(storeTabContentItem);
                 }
             }
         }
@@ -152,7 +152,6 @@ namespace Aksl.Tabs.ViewModels
             if (activeTabContentItem is not null)
             {
                 activeTabContentItem.ViewElement = null;
-
                 if (tabInformation.ViewElement is not null)
                 {
                     activeTabContentItem.ViewElement = tabInformation.ViewElement;
@@ -166,7 +165,6 @@ namespace Aksl.Tabs.ViewModels
                 if (storeContentTabItem is not null)
                 {
                     storeContentTabItem.ViewElement = null;
-
                     if (tabInformation.ViewElement is not null)
                     {
                         storeContentTabItem.ViewElement = tabInformation.ViewElement;
@@ -224,16 +222,16 @@ namespace Aksl.Tabs.ViewModels
 
         public TabContentItemViewModel GetStoreTabContentItemViewModel(TabInformation tabInformation)
         {
-            var storeTabContentItemViewModel = StoreTabContentItems.FirstOrDefault(ti => IsEqualsNameOrTitle(ti.Name, tabInformation.Name) || IsEqualsNameOrTitle(ti.Title, tabInformation.Title));
+            var storeTabContentItem = StoreTabContentItems.FirstOrDefault(ti => IsEqualsNameOrTitle(ti.Name, tabInformation.Name) || IsEqualsNameOrTitle(ti.Title, tabInformation.Title));
 
-            return storeTabContentItemViewModel;
+            return storeTabContentItem;
         }
 
         public System.Windows.DependencyObject GetViewElementByType(Type viewType)
         {
-            var tabContentItemViewModel = StoreTabContentItems.FirstOrDefault(ti => ti.ViewElementType == viewType);
+            var tabContentItem = StoreTabContentItems.FirstOrDefault(ti => ti.ViewElementType == viewType);
 
-            return tabContentItemViewModel?.ViewElement;
+            return tabContentItem?.ViewElement;
         }
         #endregion
 
