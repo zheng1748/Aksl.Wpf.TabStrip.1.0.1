@@ -122,10 +122,13 @@ namespace Aksl.Tabs.ViewModels
 
                 if (nextTabHeaderItemViewModel is not null)
                 {
-                    SelectedTabHeaderItem.IsSelected = false;
+                    if (SelectedTabHeaderItem is not null)
+                    {
+                        SelectedTabHeaderItem.IsSelected = false;
+                    }
 
                     SelectedTabHeaderItem = nextTabHeaderItemViewModel;
-                    SelectedTabHeaderItem.IsSelected = true;
+                   // SelectedTabHeaderItem.IsSelected = true;
                 }
             }
         }
@@ -137,7 +140,7 @@ namespace Aksl.Tabs.ViewModels
                 if (SelectedTabHeaderItem is null)
                 {
                     SelectedTabHeaderItem = tabHeaderItemViewModel;
-                    SelectedTabHeaderItem.IsSelected = true;
+                    //SelectedTabHeaderItem.IsSelected = true;
                 }
 
                 if (SelectedTabHeaderItem is not null && tabHeaderItemViewModel != SelectedTabHeaderItem)
@@ -145,7 +148,7 @@ namespace Aksl.Tabs.ViewModels
                     SelectedTabHeaderItem.IsSelected = false;
 
                     SelectedTabHeaderItem = tabHeaderItemViewModel;
-                    SelectedTabHeaderItem.IsSelected = true;
+                  //  SelectedTabHeaderItem.IsSelected = true;
 
                     //tabHeaderItemViewModel.IsSelected = true;
                     //SelectedTabHeaderItem = tabHeaderItemViewModel;

@@ -310,10 +310,6 @@ namespace Aksl.Modules.HamburgerMenuSideBarTab.ViewModels
                         tabInformation.ViewElement = subTabView;
                     }
 
-                    //if (TabViewModel.IsActiveTabItem(tabInformation))
-                    //{
-                    //    return;
-                    //}
                     if (TabHubViewModel.IsActiveTabItem(tabInformation))
                     {
                         return;
@@ -360,6 +356,39 @@ namespace Aksl.Modules.HamburgerMenuSideBarTab.ViewModels
                         {
                             await _dialogViewService.AlertAsync(message: $"Unable to find \"{viewTypeAssemblyQualifiedName}\".", title: $"Error:Missing Type");
                         }
+                    }
+                    #endregion
+
+                    #region LoadView Method
+                    async Task LoadView()
+                    {
+                        async Task RecursiveSubMenuItem(MenuItem menuItem)
+                        {
+                            IEnumerable<MenuItem> subMenus = null;
+
+                            if (HasNavigationName(menuItem))
+                            {
+                                var parentMenuItem = await _menuService.GetMenuAsync(currentMenuItem.NavigationName);
+                                subMenus = parentMenuItem.SubMenus;
+                            }
+
+                            if (!HasNavigationName(menuItem) && HasSubMenu(currentMenuItem) && IsExistsViewInSubMenu(currentMenuItem))
+                            {
+                                subMenus = currentMenuItem.SubMenus.Where(sm => !string.IsNullOrEmpty(sm.ViewName)).ToList();
+                            }
+
+                            if (subMenus is not null)
+                            {
+                                foreach (var smi in subMenus)
+                                {
+                                    await RecursiveSubMenuItem(smi);
+                                }
+                            }
+                        }
+
+                        bool HasNavigationName(MenuItem mi) => (mi is not null) && !string.IsNullOrEmpty(mi.NavigationName);
+
+                        bool HasSubMenu(MenuItem mi) => (mi is not null) && mi.SubMenus.Any();
                     }
                     #endregion
 
