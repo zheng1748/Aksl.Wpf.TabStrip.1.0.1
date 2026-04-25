@@ -7,7 +7,7 @@
 			  Name="CoolingTowerTry"
 			  Title="冷却塔测试"
 			  Level="2"
-			  IsCacheable="False"
+			  IsCacheable="True"
 			  IconKind="TowerFire"
 			  ItemType="Item"
 			  ModuleName="CoolingTowerModule"
