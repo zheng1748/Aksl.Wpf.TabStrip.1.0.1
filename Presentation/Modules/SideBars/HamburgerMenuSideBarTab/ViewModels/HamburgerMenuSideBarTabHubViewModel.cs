@@ -323,7 +323,6 @@ namespace Aksl.Modules.HamburgerMenuSideBarTab.ViewModels
                         Type viewType = Type.GetType(viewTypeAssemblyQualifiedName);
                         if (viewType is not null)
                         {
-                            //var currentView = TabViewModel.GetStoreViewElement(viewType);
                             var currentView = TabHubViewModel.GetViewElementByType(viewType);
 
                             if (currentView is not null)
