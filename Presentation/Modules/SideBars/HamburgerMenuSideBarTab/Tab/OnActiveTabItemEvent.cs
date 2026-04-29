@@ -2,7 +2,7 @@
 
 using Prism.Events;
 
-namespace Aksl.Modules.HamburgerMenuSideBarTab
+namespace Aksl.Tabs
 {
     public class OnActiveTabItemEvent : PubSubEvent<OnActiveTabItemEvent>
     {

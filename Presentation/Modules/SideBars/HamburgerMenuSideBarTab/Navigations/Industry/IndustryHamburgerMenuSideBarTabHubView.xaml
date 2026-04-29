@@ -6,6 +6,7 @@
              xmlns:ei="http://schemas.microsoft.com/xaml/behaviors"
              xmlns:prism="http://prismlibrary.com/"
              xmlns:views="clr-namespace:Aksl.Modules.HamburgerMenuSideBarTab.Views"
+             xmlns:tabViews="clr-namespace:Aksl.Tabs.Views"
              xmlns:a="clr-namespace:Aksl.Modules.HamburgerMenuSideBarTab"
              xmlns:sv="clr-namespace:Aksl.Modules.HamburgerMenuSideBarTab"
              mc:Ignorable="d"
@@ -560,7 +561,7 @@
                         <SolidColorBrush Color="Transparent" />
                     </Grid.Background>
                     <Border>
-                        <views:TabView DataContext="{Binding Path=TabViewModel}" />
+                        <tabViews:TabView DataContext="{Binding Path=TabViewModel}" />
                     </Border>
                     <Rectangle x:Name="LightDismissLayer"
                                Fill="Transparent"

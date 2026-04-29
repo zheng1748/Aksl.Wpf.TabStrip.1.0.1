@@ -121,9 +121,9 @@ namespace Aksl.Modules.HamburgerMenuSideBarTab.ViewModels
         #region Register Active TabItem Event
         private void RegisterActiveTabItemEvent()
         {
-            _eventAggregator.GetEvent<Aksl.Tabs.OnActiveTabItemEvent>().Subscribe(async (oatie) =>
+            _eventAggregator.GetEvent<Aksl.Tabs.OnActiveTabHeaderItemEvent>().Subscribe(async (oathie) =>
             {
-                var currentTabItem = oatie.SelectedTabItem;
+                var currentTabInfo = oathie.SelectedTabInfo;
 
                 try
                 {
@@ -132,8 +132,8 @@ namespace Aksl.Modules.HamburgerMenuSideBarTab.ViewModels
                     #region Set Selected HamburgerMenuItem Method
                     void SetSelectedHamburgerMenuItem()
                     {
-                        var hamburgerMenuSideBarItemViewModel = AllLeafHamburgerMenuSideBarItems.FirstOrDefault(hmi => hmi.Name.Equals(currentTabItem.Name, StringComparison.InvariantCultureIgnoreCase) ||
-                                                                                                                       hmi.Title.Equals(currentTabItem.Title, StringComparison.InvariantCultureIgnoreCase));
+                        var hamburgerMenuSideBarItemViewModel = AllLeafHamburgerMenuSideBarItems.FirstOrDefault(hmi => hmi.Name.Equals(currentTabInfo.Name, StringComparison.InvariantCultureIgnoreCase) ||
+                                                                                                                       hmi.Title.Equals(currentTabInfo.Title, StringComparison.InvariantCultureIgnoreCase));
                         if (hamburgerMenuSideBarItemViewModel is not null)
                         {
                             if (hamburgerMenuSideBarItemViewModel != SelectedHamburgerMenuSideBarItem)
@@ -197,7 +197,7 @@ namespace Aksl.Modules.HamburgerMenuSideBarTab.ViewModels
                 var isAddOnNotLeaf = !IsLeaf(currentMenuItem) && !IsNexOnNotLeaf(currentMenuItem);
                 if (!AnyEqualsMenuItems(travelMenuItems, currentMenuItem) && HasTitle(currentMenuItem) && (isAddOnLeaf || isAddOnNotLeaf))
                 {
-                    leafHamburgerMenuSideBarItemViewModels.Add(new(_eventAggregator, currentMenuItem));
+                    leafHamburgerMenuSideBarItemViewModels.Add(new(currentMenuItem, null));
                     travelMenuItems.Add(currentMenuItem);
                 }
 

@@ -316,7 +316,12 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
         {
             List<MenuItem> leafMenuItems = new();
 
-            await RecursiveSubMenuItem(menuItem);
+            foreach (var mi in menuItem.SubMenus)
+            {
+                await RecursiveSubMenuItem(mi);
+            }
+
+             //await RecursiveSubMenuItem(menuItem);
 
             async Task RecursiveSubMenuItem(MenuItem currentMenuItem)
             {

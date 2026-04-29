@@ -11,7 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Aksl.Modules.HamburgerMenuSideBarTab.Views
+namespace Aksl.Tabs.Views
 {
     public partial class TabItemView : UserControl
     {

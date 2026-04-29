@@ -5,19 +5,19 @@
     <Page Update="Navigations\Industry\IndustryHamburgerMenuSideBarTabHubView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="TabEx\TabContentItemView.xaml">
+    <Page Update="TabBit\TabContentItemView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="TabEx\TabHubView.xaml">
+    <Page Update="TabBit\TabHubView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="TabEx\TabHeaderItemView.xaml">
+    <Page Update="TabBit\TabHeaderItemView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="TabEx\TabHeaderView.xaml">
+    <Page Update="TabBit\TabHeaderView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="TabEx\TabContentView.xaml">
+    <Page Update="TabBit\TabContentView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Tab\TabItemHeaderView.xaml">

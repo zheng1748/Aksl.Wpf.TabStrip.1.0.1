@@ -4,10 +4,21 @@ using Prism.Events;
 using Prism.Mvvm;
 
 using Aksl.Infrastructure;
+using System;
+using System.Collections.ObjectModel;
 
 namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
 {
-    public class GroupedMenuViewModel : BindableBase
+    public abstract class MenuViewModelBase : BindableBase
+    {
+        #region Constructors
+        public MenuViewModelBase()
+        {
+        }
+        #endregion
+    }
+
+    public class GroupedMenuViewModel : MenuViewModelBase
     {
         #region Members
         private readonly IEventAggregator _eventAggregator;
@@ -16,7 +27,7 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
         #endregion
 
         #region Constructors
-        public GroupedMenuViewModel(IEventAggregator eventAggregator, int groupIndex, MenuItem headerMenuItem, IEnumerable<MenuItem> leafMenuItems)
+        public GroupedMenuViewModel(IEventAggregator eventAggregator, int groupIndex, MenuItem headerMenuItem, IEnumerable<MenuItem> leafMenuItems) : base()
         {
             _eventAggregator = eventAggregator;
             GroupIndex = groupIndex;
@@ -101,6 +112,26 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
             MenuContent = menuContentViewModel;
 
             IsLoading = false;
+        }
+        #endregion
+    }
+
+    public class NoGroupedMenuViewModel : MenuViewModelBase
+    {
+        #region Members
+        private readonly IEventAggregator _eventAggregator;
+        private readonly MenuItem _headerMenuItem;
+        #endregion
+
+        #region Properties
+        
+        #endregion
+
+        #region Constructors
+        public NoGroupedMenuViewModel(IEventAggregator eventAggregator, int index, MenuItem headerMenuItem) : base()
+        {
+            _eventAggregator = eventAggregator;
+            _headerMenuItem = headerMenuItem;
         }
         #endregion
     }
