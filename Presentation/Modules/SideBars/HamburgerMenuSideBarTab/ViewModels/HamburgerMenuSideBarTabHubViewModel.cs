@@ -20,6 +20,7 @@ using Aksl.Dialogs.Services;
 using Aksl.Infrastructure;
 using Aksl.Infrastructure.Events;
 using Aksl.Tabs.ViewModels;
+using Aksl.Toolkit.UI;
 
 namespace Aksl.Modules.HamburgerMenuSideBarTab.ViewModels
 {
@@ -246,7 +247,8 @@ namespace Aksl.Modules.HamburgerMenuSideBarTab.ViewModels
                     if (subMenus is not null && subMenus.Any())
                     {
                         //TabViewModel subTtabViewModel = new();
-                        subTabView = new Tabs.Views.TabView() { HorizontalAlignment = HorizontalAlignment.Stretch };
+                        subTabView = new Tabs.Views.TabView();
+                        VisualTreeFinder visualTreeFinder = new();
                         //subTabView.DataContext = subTtabViewModel;
                         subTabView.DataContext = TabViewModel;
                         bool isSetFirst = false;
