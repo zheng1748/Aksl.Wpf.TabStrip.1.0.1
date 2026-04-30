@@ -2,7 +2,7 @@
 
 using Prism.Events;
 
-namespace Aksl.Tabs
+namespace Aksl.TabBits
 {
     public class OnActiveTabHeaderItemEvent : PubSubEvent<OnActiveTabHeaderItemEvent>
     {

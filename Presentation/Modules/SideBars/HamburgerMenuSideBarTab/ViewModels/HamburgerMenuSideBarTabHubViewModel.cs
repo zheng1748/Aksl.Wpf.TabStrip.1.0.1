@@ -16,11 +16,12 @@ using Prism.Unity;
 using Unity;
 
 using Aksl.Dialogs.Services;
+using Aksl.Toolkit.UI;
 
 using Aksl.Infrastructure;
 using Aksl.Infrastructure.Events;
 using Aksl.Tabs.ViewModels;
-using Aksl.Toolkit.UI;
+using Aksl.TabBits.ViewModels;
 
 namespace Aksl.Modules.HamburgerMenuSideBarTab.ViewModels
 {
@@ -324,7 +325,7 @@ namespace Aksl.Modules.HamburgerMenuSideBarTab.ViewModels
                        // subTtabViewModel.SetFirstActiveTabItem();
                     }
 
-                    Aksl.Tabs.TabInformation tabInformation = new()
+                    Aksl.TabBits.TabInformation tabInformation = new()
                     {
                         Name = currentMenuItem.Name,
                         Title = currentMenuItem.Title,

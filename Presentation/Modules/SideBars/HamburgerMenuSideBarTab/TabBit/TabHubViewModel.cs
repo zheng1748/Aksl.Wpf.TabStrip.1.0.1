@@ -12,7 +12,7 @@ using Prism.Mvvm;
 using Prism.Unity;
 using Unity;
 
-namespace Aksl.Tabs.ViewModels 
+namespace Aksl.TabBits.ViewModels 
 {
     public class TabHubViewModel : BindableBase
     {

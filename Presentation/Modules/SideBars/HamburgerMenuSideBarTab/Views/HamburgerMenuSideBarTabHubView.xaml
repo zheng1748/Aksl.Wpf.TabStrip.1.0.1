@@ -6,7 +6,7 @@
              xmlns:ei="http://schemas.microsoft.com/xaml/behaviors"
              xmlns:prism="http://prismlibrary.com/"
              xmlns:views="clr-namespace:Aksl.Modules.HamburgerMenuSideBarTab.Views"
-             xmlns:tabViews="clr-namespace:Aksl.Tabs.Views"
+             xmlns:tabViews="clr-namespace:Aksl.TabBits.Views"
              xmlns:a="clr-namespace:Aksl.Modules.HamburgerMenuSideBarTab"
              xmlns:sv="clr-namespace:Aksl.Modules.HamburgerMenuSideBarTab"
              mc:Ignorable="d"

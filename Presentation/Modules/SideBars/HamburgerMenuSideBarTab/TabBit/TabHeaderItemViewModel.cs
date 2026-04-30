@@ -13,7 +13,7 @@ using Unity;
 
 using Aksl.Toolkit.Controls;
 
-namespace Aksl.Tabs.ViewModels
+namespace Aksl.TabBits.ViewModels
 {
     public class TabHeaderItemViewModel : BindableBase
     {

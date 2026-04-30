@@ -99,7 +99,7 @@ namespace Aksl.Modules.HamburgerMenuSideBarTab.ViewModels
         #region Register SelectedTabItem Empty Event
         private void RegisterOnSelectedTabItemEmptyEvent()
         {
-            _eventAggregator.GetEvent<Aksl.Tabs.OnSelectedTabHeaderItemEmptyEvent>().Subscribe(async (osthiee) =>
+            _eventAggregator.GetEvent<Aksl.TabBits.OnSelectedTabHeaderItemEmptyEvent>().Subscribe(async (osthiee) =>
             {
                 try
                 {
@@ -121,7 +121,7 @@ namespace Aksl.Modules.HamburgerMenuSideBarTab.ViewModels
         #region Register Active TabItem Event
         private void RegisterActiveTabItemEvent()
         {
-            _eventAggregator.GetEvent<Aksl.Tabs.OnActiveTabHeaderItemEvent>().Subscribe(async (oathie) =>
+            _eventAggregator.GetEvent<Aksl.TabBits.OnActiveTabHeaderItemEvent>().Subscribe(async (oathie) =>
             {
                 var currentTabInfo = oathie.SelectedTabInfo;
 

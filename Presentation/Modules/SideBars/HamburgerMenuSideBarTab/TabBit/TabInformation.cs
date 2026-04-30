@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Windows;
 
-namespace Aksl.Tabs
+namespace Aksl.TabBits
 {
     public class TabInformation
     {
