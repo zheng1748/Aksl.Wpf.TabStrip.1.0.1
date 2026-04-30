@@ -7,6 +7,7 @@
              xmlns:ei="http://schemas.microsoft.com/xaml/behaviors"
              xmlns:prism="http://prismlibrary.com/"
              xmlns:views="clr-namespace:Aksl.Modules.HamburgerMenuNavigationSideBarTab.Views"
+             xmlns:tabBitViews="clr-namespace:Aksl.TabBits.Views"
              xmlns:a="clr-namespace:Aksl.Modules.HamburgerMenuNavigationSideBarTab"
              xmlns:sv="clr-namespace:Aksl.Modules.HamburgerMenuNavigationSideBarTab"
              x:Name="HamburgerMenuNavigationSideBarContainer"
@@ -542,7 +543,8 @@
                 <Grid x:Name="ContentRoot"
                       Grid.ColumnSpan="2">
                     <Border>
-                        <views:TabView DataContext="{Binding Path=TabViewModel}" />
+                        <!--tabViews:TabView DataContext="{Binding Path=TabViewModel}" />-->
+                        <tabBitViews:TabHubView DataContext="{Binding Path=TabHubViewModel}" />
                     </Border>
                     <Rectangle x:Name="LightDismissLayer"
                                Fill="Transparent"
@@ -564,7 +566,7 @@
                                         VerticalAlignment="Stretch"
                                         Margin="0,0,2,2"
                                         RenderTransformOrigin="0.5,0.5">
-                            <views:GroupedMenusView DataContext="{Binding Path=NavigationSideBar}" />
+                            <views:GroupedMenusView DataContext="{Binding Path=GroupedMenu}" />
                             <ContentControl.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform />

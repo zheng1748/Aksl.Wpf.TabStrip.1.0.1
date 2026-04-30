@@ -1,0 +1,275 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Windows;
+using System.Windows.Input;
+
+using Prism;
+using Prism.Commands;
+using Prism.Events;
+using Prism.Ioc;
+using Prism.Mvvm;
+using Prism.Unity;
+using Unity;
+
+namespace Aksl.TabBits.ViewModels
+{
+    public class TabContentViewModel : BindableBase
+    {
+        #region Members
+        protected readonly IEventAggregator _eventAggregator;
+        #endregion
+
+        #region Constructors
+        public TabContentViewModel()
+        {
+            _eventAggregator = (PrismApplication.Current as PrismApplicationBase).Container.Resolve<IEventAggregator>();
+
+            //TabContentItems=new();
+
+            ActiveTabContentItems= new();
+            StoreTabContentItems = new();
+        }
+        #endregion
+
+        #region Properties
+        public ObservableCollection<TabContentItemViewModel> ActiveTabContentItems { get; }
+        public List<TabContentItemViewModel> StoreTabContentItems { get; }
+
+      //  public ObservableCollection<TabContentItemViewModel> TabContentItems { get; set; }
+
+        private TabContentItemViewModel _selectedTabContentItem;
+        public TabContentItemViewModel SelectedTabContentItem
+        {
+            get => _selectedTabContentItem;
+            set => SetProperty<TabContentItemViewModel>(ref _selectedTabContentItem, value);
+        }
+        #endregion
+
+        #region Methods
+        public void Add(TabInformation tabInformation)
+        {
+            TabContentItemViewModel newTabContentItemViewModel = new(tabInformation);
+
+            if (tabInformation.ViewElement is not null)
+            {
+                newTabContentItemViewModel.ViewElement = tabInformation.ViewElement;
+            }
+
+           AddCore(newTabContentItemViewModel);
+        }
+
+        private void AddCore(TabContentItemViewModel newTabContentItemViewModel)
+        {
+            if (!IsExistsActivTabContentItems(newTabContentItemViewModel.Name, newTabContentItemViewModel.Title))
+            {
+                ActiveTabContentItems.Add(newTabContentItemViewModel);
+            }
+
+            AddPropertyChanged();
+            void AddPropertyChanged()
+            {
+                newTabContentItemViewModel.PropertyChanged += (sender, e) =>
+                {
+                    if (sender is TabContentItemViewModel tcivm)
+                    {
+                        if (e.PropertyName == nameof(TabContentItemViewModel.IsSelected))
+                        {
+                            if (SelectedTabContentItem is null)
+                            {
+                                SelectedTabContentItem = tcivm;
+                            }
+
+                            if (SelectedTabContentItem is not null && tcivm != SelectedTabContentItem)
+                            {
+                                SelectedTabContentItem.IsSelected = false;
+
+                                SelectedTabContentItem = tcivm;
+                            }
+                        }
+                    }
+                };
+            }
+
+            StoreTabContentItem(newTabContentItemViewModel);
+
+            SetActiveTabContentItem(newTabContentItemViewModel);
+
+            RaisePropertyChanged(nameof(ActiveTabContentItems));
+        }
+
+        private void StoreTabContentItem(TabContentItemViewModel tabContentItemViewModel)
+        {
+            if (!IsExistsStoreTabContentItems(tabContentItemViewModel.Name, tabContentItemViewModel.Title))
+            {
+                StoreTabContentItems.Add(tabContentItemViewModel);
+            }
+        }
+
+        public void SetActiveTabContentItem(TabContentItemViewModel tabContentItemViewModel)
+        {
+            if (tabContentItemViewModel is not null && !IsEqualsTabContentItemViewModel(tabContentItemViewModel, SelectedTabContentItem))
+            {
+                if (SelectedTabContentItem is null)
+                {
+                    SelectedTabContentItem = tabContentItemViewModel; 
+                    SelectedTabContentItem.IsSelected = true;
+                }
+
+                if (SelectedTabContentItem is not null && tabContentItemViewModel != SelectedTabContentItem)
+                {
+                    SelectedTabContentItem.IsSelected = false;
+                   // SelectedTabContentItem.ViewElementVisibility = Visibility.Collapsed;
+
+                    SelectedTabContentItem = tabContentItemViewModel;
+                    SelectedTabContentItem.IsSelected = true;
+                  //  SelectedTabContentItem.ViewElementVisibility = Visibility.Visible;
+                }
+            }
+        }
+
+        public void SetTabContentItem(TabInformation tabInformation)
+        {
+            var activeTabContentItem= GetActiveTabContentItemByInfo(tabInformation);
+            if (activeTabContentItem is not null)
+            {
+                SetActiveTabContentItem(activeTabContentItem);
+            }
+            else
+            {
+                var storeTabContentItem = GetStoreTabContentItemViewModel(tabInformation);
+                if (storeTabContentItem is not null)
+                {
+                    AddCore(storeTabContentItem);
+                }
+            }
+        }
+
+        public void RetsetTabItem(TabInformation tabInformation)
+        {
+            var activeTabContentItem = GetActiveTabContentItemByInfo(tabInformation);
+            if (activeTabContentItem is not null)
+            {
+                activeTabContentItem.ViewElement = null;
+                if (tabInformation.ViewElement is not null)
+                {
+                    activeTabContentItem.ViewElement = tabInformation.ViewElement;
+                }
+
+                SetActiveTabContentItem(activeTabContentItem);
+            }
+            else
+            {
+                var storeContentTabItem = GetStoreTabContentItemViewModel(tabInformation);
+                if (storeContentTabItem is not null)
+                {
+                    storeContentTabItem.ViewElement = null;
+                    if (tabInformation.ViewElement is not null)
+                    {
+                        storeContentTabItem.ViewElement = tabInformation.ViewElement;
+                    }
+
+                    ActiveTabContentItems.Add(storeContentTabItem);
+
+                    SetActiveTabContentItem(storeContentTabItem);
+                }
+            }
+        }
+
+        public void SetTabItemOnClose(TabInformation tabInformation)
+        {
+            var activeTabContentItem = GetActiveTabContentItemByInfo(tabInformation);
+            if (activeTabContentItem is not null)
+            {
+                Remove(activeTabContentItem);
+            }
+        }
+
+        public void Remove(TabContentItemViewModel tabContentItemViewModel)
+        {
+            if (tabContentItemViewModel is not null)
+            {
+                if (IsExistsActivTabContentItems(tabContentItemViewModel.Name, tabContentItemViewModel.Title))
+                {
+                    ActiveTabContentItems.Remove(tabContentItemViewModel);
+                }
+
+                if (!ActiveTabContentItems.Any())
+                {
+                    SelectedTabContentItem = null;
+                }
+
+                RaisePropertyChanged(nameof(ActiveTabContentItems));
+            }
+        }
+
+        public void SetTabItemOnSelected(TabInformation tabInformation)
+        {
+            var activeTabContentItem = GetActiveTabContentItemByInfo(tabInformation);
+            if (activeTabContentItem is not null)
+            {
+                SetActiveTabContentItem(activeTabContentItem);
+            }
+        }
+
+        private TabContentItemViewModel GetActiveTabContentItemByInfo(TabInformation tabInformation)
+        {
+            var activeTabContentItemViewModel = ActiveTabContentItems.FirstOrDefault(ti => IsEqualsNameOrTitle(ti.Name, tabInformation.Name) || IsEqualsNameOrTitle(ti.Title, tabInformation.Title));
+
+            return activeTabContentItemViewModel;
+        }
+
+        public TabContentItemViewModel GetStoreTabContentItemViewModel(TabInformation tabInformation)
+        {
+            var storeTabContentItem = StoreTabContentItems.FirstOrDefault(ti => IsEqualsNameOrTitle(ti.Name, tabInformation.Name) || IsEqualsNameOrTitle(ti.Title, tabInformation.Title));
+
+            return storeTabContentItem;
+        }
+
+        public System.Windows.DependencyObject GetViewElementByType(Type viewType)
+        {
+            var tabContentItem = StoreTabContentItems.FirstOrDefault(ti => ti.ViewElementType == viewType);
+
+            return tabContentItem?.ViewElement;
+        }
+        #endregion
+
+        #region Contain Methods
+        private bool IsExistsActivTabContentItems(string name, string title)
+        {
+            var isAny = ActiveTabContentItems.Any(ti => IsEqualsNameOrTitle(ti.Name, name) || IsEqualsNameOrTitle(ti.Title, title));
+
+            return isAny;
+        }
+
+        private bool IsExistsStoreTabContentItems(string name, string title)
+        {
+            var isAny = StoreTabContentItems.Any(ti => IsEqualsNameOrTitle(ti.Name, name) || IsEqualsNameOrTitle(ti.Title, title));
+
+            return isAny;
+        }
+
+        private bool IsEqualsTabContentItemViewModel(TabContentItemViewModel tabContentItemViewModel, TabContentItemViewModel otherTabContentItemViewModel)
+        {
+            var isEquals = (IsEqualsNameOrTitle(tabContentItemViewModel?.Name, otherTabContentItemViewModel?.Name) ||
+                            IsEqualsNameOrTitle(tabContentItemViewModel?.Title, otherTabContentItemViewModel?.Title));
+
+            return isEquals;
+        }
+
+        private bool IsEqualsNameOrTitle(string nameOrTitle, string otherNameOrTitle)
+        {
+            if (string.IsNullOrEmpty(nameOrTitle) || string.IsNullOrEmpty(otherNameOrTitle))
+            {
+                return false;
+            }
+
+            var isEquals = (!string.IsNullOrEmpty(nameOrTitle) && nameOrTitle.Equals(otherNameOrTitle, StringComparison.InvariantCultureIgnoreCase)) ||
+                           (!string.IsNullOrEmpty(otherNameOrTitle) && otherNameOrTitle.Equals(nameOrTitle, StringComparison.InvariantCultureIgnoreCase));
+
+            return isEquals;
+        }
+        #endregion
+    }
+}

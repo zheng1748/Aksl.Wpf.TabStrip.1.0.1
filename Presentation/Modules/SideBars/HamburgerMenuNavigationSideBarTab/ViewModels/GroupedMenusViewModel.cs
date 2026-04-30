@@ -36,6 +36,8 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
             _menuService = menuService;
 
             GroupedMenus = new();
+            NavigationBars = new();
+            AllMenus = new();
 
             RegisterActiveTabItemEvent();
             RegisterOnSelectedTabItemEmptyEvent();
@@ -44,6 +46,8 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
 
         #region Properties
         public ObservableCollection<GroupedMenuViewModel> GroupedMenus { get; }
+        public ObservableCollection<NavigationBarItemViewModel> NavigationBars { get; }
+        public ObservableCollection<NavigationBarBase> AllMenus { get; }
         public string WorkspaceViewEventName { get; set; }
 
         internal MenuItemViewModel _previewSelectedMenuItem;
@@ -64,6 +68,19 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
                             gm.MenuContent.SelectedMenuItem = _selectedMenuItemItem;
                         }
                     }
+                }
+            }
+        }
+
+        private NavigationBarItemViewModel _selectedNavigationBarItem;
+        public NavigationBarItemViewModel SelectedNavigationBarItem
+        {
+            get => _selectedNavigationBarItem;
+            set
+            {
+                if (SetProperty(ref _selectedNavigationBarItem, value))
+                {
+                    ClearSelectedMenuItem();
                 }
             }
         }
@@ -163,7 +180,7 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
         #region Register SelectedTabItem Empty Event
         private void RegisterOnSelectedTabItemEmptyEvent()
         {
-            _eventAggregator.GetEvent<OnSelectedTabItemEmptyEvent>().Subscribe(async (oatie) =>
+            _eventAggregator.GetEvent<Aksl.TabBits.OnSelectedTabHeaderItemEmptyEvent>().Subscribe(async (osthiee) =>
             {
                 try
                 {
@@ -185,9 +202,9 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
         #region Register Active TabItem Event
         private void RegisterActiveTabItemEvent()
         {
-            _eventAggregator.GetEvent<OnActiveTabItemEvent>().Subscribe(async (oatie) =>
+            _eventAggregator.GetEvent< Aksl.TabBits.OnActiveTabHeaderItemEvent>().Subscribe(async (oathie) =>
             {
-                var currentTabItem = oatie.SelectedTabItem;
+                var currentTabInfo = oathie.SelectedTabInfo;
 
                 try
                 {
@@ -199,7 +216,7 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
                         var groupedMenu = (from gm in GroupedMenus
                                            let mc = gm.MenuContent
                                            from mi in mc.MenuItems
-                                           where mi.Name.Equals(currentTabItem.Name, StringComparison.InvariantCultureIgnoreCase) || mi.Title.Equals(currentTabItem.Title, StringComparison.InvariantCultureIgnoreCase)
+                                           where mi.Name.Equals(currentTabInfo.Name, StringComparison.InvariantCultureIgnoreCase) || mi.Title.Equals(currentTabInfo.Title, StringComparison.InvariantCultureIgnoreCase)
                                            select new { MenuContent = mc, MenuItemItemViewModel = mi }).FirstOrDefault();
 
                         var selectedGroupedMenu = (from gm in GroupedMenus
@@ -241,56 +258,98 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
             var rootMenuItem = await _menuService.GetMenuAsync("All");
 
             var subMenuItems = rootMenuItem.SubMenus;
-            int index = 0;
+            int index = 0; 
+            int groupIndex =0;
             foreach (var smi in subMenuItems)
             {
                 var leafMenuItems = await GetAllLeafMenuItems(smi);
 
-                GroupedMenuViewModel groupedMenuViewModel = new(_eventAggregator, index++, smi, leafMenuItems);
-                AddPropertyChanged();
-
-                GroupedMenus.Add(groupedMenuViewModel);
-
-                void AddPropertyChanged()
+                if (HasLeafMenu())
                 {
-                    groupedMenuViewModel.PropertyChanged += (sender, e) =>
+                    GroupedMenuViewModel groupedMenuViewModel = new(_eventAggregator, groupIndex++, smi, leafMenuItems);
+
+                    AddPropertyChanged();
+
+                    GroupedMenus.Add(groupedMenuViewModel);
+                    AllMenus.Add(groupedMenuViewModel);
+
+                    void AddPropertyChanged()
                     {
-                        if (sender is GroupedMenuViewModel gmvm)
+                        groupedMenuViewModel.PropertyChanged += (sender, e) =>
                         {
-                            if (e.PropertyName == nameof(GroupedMenuViewModel.IsLoading))
+                            if (sender is GroupedMenuViewModel gmvm)
                             {
-                                //最后一个
-                                if (gmvm.GroupIndex == GroupedMenus.Count() && !gmvm.IsLoading)
+                                if (e.PropertyName == nameof(GroupedMenuViewModel.IsLoading))
                                 {
-                                    IsLoading = false;
+                                    //最后一个
+                                    if (gmvm.GroupIndex == GroupedMenus.Count() && !gmvm.IsLoading)
+                                    {
+                                        IsLoading = false;
+                                    }
+                                }
+
+                                if (e.PropertyName == nameof(GroupedMenuViewModel.MenuContent))
+                                {
+                                    if (_currentGroupeIndex == gmvm.GroupIndex)
+                                    {
+                                        SelectedMenuItem = gmvm.MenuContent.SelectedMenuItem;
+                                    }
+                                    else
+                                    {
+                                        foreach (var gm in GroupedMenus)
+                                        {
+                                            if (_currentGroupeIndex == gm.GroupIndex)
+                                            {
+                                                _previewSelectedMenuItem = gm.MenuContent.SelectedMenuItem;
+                                                gm.MenuContent.ClearSelectedMenuItem();
+
+                                                break;
+                                            }
+                                        }
+
+                                        _currentGroupeIndex = gmvm.GroupIndex;
+                                        _selectedMenuItemItem = gmvm.MenuContent.SelectedMenuItem;
+                                    }
                                 }
                             }
+                        };
+                    }
+                }
+                else
+                {
+                    NavigationBarItemViewModel navigationBarItemViewModel = new(_eventAggregator,index++, smi);
+                    NavigationBars.Add(navigationBarItemViewModel);
+                    AllMenus.Add(navigationBarItemViewModel);
 
-                            if (e.PropertyName == nameof(GroupedMenuViewModel.MenuContent))
+                    AddPropertyChanged();
+                    void AddPropertyChanged()
+                    {
+                        navigationBarItemViewModel.PropertyChanged += (sender, e) =>
+                        {
+                            if (sender is NavigationBarItemViewModel nbvm)
                             {
-                                if (_currentGroupeIndex == gmvm.GroupIndex)
+                                if (e.PropertyName == nameof(NavigationBarItemViewModel.IsSelected))
                                 {
-                                    SelectedMenuItem = gmvm.MenuContent.SelectedMenuItem;
-                                }
-                                else
-                                {
-                                    foreach (var gm in GroupedMenus)
+                                    if (SelectedNavigationBarItem is null)
                                     {
-                                        if (_currentGroupeIndex == gm.GroupIndex)
-                                        {
-                                            _previewSelectedMenuItem = gm.MenuContent.SelectedMenuItem;
-                                            gm.MenuContent.ClearSelectedMenuItem();
-
-                                            break;
-                                        }
+                                        SelectedNavigationBarItem = nbvm;
                                     }
 
-                                    _currentGroupeIndex = gmvm.GroupIndex;
-                                    _selectedMenuItemItem = gmvm.MenuContent.SelectedMenuItem;
+                                    if (SelectedNavigationBarItem is not null && nbvm.IsSelected && nbvm != SelectedNavigationBarItem)
+                                    {
+                                        SelectedNavigationBarItem.IsSelected = false;
+
+                                        SelectedNavigationBarItem = nbvm;
+                                    }
                                 }
                             }
-                        }
-                    };
+                        };
+                    }
+                }
+
+                bool HasLeafMenu()
+                {
+                    return !AnyEqualsMenuItems(leafMenuItems,smi);
                 }
             }
 
@@ -305,6 +364,11 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
                         mi.WorkspaceViewEventName = this.WorkspaceViewEventName;
                     }
                 }
+
+                foreach (var nb in NavigationBars)
+                {
+                    nb.WorkspaceViewEventName = this.WorkspaceViewEventName;
+                }
             }
 
             IsLoading = false;
@@ -316,12 +380,7 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
         {
             List<MenuItem> leafMenuItems = new();
 
-            foreach (var mi in menuItem.SubMenus)
-            {
-                await RecursiveSubMenuItem(mi);
-            }
-
-             //await RecursiveSubMenuItem(menuItem);
+            await RecursiveSubMenuItem(menuItem);
 
             async Task RecursiveSubMenuItem(MenuItem currentMenuItem)
             {

@@ -19,7 +19,7 @@ namespace Aksl.Modules.HamburgerMenuSideBarTab.ViewModels
     {
         #region Members
         protected readonly IEventAggregator _eventAggregator;
-        protected readonly HamburgerMenuSideBarItemViewModel _parent; 
+        protected readonly HamburgerMenuSideBarItemViewModel _parent;
         protected ObservableCollection<HamburgerMenuSideBarItemViewModel> _children;
         private readonly MenuItem _menuItem;
         #endregion

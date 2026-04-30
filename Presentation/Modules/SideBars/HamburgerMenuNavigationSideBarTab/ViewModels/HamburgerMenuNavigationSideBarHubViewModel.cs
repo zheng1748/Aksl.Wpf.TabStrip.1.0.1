@@ -18,6 +18,9 @@ using Aksl.Dialogs.Services;
 
 using Aksl.Infrastructure;
 using Aksl.Infrastructure.Events;
+using Aksl.Tabs.ViewModels;
+using Aksl.TabBits.ViewModels;
+using Aksl.Toolkit.UI;
 
 namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
 {
@@ -43,6 +46,7 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
             _menuService = _container.Resolve<IMenuService>();
 
             TabViewModel = (PrismApplication.Current as PrismApplicationBase).Container.Resolve<TabViewModel>();
+            TabHubViewModel = (PrismApplication.Current as PrismApplicationBase).Container.Resolve<TabHubViewModel>();
 
             SelectedDisplayMode = SplitViewDisplayMode.Inline;
             IsPaneOpen = true;
@@ -56,8 +60,9 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
         #endregion
 
         #region Properties
-        public GroupedMenusViewModel NavigationSideBar { get; private set; }
+        public GroupedMenusViewModel GroupedMenu{ get; private set; }
         public TabViewModel TabViewModel { get; set; }
+        public TabHubViewModel TabHubViewModel { get; set; }
 
         private bool _isLoading;
         public bool IsLoading
@@ -107,9 +112,9 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
             {
                 if (SetProperty<bool>(ref _isPaneOpen, value))
                 {
-                    if (NavigationSideBar is not null)
+                    if (GroupedMenu is not null)
                     {
-                        NavigationSideBar.IsPaneOpen = value;
+                        GroupedMenu.IsPaneOpen = value;
                     }
 
                     VisualState = GetVisualState();
@@ -227,7 +232,7 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
                 try
                 {
                     IEnumerable<MenuItem> subMenus = null;
-                    Views.TabView subTabView = default;
+                    Aksl.Tabs.Views.TabView subTabView = default;
 
                     if (!string.IsNullOrEmpty(currentMenuItem.NavigationName))
                     {
@@ -240,27 +245,58 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
                         subMenus = currentMenuItem.SubMenus.Where(sm => !string.IsNullOrEmpty(sm.ViewName)).ToList();
                     }
 
-                    if (subMenus is not null)
+                    AddSubTabView();
+                    void AddSubTabView()
                     {
-                        string viewTypeAssemblyQualifiedName = currentMenuItem.ViewName;
-                        Type viewType = Type.GetType(viewTypeAssemblyQualifiedName);
-                        if (viewType is not null)
+                        if (subMenus is not null && subMenus.Any())
                         {
-                            var currentView = TabViewModel.GetStoreViewElement(viewType);
+                            //TabViewModel subTtabViewModel = new();
+                            subTabView = new Tabs.Views.TabView();
+                            VisualTreeFinder visualTreeFinder = new();
+                            //subTabView.DataContext = subTtabViewModel;
+                            subTabView.DataContext = TabViewModel;
+                            bool isSetFirst = false;
 
-                            if (currentView is not null)
+                            foreach (var smi in subMenus)
                             {
-                                if (currentMenuItem.IsCacheable)
+                                string viewTypeAssemblyQualifiedName = smi.ViewName;
+                                Type viewType = Type.GetType(viewTypeAssemblyQualifiedName);
+                                if (viewType is not null)
                                 {
-                                }
-                                else
-                                {
-                                    AddSubTabView();
+                                    var currentView = TabViewModel.GetStoreViewElement(viewType);
+                                    //var currentView = TabHubViewModel.GetViewElementByType(viewType);
+                                    Aksl.Tabs.TabInformation subTabInformation = new()
+                                    {
+                                        Name = smi.Name,
+                                        Title = smi.Title,
+                                        IconKind = smi.IconKind,
+                                        ViewName = smi.ViewName,
+                                        CloseTabButtonVisibility = Visibility.Collapsed
+                                    };
+
+                                    if (currentView is not null)
+                                    {
+                                        if (smi.IsCacheable)
+                                        {
+                                            // TabViewModel.SetTabItem(subTabInformation);
+                                        }
+                                        else
+                                        {
+                                            TabViewModel.RetsetTabItemOnCacheable(subTabInformation);
+                                        }
+                                    }
+                                    else
+                                    {
+                                        //AddSubTabView(smi);
+                                        TabViewModel.Add(subTabInformation);
+                                        isSetFirst = true;
+                                    }
                                 }
                             }
-                            else
+
+                            if (isSetFirst)
                             {
-                                AddSubTabView();
+                                TabViewModel.SetFirstActiveTabItem();
                             }
                         }
                     }
@@ -269,31 +305,7 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
 
                     bool IsExistsViewInSubMenu(MenuItem mi) => (mi is not null) && mi.SubMenus.Any(sm => !string.IsNullOrEmpty(sm.ViewName));
 
-                    void AddSubTabView()
-                    {
-                        TabViewModel subTtabViewModel = new();
-
-                        subTabView = new Views.TabView();
-                        subTabView.DataContext = subTtabViewModel;
-
-                        foreach (var smi in subMenus)
-                        {
-                            TabInformation subTabInformation = new()
-                            {
-                                Name = smi.Name,
-                                Title = smi.Title,
-                                IconKind = smi.IconKind,
-                                ViewName = smi.ViewName,
-                                CloseTabButtonVisibility = Visibility.Collapsed
-                            };
-
-                            subTtabViewModel.Add(subTabInformation);
-                        }
-
-                        subTtabViewModel.SetFirstActiveTabItem();
-                    }
-
-                    TabInformation tabInformation = new()
+                    Aksl.TabBits.TabInformation tabInformation = new()
                     {
                         Name = currentMenuItem.Name,
                         Title = currentMenuItem.Title,
@@ -306,7 +318,7 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
                         tabInformation.ViewElement = subTabView;
                     }
 
-                    if (TabViewModel.IsActiveTabItem(tabInformation))
+                    if (TabHubViewModel.IsActiveTabItem(tabInformation))
                     {
                         return;
                     }
@@ -320,17 +332,17 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
                         Type viewType = Type.GetType(viewTypeAssemblyQualifiedName);
                         if (viewType is not null)
                         {
-                            var currentView = TabViewModel.GetStoreViewElement(viewType);
+                            var currentView = TabHubViewModel.GetViewElementByType(viewType);
 
                             if (currentView is not null)
                             {
                                 if (currentMenuItem.IsCacheable)
                                 {
-                                    TabViewModel.SetTabItem(tabInformation);
+                                    TabHubViewModel.SetTabItem(tabInformation);
                                 }
                                 else
                                 {
-                                    TabViewModel.RetsetTabItem(tabInformation);
+                                    TabHubViewModel.RetsetTabItem(tabInformation);
                                 }
                             }
                             else
@@ -342,7 +354,7 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
                             {
                                 if (CanAddView())
                                 {
-                                    TabViewModel.Add(tabInformation);
+                                    TabHubViewModel.Add(tabInformation);
                                 }
                             }
 
@@ -387,12 +399,12 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
 
             try
             {
-                NavigationSideBar = new(_eventAggregator, _menuService);
+                GroupedMenu = new(_eventAggregator, _menuService);
                 AddPropertyChanged();
 
                 void AddPropertyChanged()
                 {
-                    NavigationSideBar.PropertyChanged += (sender, e) =>
+                    GroupedMenu.PropertyChanged += (sender, e) =>
                     {
                         if (sender is GroupedMenusViewModel gmvm)
                         {
@@ -404,9 +416,9 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
                     };
                 }
 
-                NavigationSideBar.WorkspaceViewEventName = _workspaceViewEventName;
-                await NavigationSideBar.CreateGroupedMenuViewModelsAsync();
-                RaisePropertyChanged(nameof(NavigationSideBar));
+                GroupedMenu.WorkspaceViewEventName = _workspaceViewEventName;
+                await GroupedMenu.CreateGroupedMenuViewModelsAsync();
+                RaisePropertyChanged(nameof(GroupedMenu));
             }
             catch (Exception ex)
             {

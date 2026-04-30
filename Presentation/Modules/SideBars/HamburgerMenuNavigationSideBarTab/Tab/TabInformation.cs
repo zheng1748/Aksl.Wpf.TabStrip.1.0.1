@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Windows;
 
-namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab
+namespace Aksl.Tabs
 {
     public class TabInformation
     {

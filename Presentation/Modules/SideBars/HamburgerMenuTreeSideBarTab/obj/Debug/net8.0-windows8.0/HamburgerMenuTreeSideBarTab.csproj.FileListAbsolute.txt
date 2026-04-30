@@ -83,3 +83,4 @@ C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\Sid
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\SideBars\HamburgerMenuTreeSideBarTab\obj\Debug\net8.0-windows8.0\refint\Aksl.Modules.HamburgerMenuTreeSideBarTab.dll
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\SideBars\HamburgerMenuTreeSideBarTab\obj\Debug\net8.0-windows8.0\Aksl.Modules.HamburgerMenuTreeSideBarTab.pdb
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\SideBars\HamburgerMenuTreeSideBarTab\obj\Debug\net8.0-windows8.0\ref\Aksl.Modules.HamburgerMenuTreeSideBarTab.dll
+C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\SideBars\HamburgerMenuTreeSideBarTab\obj\Debug\net8.0-windows8.0\HamburgerMenuTreeSideBarTab.sourcelink.json

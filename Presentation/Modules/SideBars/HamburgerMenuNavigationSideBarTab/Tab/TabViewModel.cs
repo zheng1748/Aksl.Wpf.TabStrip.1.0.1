@@ -12,7 +12,7 @@ using Prism.Mvvm;
 using Prism.Unity;
 using Unity;
 
-namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
+namespace Aksl.Tabs.ViewModels
 {
     public class TabViewModel : BindableBase
     {
@@ -39,23 +39,24 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
         public TabItemViewModel SelectedTabItem
         {
             get => _selectedTabItem;
-            set
-            {
-                var previewSelectedHamburgerMenuItem = _selectedTabItem;
+            set => SetProperty(ref _selectedTabItem, value);
+            //set
+            //{
+            //    var previewSelectedHamburgerMenuItem = _selectedTabItem;
 
-                if (SetProperty(ref _selectedTabItem, value))
-                {
-                    if (previewSelectedHamburgerMenuItem is not null && previewSelectedHamburgerMenuItem.IsSelected)
-                    {
-                        previewSelectedHamburgerMenuItem.IsSelected = false;
-                    }
+            //    if (SetProperty(ref _selectedTabItem, value))
+            //    {
+            //        if (previewSelectedHamburgerMenuItem is not null && previewSelectedHamburgerMenuItem.IsSelected)
+            //        {
+            //            previewSelectedHamburgerMenuItem.IsSelected = false;
+            //        }
 
-                    if (_selectedTabItem is not null && !_selectedTabItem.IsSelected)
-                    {
-                        _selectedTabItem.IsSelected = true;
-                    }
-                }
-            }
+            //        if (_selectedTabItem is not null && !_selectedTabItem.IsSelected)
+            //        {
+            //            _selectedTabItem.IsSelected = true;
+            //        }
+            //    }
+            //}
         }
 
         public List<TabItemViewModel> StoreTabItems { get; }
@@ -239,6 +240,20 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
                     storeTabItemViewModel.RequestClose += this.OnTabItemRequestClose;
 
                     SetActiveTabItem(storeTabItemViewModel);
+                }
+            }
+        }
+
+        public void RetsetTabItemOnCacheable(TabInformation tabInformation)
+        {
+            var activeTabItem = GetActiveTabItemViewModel(tabInformation);
+            if (activeTabItem is not null)
+            {
+                activeTabItem.ViewElement = null;
+
+                if (tabInformation.ViewElement is not null)
+                {
+                    activeTabItem.ViewElement = tabInformation.ViewElement;
                 }
             }
         }

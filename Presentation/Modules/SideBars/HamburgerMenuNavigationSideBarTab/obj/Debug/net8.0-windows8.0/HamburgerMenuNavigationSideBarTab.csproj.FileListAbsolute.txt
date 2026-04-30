@@ -96,3 +96,15 @@ C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\Sid
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\SideBars\HamburgerMenuNavigationSideBarTab\obj\Debug\net8.0-windows8.0\Aksl.Modules.HamburgerMenuNavigationSideBarTab.pdb
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\SideBars\HamburgerMenuNavigationSideBarTab\obj\Debug\net8.0-windows8.0\ref\Aksl.Modules.HamburgerMenuNavigationSideBarTab.dll
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\SideBars\HamburgerMenuNavigationSideBarTab\obj\Debug\net8.0-windows8.0\HamburgerMenuNavigationSideBarTab.sourcelink.json
+C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\SideBars\HamburgerMenuNavigationSideBarTab\obj\Debug\net8.0-windows8.0\TabBit\TabContentItemView.baml
+C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\SideBars\HamburgerMenuNavigationSideBarTab\obj\Debug\net8.0-windows8.0\TabBit\TabContentItemView.g.cs
+C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\SideBars\HamburgerMenuNavigationSideBarTab\obj\Debug\net8.0-windows8.0\TabBit\TabContentView.g.cs
+C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\SideBars\HamburgerMenuNavigationSideBarTab\obj\Debug\net8.0-windows8.0\TabBit\TabHeaderItemView.g.cs
+C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\SideBars\HamburgerMenuNavigationSideBarTab\obj\Debug\net8.0-windows8.0\TabBit\TabHeaderView.g.cs
+C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\SideBars\HamburgerMenuNavigationSideBarTab\obj\Debug\net8.0-windows8.0\TabBit\TabHubView.g.cs
+C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\SideBars\HamburgerMenuNavigationSideBarTab\obj\Debug\net8.0-windows8.0\TabBit\TabContentView.baml
+C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\SideBars\HamburgerMenuNavigationSideBarTab\obj\Debug\net8.0-windows8.0\TabBit\TabHeaderItemView.baml
+C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\SideBars\HamburgerMenuNavigationSideBarTab\obj\Debug\net8.0-windows8.0\TabBit\TabHeaderView.baml
+C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\SideBars\HamburgerMenuNavigationSideBarTab\obj\Debug\net8.0-windows8.0\TabBit\TabHubView.baml
+C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\SideBars\HamburgerMenuNavigationSideBarTab\obj\Debug\net8.0-windows8.0\Views\NavigationBarItemView.baml
+C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\SideBars\HamburgerMenuNavigationSideBarTab\obj\Debug\net8.0-windows8.0\Views\NavigationBarItemView.g.cs

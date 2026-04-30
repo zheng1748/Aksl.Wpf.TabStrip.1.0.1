@@ -464,3 +464,4 @@ C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Toolkits\Aksl.Toolkit\ob
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Toolkits\Aksl.Toolkit\obj\Debug\net8.0-windows\refint\Aksl.Toolkit.dll
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Toolkits\Aksl.Toolkit\obj\Debug\net8.0-windows\Aksl.Toolkit.pdb
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Toolkits\Aksl.Toolkit\obj\Debug\net8.0-windows\ref\Aksl.Toolkit.dll
+C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Toolkits\Aksl.Toolkit\obj\Debug\net8.0-windows\Aksl.Toolkit.sourcelink.json
