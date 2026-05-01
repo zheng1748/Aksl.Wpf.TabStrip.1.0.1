@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 
-15-1137505857
+161811470841
 
-401630253063
+44625660959
 2081129143513
-TabBit\TabContentItemView.xaml;TabBit\TabContentView.xaml;TabBit\TabHeaderItemView.xaml;TabBit\TabHeaderView.xaml;TabBit\TabHubView.xaml;Tab\TabItemHeaderView.xaml;Tab\TabItemView.xaml;Tab\TabView.xaml;Views\GroupedMenusView.xaml;Views\GroupedMenuView.xaml;Views\HamburgerMenuNavigationSideBarHubView.xaml;Views\MenuContentView.xaml;Views\MenuItemHeader.xaml;Views\MenuItemView.xaml;Views\NavigationBarItemView.xaml;
+TabBit\TabContentItemView.xaml;TabBit\TabContentView.xaml;TabBit\TabHeaderItemView.xaml;TabBit\TabHeaderView.xaml;TabBit\TabHubView.xaml;Tab\TabItemHeaderView.xaml;Tab\TabItemView.xaml;Tab\TabView.xaml;Views\GroupedMenusView.xaml;Views\GroupedMenuView.xaml;Views\HamburgerMenuNavigationSideBarHubView.xaml;Views\MenuContentView.xaml;Views\MenuItemHeader.xaml;Views\MenuItemView.xaml;Views\NoGroupedMenuItem.xaml;Views\NoGroupedMenuView.xaml;
 
 False
 

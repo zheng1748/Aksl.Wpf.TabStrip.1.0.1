@@ -26,7 +26,10 @@
     <Page Update="Tab\TabView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\NavigationBarItemView.xaml">
+    <Page Update="Views\NoGroupedMenuView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\NoGroupedMenuItem.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

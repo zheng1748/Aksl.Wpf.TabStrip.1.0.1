@@ -4,7 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:views="clr-namespace:Aksl.Modules.HamburgerMenuNavigationSideBarTab.Views"
-             xmlns:selectors="clr-namespace:Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels"
+             xmlns:viewmodels="clr-namespace:Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels"
+             xmlns:selectors="clr-namespace:Aksl.Modules.HamburgerMenuNavigationSideBarTab.Selectors"
              mc:Ignorable="d"
              d:DesignHeight="450"
              d:DesignWidth="800">
@@ -13,17 +14,19 @@
         <CollectionViewSource x:Key="menusSource"
                               Source="{Binding Path=AllMenus}" />
 
-        <DataTemplate x:Key="groupedMenusDataTemplate">
+        <DataTemplate x:Key="groupedMenusDataTemplate"
+                      >
             <views:GroupedMenuView />
         </DataTemplate>
 
-        <DataTemplate x:Key="navigationBarDataTemplate">
-            <views:NavigationBarItemView />
+        <DataTemplate x:Key="noGroupedMenuDataTemplate"
+                     >
+            <views:NoGroupedMenuView />
         </DataTemplate>
 
         <selectors:GroupedMenuDataTemplateSelector x:Key="groupedMenuDataTemplateSelector"
                                                    GroupedMenuTemplate="{StaticResource groupedMenusDataTemplate}"
-                                                   NavigationBarTemplate="{StaticResource navigationBarDataTemplate}" />
+                                                   NoGroupedMenuTemplate="{StaticResource noGroupedMenuDataTemplate}" />
 
     </UserControl.Resources>
 

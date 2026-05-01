@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute(@"Prism is a fully open source version of the Prism guidance originally produced by Microsoft Patterns & Practices.  Prism provides an implementation of a collection of design patterns that are helpful in writing well structured and maintainable XAML applications, including MVVM, dependency injection, commanding, event aggregation, and more. Prism's core functionality is a shared code base in a Portable Class Library targeting these platforms; WPF, and Xamarin Forms. Features that need to be platform specific are implemented in the respective libraries for the target platform.")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ea289afb1266e21e69fc9966b3da024e98d3bf65")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1b11dd61ecf616b7bc8314e0ef36146677ead815")]
 [assembly: System.Reflection.AssemblyProductAttribute("Prism")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Prism")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

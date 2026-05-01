@@ -1,7 +1,9 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 
-namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
+using Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels;
+
+namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.Selectors
 {
     public class GroupedMenuDataTemplateSelector : DataTemplateSelector
     {
@@ -9,19 +11,19 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
 
         public DataTemplate GroupedMenuTemplate { set; get; }
 
-        public DataTemplate NavigationBarTemplate { set; get; }
+        public DataTemplate NoGroupedMenuTemplate { set; get; }
 
         public override DataTemplate SelectTemplate(object item, DependencyObject container)
         {
-            if (item is NavigationBarBase  navigationBarBase)
+            if (item is GroupedMenuViewModelBase  groupedMenuViewModelBase)
             {
-                if (navigationBarBase is GroupedMenuViewModel)
+                if (groupedMenuViewModelBase is GroupedMenuViewModel)
                 {
                     return GroupedMenuTemplate;
                 }
                 else
                 {
-                    return NavigationBarTemplate;
+                    return NoGroupedMenuTemplate;
                 }
             }
 

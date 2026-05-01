@@ -246,8 +246,8 @@ C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Toolkits\Aksl.Toolkit.Co
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Toolkits\Aksl.Toolkit.Controls\obj\Debug\net8.0-windows\Aksl.Toolkit.Controls.AssemblyInfoInputs.cache
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Toolkits\Aksl.Toolkit.Controls\obj\Debug\net8.0-windows\Aksl.Toolkit.Controls.AssemblyInfo.cs
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Toolkits\Aksl.Toolkit.Controls\obj\Debug\net8.0-windows\Aksl.Toolkit.Controls.csproj.CoreCompileInputs.cache
+C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Toolkits\Aksl.Toolkit.Controls\obj\Debug\net8.0-windows\Aksl.Toolkit.Controls.sourcelink.json
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Toolkits\Aksl.Toolkit.Controls\obj\Debug\net8.0-windows\Aksl.Toolkit.Controls.dll
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Toolkits\Aksl.Toolkit.Controls\obj\Debug\net8.0-windows\refint\Aksl.Toolkit.Controls.dll
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Toolkits\Aksl.Toolkit.Controls\obj\Debug\net8.0-windows\Aksl.Toolkit.Controls.pdb
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Toolkits\Aksl.Toolkit.Controls\obj\Debug\net8.0-windows\ref\Aksl.Toolkit.Controls.dll
-C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Toolkits\Aksl.Toolkit.Controls\obj\Debug\net8.0-windows\Aksl.Toolkit.Controls.sourcelink.json

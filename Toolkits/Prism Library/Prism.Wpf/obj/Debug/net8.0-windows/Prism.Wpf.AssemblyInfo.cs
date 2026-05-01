@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyDescriptionAttribute(@"Prism is a fully open source version of the Prism guidance originally produced by Microsoft Patterns & Practices. Prism provides an implementation of a collection of design patterns that are helpful in writing well structured, maintainable, and testable XAML applications, including MVVM, dependency injection, commanding, event aggregation, and more. Prism's core functionality is a shared library targeting the .NET Framework and .NET Standard. Features that need to be platform specific are implemented in the respective libraries for the target platform (WPF, Uno Platform, and Xamarin Forms).
                  Prism.Wpf helps you more easily design and build rich, flexible, and easy to maintain Windows Presentation Foundation (WPF) desktop applications. This library provides user interface composition as well as modularity support.")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ea289afb1266e21e69fc9966b3da024e98d3bf65")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1b11dd61ecf616b7bc8314e0ef36146677ead815")]
 [assembly: System.Reflection.AssemblyProductAttribute("Prism.Wpf")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Prism.Wpf")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
