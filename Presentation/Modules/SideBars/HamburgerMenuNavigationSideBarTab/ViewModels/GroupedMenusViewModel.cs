@@ -61,18 +61,21 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
             {
                 if (SetProperty(ref _selectedMenuItemItem, value))
                 {
-                    ClearSelectedNoGroupedMenuItem();
-
-                    foreach (var gm in GroupedMenus)
+                    if (_selectedMenuItemItem is not null)
                     {
-                        if (_currentGroupeIndex == gm.GroupIndex)
-                        {
-                            if (gm.MenuContent.SelectedMenuItem != _selectedMenuItemItem)
-                            {
-                                gm.MenuContent.SelectedMenuItem = _selectedMenuItemItem;
-                            }
-                        }
+                        ClearSelectedNoGroupedMenuItem();
                     }
+
+                    //foreach (var gm in GroupedMenus)
+                    //{
+                    //    if (_currentGroupeIndex == gm.GroupIndex)
+                    //    {
+                    //        if (gm.MenuContent.SelectedMenuItem != _selectedMenuItemItem)
+                    //        {
+                    //            gm.MenuContent.SelectedMenuItem = _selectedMenuItemItem;
+                    //        }
+                    //    }
+                    //}
                 }
             }
         }
@@ -85,7 +88,10 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
             {
                 if (SetProperty(ref _selectedNoGroupedMenuItem, value))
                 {
-                    ClearSelectedMenuItem();
+                    if (_selectedNoGroupedMenuItem is not null)
+                    {
+                        ClearSelectedMenuItem();
+                    }
                 }
             }
         }
@@ -132,14 +138,15 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
         #region Reset/Clear Selected MenuItem Method
         internal void ClearSelectedMenuItem()
         {
-            if (_selectedMenuItemItem is not null)
+            if (SelectedMenuItem is not null)
             {
-                var groupedMenu = GroupedMenus.FirstOrDefault(gm => gm.MenuContent.MenuItems.Any(mi => IsEqualsNameOrTitle(mi.MenuItem.Title, _selectedMenuItemItem.MenuItem.Title) || IsEqualsNameOrTitle(mi.MenuItem.Name, _selectedMenuItemItem.MenuItem.Name)));
+                var groupedMenu = GroupedMenus.FirstOrDefault(gm => gm.MenuContent.MenuItems.Any(mi => IsEqualsNameOrTitle(mi.MenuItem.Title, SelectedMenuItem.MenuItem.Title) || IsEqualsNameOrTitle(mi.MenuItem.Name, SelectedMenuItem.MenuItem.Name)));
 
                 if (groupedMenu is not null)
                 {
-                    _selectedMenuItemItem = null;
-                    _previewSelectedMenuItem = null;
+                    //_selectedMenuItemItem = null;
+                    // _previewSelectedMenuItem = null;
+                    SelectedMenuItem = null;
 
                     groupedMenu.MenuContent.ClearSelectedMenuItem();
                     _currentGroupeIndex = -1;
