@@ -15,12 +15,12 @@
                               Source="{Binding Path=AllMenus}" />
 
         <DataTemplate x:Key="groupedMenusDataTemplate"
-                      >
+                      DataType="{x:Type viewmodels:GroupedMenuViewModel}">
             <views:GroupedMenuView />
         </DataTemplate>
 
         <DataTemplate x:Key="noGroupedMenuDataTemplate"
-                     >
+                      DataType="{x:Type viewmodels:NoGroupedMenuViewModel}">
             <views:NoGroupedMenuView />
         </DataTemplate>
 
@@ -33,11 +33,11 @@
     <ScrollViewer HorizontalScrollBarVisibility="Auto"
                   VerticalScrollBarVisibility="Auto">
         <Border SnapsToDevicePixels="True"
-                Background="WhiteSmoke"
+                Background="White"
                 BorderBrush="LightGray"
                 BorderThickness="2"
                 CornerRadius="5">
-            <ItemsControl x:Name="GroupedMenusItemsControl"
+            <ItemsControl x:Name="GroupedMenusItemsControl" 
                           ItemsSource="{Binding Source={StaticResource menusSource}}"
                           ItemTemplateSelector="{StaticResource groupedMenuDataTemplateSelector}">
             </ItemsControl>

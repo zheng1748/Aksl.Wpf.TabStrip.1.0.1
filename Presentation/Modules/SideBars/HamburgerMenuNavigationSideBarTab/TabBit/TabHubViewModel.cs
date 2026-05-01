@@ -96,9 +96,9 @@ namespace Aksl.TabBits.ViewModels
 
         public bool IsActiveTabItem(TabInformation tabInformation)
         {
-            var isExists = TabHeaderViewModel.IsActiveTabItem(tabInformation);
+            var isActive = TabHeaderViewModel.IsActiveTabItem(tabInformation);
 
-            return isExists;
+            return isActive;
         }
         #endregion
 

@@ -95,7 +95,7 @@
         </Style>
     </UserControl.Resources>
 
-    <Grid Height="32"  >
+    <Grid Height="30"  >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="48" />
             <ColumnDefinition Width="Auto" />

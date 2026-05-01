@@ -13,7 +13,8 @@
         <CollectionViewSource x:Key="menuSource"
                               Source="{Binding Path=NoGroupedMenuItems}" />
 
-        <DataTemplate x:Key="menuDataTemplate">
+        <DataTemplate x:Key="menuDataTemplate"
+                      DataType="{x:Type viewmodels:NoGroupedMenuItemViewModel}">
             <views:NoGroupedMenuItemView/>
         </DataTemplate>
 
