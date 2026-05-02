@@ -21,7 +21,6 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
             _menuItem = menuItems;
 
             NoGroupedMenuItems = new(); 
-            CreateMenuItemViewModels();
         }
         #endregion
 

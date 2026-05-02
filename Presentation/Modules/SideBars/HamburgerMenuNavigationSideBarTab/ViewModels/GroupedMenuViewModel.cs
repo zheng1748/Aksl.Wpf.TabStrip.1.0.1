@@ -39,8 +39,6 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
             GroupIndex = groupIndex;
             _leafMenuItems = leafMenuItems;
             _headerMenuItem = headerMenuItem;
-
-            CreateMenuContentViewModels();
         }
         #endregion
 
@@ -101,10 +99,10 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
                 {
                     if (sender is MenuContentViewModel mcvm)
                     {
-                        if (e.PropertyName == nameof(MenuContentViewModel.IsLoading) && !mcvm.IsLoading)
-                        {
-                            IsLoading = false;
-                        }
+                        //if (e.PropertyName == nameof(MenuContentViewModel.IsLoading) && !mcvm.IsLoading)
+                        //{
+                        //    IsLoading = false;
+                        //}
 
                         if (e.PropertyName == nameof(MenuContentViewModel.SelectedMenuItem))
                         {

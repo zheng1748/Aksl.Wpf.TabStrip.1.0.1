@@ -187,10 +187,10 @@ namespace Aksl.TabBits.ViewModels
             }
             else
             {
-                var storeTTabHeaderItem = GetStoreTabHeaderItemViewModel(tabInformation);
-                if (storeTTabHeaderItem is not null)
+                var storeTabHeaderItem = GetStoreTabHeaderItemViewModel(tabInformation);
+                if (storeTabHeaderItem is not null)
                 {
-                    AddCore(storeTTabHeaderItem);
+                    AddCore(storeTabHeaderItem);
                 }
             }
         }

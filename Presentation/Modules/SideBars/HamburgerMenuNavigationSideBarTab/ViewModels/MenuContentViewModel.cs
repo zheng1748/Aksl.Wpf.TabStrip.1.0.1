@@ -84,7 +84,7 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
         {
             if (SelectedMenuItem is not null)
             {
-                SelectedMenuItem.IsSelected = false; 
+                //SelectedMenuItem.IsSelected = false; 
                 SelectedMenuItem = null;
             }
         }

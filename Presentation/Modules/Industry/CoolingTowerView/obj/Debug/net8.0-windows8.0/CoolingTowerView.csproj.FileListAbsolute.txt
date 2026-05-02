@@ -336,9 +336,9 @@ C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\Ind
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\Industry\CoolingTowerView\obj\Debug\net8.0-windows8.0\CoolingTowerView.AssemblyInfoInputs.cache
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\Industry\CoolingTowerView\obj\Debug\net8.0-windows8.0\CoolingTowerView.AssemblyInfo.cs
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\Industry\CoolingTowerView\obj\Debug\net8.0-windows8.0\CoolingTowerView.csproj.CoreCompileInputs.cache
+C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\Industry\CoolingTowerView\obj\Debug\net8.0-windows8.0\CoolingTowerView.sourcelink.json
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\Industry\CoolingTowerView\obj\Debug\net8.0-windows8.0\CoolingTowerView.csproj.CopyComplete
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\Industry\CoolingTowerView\obj\Debug\net8.0-windows8.0\Aksl.Modules.CoolingTower.dll
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\Industry\CoolingTowerView\obj\Debug\net8.0-windows8.0\refint\Aksl.Modules.CoolingTower.dll
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\Industry\CoolingTowerView\obj\Debug\net8.0-windows8.0\Aksl.Modules.CoolingTower.pdb
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\Industry\CoolingTowerView\obj\Debug\net8.0-windows8.0\ref\Aksl.Modules.CoolingTower.dll
-C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\Industry\CoolingTowerView\obj\Debug\net8.0-windows8.0\CoolingTowerView.sourcelink.json
