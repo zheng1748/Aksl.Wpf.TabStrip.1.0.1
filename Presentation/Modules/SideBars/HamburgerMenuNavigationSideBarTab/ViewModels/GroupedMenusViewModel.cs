@@ -326,6 +326,7 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
                                 }
                                 else if (SelectedMenuItem is not null)
                                 {
+                                    matchNoGroupedMenu.IsSelected = true;
                                     SelectedNoGroupedMenuItem = matchNoGroupedMenu;
                                 }
                                 //SetSelectedGroupedMenuMenuItem();
