@@ -41,7 +41,7 @@ namespace Aksl.TabBits.ViewModels
         {
             get
             { 
-                return TabContentViewModel.SelectedTabContentItem is not null;
+                return TabContentViewModel.ActiveTabContentItems is not null &&TabContentViewModel.ActiveTabContentItems.Any();
             }
         }
         #endregion
@@ -67,7 +67,7 @@ namespace Aksl.TabBits.ViewModels
             {
                 if (sender is TabContentViewModel tvvm)
                 {
-                    if (e.PropertyName == nameof(TabContentViewModel.SelectedTabContentItem))
+                    if (e.PropertyName == nameof(TabContentViewModel.ActiveTabContentItems))
                     {
                         RaisePropertyChanged(nameof(HasContent));
                     }
