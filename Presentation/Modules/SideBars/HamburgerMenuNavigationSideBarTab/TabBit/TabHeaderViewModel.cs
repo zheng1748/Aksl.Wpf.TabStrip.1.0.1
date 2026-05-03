@@ -63,17 +63,18 @@ namespace Aksl.TabBits.ViewModels
 
                 if (nextTabHeaderItemViewModel is not null)
                 {
-                    //if (SelectedTabHeaderItem is not null)
+                    if (SelectedTabHeaderItem is null)
+                    {
+                        //SelectedTabHeaderItem.IsSelected = false;
+                       nextTabHeaderItemViewModel.IsSelected = true;
+                    }
+
+                    //if (SelectedTabHeaderItem is not null && SelectedTabHeaderItem == nextTabHeaderItemViewModel)
                     //{
                     //    SelectedTabHeaderItem.IsSelected = false;
                     //}
 
-                    if (SelectedTabHeaderItem is not null && SelectedTabHeaderItem == nextTabHeaderItemViewModel)
-                    {
-                        SelectedTabHeaderItem.IsSelected = false;
-                    }
-
-                    nextTabHeaderItemViewModel.IsSelected = true;
+                    //nextTabHeaderItemViewModel.IsSelected = true;
                     // nextTabHeaderItemViewModel.IsSelected = true;
                     // SelectedTabHeaderItem = nextTabHeaderItemViewModel;
                     // SelectedTabHeaderItem.IsSelected = true;
