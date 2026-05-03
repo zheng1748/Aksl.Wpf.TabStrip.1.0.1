@@ -33,21 +33,22 @@
 
         <Style x:Key="tabHeaderListViewItemStyle"
                TargetType="{x:Type ListViewItem}">
+            <Setter Property="Cursor"
+                    Value="Hand" />
             <Setter Property="IsSelected"
                     Value="{Binding IsSelected,Mode=TwoWay}" />
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type ListViewItem}">
                         <Border Name="BD_Collector"
-                               
                                 BorderThickness="1"
                                 BorderBrush="Black"
                                 CornerRadius="2"
                                 Margin="0,0,5,0">
                             <!--<Label Content="{Binding}"
-                            VerticalContentAlignment="Center"
-                            HorizontalContentAlignment="Center"
-                            FontSize="13" />-->
+                       VerticalContentAlignment="Center"
+                       HorizontalContentAlignment="Center"
+                       FontSize="13" />-->
                             <ContentPresenter x:Name="ContentPresenter"
                                               ContentTemplate="{TemplateBinding ContentTemplate}"
                                               Content="{TemplateBinding Content}"
@@ -100,8 +101,8 @@
                       Background="WhiteSmoke">
         </ItemsControl>
     </ScrollViewer>-->
-    <ListView
-              ItemsSource="{Binding Path=ActiveTabHeaderItems}"
+
+    <ListView ItemsSource="{Binding Path=ActiveTabHeaderItems}"
               Style="{StaticResource tabHeaderListViewStyle}"
               ItemsPanel="{StaticResource tabHeaderItemsTemplate}"
               ItemContainerStyle="{StaticResource tabHeaderListViewItemStyle}"
@@ -110,4 +111,5 @@
               SelectedItem="{Binding Path=SelectedTabHeaderItem,Mode=TwoWay}"
               VerticalAlignment="Center"
               Cursor="" />
+
 </UserControl>

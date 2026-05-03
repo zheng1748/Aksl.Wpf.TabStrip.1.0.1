@@ -217,10 +217,15 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
                 {
                     if (SelectedMenuItem is not null)
                     {
-                        SelectedMenuItem.IsSelected = false;
+                        SelectedMenuItem.IsSelected = false; 
+                        SelectedMenuItem = null;
                     }
 
-                    SelectedMenuItem = null;
+                    if (SelectedNoGroupedMenuItem is not null)
+                    {
+                        SelectedNoGroupedMenuItem.IsSelected =false;
+                        SelectedNoGroupedMenuItem = null;
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -268,7 +273,6 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
                                     return;
                                 }
 
-                                //SetSelectedGroupedMenuMenuItem();
                                 if (SelectedMenuItem is not null)
                                 {
                                     var selectedGroupedMenu = (from gm in GroupedMenus
@@ -309,7 +313,6 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
                                     SelectedMenuItem = matchGroupedMenu.MenuItemItem;
                                     // ClearSelectedNoGroupedMenuItem();
                                 }
-                                //SetSelectedNoGroupedMenuMenuItem();
                             }
                         }
 
@@ -317,6 +320,11 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
                         {
                             if (matchNoGroupedMenu is not null && matchGroupedMenu is null)
                             {
+                                if (matchNoGroupedMenu == SelectedNoGroupedMenuItem)
+                                {
+                                    return;
+                                }
+
                                 if (SelectedNoGroupedMenuItem is not null)
                                 {
                                     if (matchNoGroupedMenu != SelectedNoGroupedMenuItem)
