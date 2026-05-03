@@ -49,7 +49,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HamburgerMenuNavigationSide
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HamburgerMenuTreeSideBarTab", "Presentation\Modules\SideBars\HamburgerMenuTreeSideBarTab\HamburgerMenuTreeSideBarTab.csproj", "{6144BED6-2ADE-4EC6-B0C7-31D37A92F081}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Miscs", "Miscs", "{5DB860FA-3E3E-44B4-9710-E6C85164CB30}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Others", "Others", "{5DB860FA-3E3E-44B4-9710-E6C85164CB30}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OthersView", "Presentation\Modules\Others\OthersView\OthersView.csproj", "{930C2A89-B99A-45D4-B807-765DB776D98E}"
 EndProject

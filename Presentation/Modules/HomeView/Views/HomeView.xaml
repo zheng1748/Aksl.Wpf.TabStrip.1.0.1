@@ -8,10 +8,10 @@
              mc:Ignorable="d"
              d:DesignHeight="300"
              prism:ViewModelLocator.AutoWireViewModel="True">
-    <Grid Margin="4,4,4,4"
+    <Grid Margin="4,4,4,4" Background="BlanchedAlmond"
           HorizontalAlignment="Stretch"
           VerticalAlignment="Stretch">
-        <TextBlock Text="hello Home"
+        <TextBlock Text="Hello World!"
                    FontSize="32"
                    Foreground="Red"
                    FontWeight="Black"

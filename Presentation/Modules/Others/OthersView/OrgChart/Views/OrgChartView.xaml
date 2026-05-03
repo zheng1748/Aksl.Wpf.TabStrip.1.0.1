@@ -174,7 +174,7 @@
     </UserControl.Resources>
     
     <Grid Margin="4,4,4,4"
-          HorizontalAlignment="Stretch"
+          HorizontalAlignment="Stretch" Background="BlanchedAlmond"
           VerticalAlignment="Stretch">
         <ScrollViewer HorizontalScrollBarVisibility="Auto"
                       VerticalScrollBarVisibility="Auto"

@@ -79,12 +79,24 @@ namespace Aksl.TabBits.ViewModels
             {
                 if (SetProperty<bool>(ref _isSelected, value))
                 {
-                    if (_isSelected)
-                    {
-                    
-                    }
-
-                    ViewElementVisibility = _isSelected? Visibility.Visible: Visibility.Collapsed;
+                    //if (ViewElement is not null)
+                    //{
+                    //    (ViewElement as UIElement).Visibility = _isSelected ? Visibility.Visible : Visibility.Collapsed;
+                    //}
+                    //if (_isSelected)
+                    //{
+                        if (ViewElement is not null)
+                        {
+                            (ViewElement as UIElement).Visibility = _isSelected ? Visibility.Visible : Visibility.Collapsed;
+                        }
+                    //}
+                    //else
+                    //{
+                    //    if (ViewElement is not null)
+                    //    {
+                    //        ViewElement = null;
+                    //    }
+                    //}
                 }
             }
         }

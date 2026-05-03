@@ -31,12 +31,29 @@
                        Orientation="Horizontal" />
         </ItemsPanelTemplate>
 
+        <Style x:Key="tabHeaderListViewStyle"
+               TargetType="{x:Type ListView}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ListView}">
+                        <Border CornerRadius="2"
+                                BorderThickness="2">
+                            <ScrollViewer VerticalScrollBarVisibility="Disabled"
+                                          HorizontalScrollBarVisibility="Auto">
+                                <ItemsPresenter />
+                            </ScrollViewer>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
         <Style x:Key="tabHeaderListViewItemStyle"
                TargetType="{x:Type ListViewItem}">
             <Setter Property="Cursor"
                     Value="Hand" />
             <Setter Property="IsSelected"
-                    Value="{Binding IsSelected,Mode=TwoWay}"/>
+                    Value="{Binding IsSelected,Mode=TwoWay}" />
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type ListViewItem}">
@@ -46,9 +63,9 @@
                                 CornerRadius="2"
                                 Margin="0,0,5,0">
                             <!--<Label Content="{Binding}"
-                       VerticalContentAlignment="Center"
-                       HorizontalContentAlignment="Center"
-                       FontSize="13" />-->
+               VerticalContentAlignment="Center"
+               HorizontalContentAlignment="Center"
+               FontSize="13" />-->
                             <ContentPresenter x:Name="ContentPresenter"
                                               ContentTemplate="{TemplateBinding ContentTemplate}"
                                               Content="{TemplateBinding Content}"
@@ -74,23 +91,6 @@
                 </Setter.Value>
             </Setter>
         </Style>
-
-        <Style x:Key="tabHeaderListViewStyle"
-               TargetType="{x:Type ListView}">
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type ListView}">
-                        <Border CornerRadius="2"
-                                BorderThickness="2">
-                            <ScrollViewer VerticalScrollBarVisibility="Disabled"
-                                          HorizontalScrollBarVisibility="Auto">
-                                <ItemsPresenter />
-                            </ScrollViewer>
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
     </UserControl.Resources>
 
     <!--<ScrollViewer HorizontalScrollBarVisibility="Auto"
@@ -109,7 +109,7 @@
               ItemTemplate="{StaticResource tabHeaderDataTemplate}"
               SelectionMode="Single"
               SelectedItem="{Binding Path=SelectedTabHeaderItem,Mode=TwoWay}"
-              VerticalAlignment="Center"
-              Cursor="" />
+              VerticalAlignment="Center">
+    </ListView>
 
 </UserControl>
