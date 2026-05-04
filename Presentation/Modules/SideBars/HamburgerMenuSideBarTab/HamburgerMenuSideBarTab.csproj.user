@@ -8,7 +8,7 @@
     <Page Update="TabBit\TabContentItemView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="TabBit\TabHubView.xaml">
+    <Page Update="TabBit\TabContentView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="TabBit\TabHeaderItemView.xaml">
@@ -17,7 +17,7 @@
     <Page Update="TabBit\TabHeaderView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="TabBit\TabContentView.xaml">
+    <Page Update="TabBit\TabHubView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Tab\TabItemHeaderView.xaml">

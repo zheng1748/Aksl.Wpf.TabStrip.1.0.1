@@ -16,5 +16,5 @@ TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 207-745646164
 CoolingPie\CoolingPieHubView.xaml;CoolingPie\CoolingPieView.xaml;PipelineSystem\PipelineSystemHubView.xaml;Pipeline\PipelineHubView.xaml;Pipeline\PipelineView.xaml;
 
-False
+True
 

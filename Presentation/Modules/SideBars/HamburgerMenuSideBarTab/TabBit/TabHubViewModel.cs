@@ -36,6 +36,14 @@ namespace Aksl.TabBits.ViewModels
         public TabHeaderViewModel TabHeaderViewModel { get; set; }
 
         public TabContentViewModel TabContentViewModel { get; set; }
+
+        public bool HasContent
+        {
+            get
+            { 
+                return TabContentViewModel.ActiveTabContentItems is not null &&TabContentViewModel.ActiveTabContentItems.Any();
+            }
+        }
         #endregion
 
         #region RegisterPropertyChanged Method
@@ -51,6 +59,17 @@ namespace Aksl.TabBits.ViewModels
                         {
                             TabContentViewModel.SetTabItemOnSelected(thvm.SelectedTabHeaderItem.TabInformation);
                         }
+                    }
+                }
+            };
+
+            TabContentViewModel.PropertyChanged += (sender, e) =>
+            {
+                if (sender is TabContentViewModel tvvm)
+                {
+                    if (e.PropertyName == nameof(TabContentViewModel.ActiveTabContentItems))
+                    {
+                        RaisePropertyChanged(nameof(HasContent));
                     }
                 }
             };
@@ -96,9 +115,9 @@ namespace Aksl.TabBits.ViewModels
 
         public bool IsActiveTabItem(TabInformation tabInformation)
         {
-            var isExists = TabHeaderViewModel.IsActiveTabItem(tabInformation);
+            var isActive = TabHeaderViewModel.IsActiveTabItem(tabInformation);
 
-            return isExists;
+            return isActive;
         }
         #endregion
 

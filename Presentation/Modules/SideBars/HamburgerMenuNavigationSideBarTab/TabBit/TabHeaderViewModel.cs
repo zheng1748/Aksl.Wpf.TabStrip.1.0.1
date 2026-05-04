@@ -66,7 +66,7 @@ namespace Aksl.TabBits.ViewModels
                     if (SelectedTabHeaderItem is null)
                     {
                         //SelectedTabHeaderItem.IsSelected = false;
-                       nextTabHeaderItemViewModel.IsSelected = true;
+                        nextTabHeaderItemViewModel.IsSelected = true;
                     }
 
                     //if (SelectedTabHeaderItem is not null && SelectedTabHeaderItem == nextTabHeaderItemViewModel)
@@ -146,13 +146,17 @@ namespace Aksl.TabBits.ViewModels
             {
                 if (SelectedTabHeaderItem is null)
                 {
+                    //tabHeaderItemViewModel.IsSelected = true;
+
                     SelectedTabHeaderItem = tabHeaderItemViewModel;
                     //SelectedTabHeaderItem.IsSelected = true;
                 }
 
                 if (SelectedTabHeaderItem is not null && tabHeaderItemViewModel != SelectedTabHeaderItem)
                 {
-                    //SelectedTabHeaderItem.IsSelected = false;
+                    //tabHeaderItemViewModel.IsSelected = true;
+
+                    SelectedTabHeaderItem.IsSelected = false;
 
                     SelectedTabHeaderItem = tabHeaderItemViewModel;
                   //  SelectedTabHeaderItem.IsSelected = true;
@@ -294,6 +298,11 @@ namespace Aksl.TabBits.ViewModels
 
         private bool IsEqualsTabHeaderItemViewModel(TabHeaderItemViewModel tabHeaderItemViewModel, TabHeaderItemViewModel otherTabHeaderItemViewModel)
         {
+            if (tabHeaderItemViewModel is null || otherTabHeaderItemViewModel is null)
+            {
+                return false;
+            }
+
             var isEquals = (IsEqualsNameOrTitle(tabHeaderItemViewModel?.Name, otherTabHeaderItemViewModel?.Name) ||
                             IsEqualsNameOrTitle(tabHeaderItemViewModel?.Title, otherTabHeaderItemViewModel?.Title));
 

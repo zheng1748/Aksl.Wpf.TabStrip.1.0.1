@@ -65,7 +65,7 @@ namespace Aksl.TabBits.ViewModels
                 ActiveTabContentItems.Add(newTabContentItemViewModel);
             }
 
-            AddPropertyChanged();
+           // AddPropertyChanged();
             void AddPropertyChanged()
             {
                 newTabContentItemViewModel.PropertyChanged += (sender, e) =>
@@ -74,12 +74,12 @@ namespace Aksl.TabBits.ViewModels
                     {
                         if (e.PropertyName == nameof(TabContentItemViewModel.IsSelected))
                         {
-                            if (SelectedTabContentItem is null)
+                            if (SelectedTabContentItem is null && (tcivm is not null && tcivm.IsSelected))
                             {
                                 SelectedTabContentItem = tcivm;
                             }
 
-                            if (SelectedTabContentItem is not null && tcivm != SelectedTabContentItem)
+                            if (SelectedTabContentItem is not null && (tcivm is not null && tcivm.IsSelected && tcivm != SelectedTabContentItem))
                             {
                                 SelectedTabContentItem.IsSelected = false;
 
@@ -250,6 +250,11 @@ namespace Aksl.TabBits.ViewModels
 
         private bool IsEqualsTabContentItemViewModel(TabContentItemViewModel tabContentItemViewModel, TabContentItemViewModel otherTabContentItemViewModel)
         {
+            if (tabContentItemViewModel is null || otherTabContentItemViewModel is null)
+            {
+                return false;
+            }
+
             var isEquals = (IsEqualsNameOrTitle(tabContentItemViewModel?.Name, otherTabContentItemViewModel?.Name) ||
                             IsEqualsNameOrTitle(tabContentItemViewModel?.Title, otherTabContentItemViewModel?.Title));
 

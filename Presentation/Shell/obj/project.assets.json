@@ -1153,6 +1153,27 @@
           "Microsoft.WindowsDesktop.App.WPF"
         ]
       },
+      "Aksl.Modules.RadarMap/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Aksl.Infrastructure": "1.0.0",
+          "Aksl.Toolkit": "1.0.0",
+          "Aksl.Toolkit.Controls": "1.0.0",
+          "Prism.Core": "1.0.0",
+          "Prism.Unity": "1.0.0",
+          "Prism.Wpf": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Aksl.Modules.RadarMap.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Aksl.Modules.RadarMap.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
       "Aksl.Modules.Thermometer/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -3013,6 +3034,11 @@
       "path": "../Modules/Industry/PipelineView/PipelineView.csproj",
       "msbuildProject": "../Modules/Industry/PipelineView/PipelineView.csproj"
     },
+    "Aksl.Modules.RadarMap/1.0.0": {
+      "type": "project",
+      "path": "../Modules/RadarMap/RadarMapView.csproj",
+      "msbuildProject": "../Modules/RadarMap/RadarMapView.csproj"
+    },
     "Aksl.Modules.Thermometer/1.0.0": {
       "type": "project",
       "path": "../Modules/Industry/ThermometerrView/ThermometerView.csproj",
@@ -3056,6 +3082,7 @@
       "Aksl.Modules.Home >= 1.0.0",
       "Aksl.Modules.Others >= 1.0.0",
       "Aksl.Modules.Pipeline >= 1.0.0",
+      "Aksl.Modules.RadarMap >= 1.0.0",
       "Aksl.Modules.Thermometer >= 1.0.0",
       "Aksl.Toolkit >= 1.0.0",
       "Aksl.Toolkit.Controls >= 1.0.0",
@@ -3148,6 +3175,9 @@
             },
             "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.TabStrip.1.0.1\\Presentation\\Modules\\Others\\OthersView\\OthersView.csproj": {
               "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.TabStrip.1.0.1\\Presentation\\Modules\\Others\\OthersView\\OthersView.csproj"
+            },
+            "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.TabStrip.1.0.1\\Presentation\\Modules\\RadarMap\\RadarMapView.csproj": {
+              "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.TabStrip.1.0.1\\Presentation\\Modules\\RadarMap\\RadarMapView.csproj"
             },
             "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.TabStrip.1.0.1\\Presentation\\Modules\\SideBars\\HamburgerMenuNavigationSideBarTab\\HamburgerMenuNavigationSideBarTab.csproj": {
               "projectPath": "C:\\Users\\zheng\\Documents\\GitHub\\Aksl.Wpf.TabStrip.1.0.1\\Presentation\\Modules\\SideBars\\HamburgerMenuNavigationSideBarTab\\HamburgerMenuNavigationSideBarTab.csproj"

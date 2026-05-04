@@ -25,6 +25,7 @@
     <None Remove="Data\Industry.xml" />
     <None Remove="Data\Others.xml" />
     <None Remove="Data\Pipelines.xml" />
+    <None Remove="Data\Radars.xml" />
     <None Remove="Data\Thermometers.xml" />
   </ItemGroup>
 
@@ -51,6 +52,9 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Data\Pipelines.xml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Data\Radars.xml">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Data\Thermometers.xml">
@@ -113,6 +117,7 @@
     <ProjectReference Include="..\Modules\Industry\PipelineView\PipelineView.csproj" />
     <ProjectReference Include="..\Modules\Industry\ThermometerrView\ThermometerView.csproj" />
     <ProjectReference Include="..\Modules\Others\OthersView\OthersView.csproj" />
+    <ProjectReference Include="..\Modules\RadarMap\RadarMapView.csproj" />
     <ProjectReference Include="..\Modules\SideBars\HamburgerMenuNavigationSideBarTab\HamburgerMenuNavigationSideBarTab.csproj" />
     <ProjectReference Include="..\Modules\SideBars\HamburgerMenuSideBarTab\HamburgerMenuSideBarTab.csproj" />
     <ProjectReference Include="..\Modules\SideBars\HamburgerMenuTreeSideBarTab\HamburgerMenuTreeSideBarTab.csproj" />

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Aksl.Toolkit.Controls")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4a27b866b5a1c23dc8938e20035bcc8a9d06f9f1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Aksl.Toolkit.Controls")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Aksl.Toolkit.Controls")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

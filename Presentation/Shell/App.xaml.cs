@@ -38,6 +38,7 @@ using Aksl.Modules.Thermometer;
 using Aksl.Modules.CoolingTower;
 using Aksl.Modules.AirCompresser;
 using Aksl.Modules.Others;
+using Aksl.Modules.RadarMap;
 
 namespace Aksl.Wpf.Unity
 {
@@ -111,7 +112,8 @@ namespace Aksl.Wpf.Unity
                                                                 "pack://application:,,,/Aksl.Wpf.Shell;Component/Data/Thermometers.xml",
                                                                 "pack://application:,,,/Aksl.Wpf.Shell;Component/Data/CoolingTowers.xml",
                                                                 "pack://application:,,,/Aksl.Wpf.Shell;Component/Data/AirCompressers.xml",
-                                                                "pack://application:,,,/Aksl.Wpf.Shell;Component/Data/Others.xml"
+                                                                "pack://application:,,,/Aksl.Wpf.Shell;Component/Data/Others.xml",
+                                                                "pack://application:,,,/Aksl.Wpf.Shell;Component/Data/Radars.xml"
                                                                 });
 
                 await menuService.CreateMenusAsync();
@@ -155,6 +157,7 @@ namespace Aksl.Wpf.Unity
             _ = moduleCatalog.AddModule(nameof(AirCompresserModule), typeof(AirCompresserModule).AssemblyQualifiedName, InitializationMode.WhenAvailable);
 
             _ = moduleCatalog.AddModule(nameof(OthersModule), typeof(OthersModule).AssemblyQualifiedName, InitializationMode.WhenAvailable);
+            _ = moduleCatalog.AddModule(nameof(RadarMapModule), typeof(RadarMapModule).AssemblyQualifiedName, InitializationMode.WhenAvailable);
 
             _ = moduleCatalog.AddModule(typeof(HamburgerMenuSideBarTabModule).Name, typeof(HamburgerMenuSideBarTabModule).AssemblyQualifiedName, InitializationMode.WhenAvailable);
             _ = moduleCatalog.AddModule(typeof(HamburgerMenuNavigationSideBarTabModule).Name, typeof(HamburgerMenuNavigationSideBarTabModule).AssemblyQualifiedName, InitializationMode.WhenAvailable);

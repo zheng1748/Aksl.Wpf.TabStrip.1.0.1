@@ -118,14 +118,14 @@
             <ColumnDefinition Width="2" />
             <ColumnDefinition Width="Auto" />
             <!--<ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="Auto" />-->
+              <ColumnDefinition Width="Auto" />-->
         </Grid.ColumnDefinitions>
         <TextBlock Grid.Column="0"
                    TextWrapping="Wrap"
                    VerticalAlignment="Center"
                    Margin="2,0,0,2">
-                  <Run Text="{Binding Path=Title,Mode=OneWay}"
-                       FontSize="16" />
+                <Run Text="{Binding Path=Title,Mode=OneWay}"
+                     FontSize="16" />
         </TextBlock >
         <Button Grid.Column="2"
                 VerticalAlignment="Center"

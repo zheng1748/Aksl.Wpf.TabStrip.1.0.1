@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Page Update="RadarMap\Views\RadarMapHubView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Radar\Views\RadarItemView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Radar\Views\RadarHubView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Radar\Views\RadarView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

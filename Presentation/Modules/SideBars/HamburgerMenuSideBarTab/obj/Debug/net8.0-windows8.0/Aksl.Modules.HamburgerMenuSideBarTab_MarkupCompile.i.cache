@@ -16,5 +16,5 @@ TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 2081129143513
 Navigations\Industry\IndustryHamburgerMenuSideBarTabHubView.xaml;TabBit\TabContentItemView.xaml;TabBit\TabContentView.xaml;TabBit\TabHeaderItemView.xaml;TabBit\TabHeaderView.xaml;TabBit\TabHubView.xaml;Tab\TabItemHeaderView.xaml;Tab\TabItemView.xaml;Tab\TabView.xaml;Views\HamburgerMenuSideBarItemView.xaml;Views\HamburgerMenuSideBarTabHubView.xaml;Views\HamburgerMenuSideBarView.xaml;
 
-True
+False
 

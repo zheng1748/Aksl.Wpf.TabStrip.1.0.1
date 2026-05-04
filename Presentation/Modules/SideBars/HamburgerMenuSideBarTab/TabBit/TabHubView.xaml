@@ -9,16 +9,14 @@
              xmlns:viewmodels="clr-namespace:Aksl.TabBits.ViewModels"
              mc:Ignorable="d"
              d:DesignHeight="450"
-             d:DesignWidth="800" 
+             d:DesignWidth="800"
              prism:ViewModelLocator.AutoWireViewModel="True">
     <UserControl.Resources>
-
-    
     </UserControl.Resources>
 
-    <Grid Background="WhiteSmoke">
+    <Grid Background="White">
         <Grid.RowDefinitions>
-            <RowDefinition Height="50" />
+            <RowDefinition Height="40" />
             <RowDefinition Height="8" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
@@ -33,38 +31,21 @@
                    Margin="0,0,0,0"
                    Height="8"
                    HorizontalAlignment="Stretch"
-                   BorderBrush="#193441" />
-        <!--<GridSplitter  Grid.Row="1"
-                      Margin="0,1,0,0" HorizontalAlignment="Stretch"
-                      BorderBrush="#193441" />-->
-
-        <!--<Border Margin="0"
-               Background="WhiteSmoke"
-               HorizontalAlignment="Stretch"
-               BorderThickness="2"
-               CornerRadius="5"
-               BorderBrush="Black">-->
-
-        <Grid Grid.Row="2"
-              Margin="2"
-              HorizontalAlignment="Stretch"
-              VerticalAlignment="Stretch">
-            <views:TabContentView DataContext="{Binding Path=TabContentViewModel}" />
-        </Grid>
-
-        <!--<ContentControl Grid.Row="2"
-                        Margin="2"
-                        Content="{Binding ViewElement,Mode=OneWay}">
-              
-            <ContentControl.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform />
-                    <SkewTransform />
-                    <RotateTransform />
-                    <TranslateTransform />
-                </TransformGroup>
-            </ContentControl.RenderTransform>
-        </ContentControl>-->
-        <!--</Border>-->
+                   BorderBrush="#193441"
+                   Visibility="{Binding Path=HasContent,Converter={StaticResource booleanToVisibilityConverter}}" />
+        
+        <Border Grid.Row="2"
+                Margin="2"
+                Background="White"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                BorderThickness="2"
+                CornerRadius="5"
+                BorderBrush="Transparent">
+            <Grid>
+                <!--<views:TabContentView DataContext="{Binding Path=TabContentViewModel}" />-->
+                <views:TabContentItemView DataContext="{Binding Path=TabContentViewModel.SelectedTabContentItem}" />
+            </Grid>
+        </Border>
     </Grid>
 </UserControl>

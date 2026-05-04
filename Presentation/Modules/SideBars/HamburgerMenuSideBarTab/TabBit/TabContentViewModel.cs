@@ -37,8 +37,6 @@ namespace Aksl.TabBits.ViewModels
         public ObservableCollection<TabContentItemViewModel> ActiveTabContentItems { get; }
         public List<TabContentItemViewModel> StoreTabContentItems { get; }
 
-      //  public ObservableCollection<TabContentItemViewModel> TabContentItems { get; set; }
-
         private TabContentItemViewModel _selectedTabContentItem;
         public TabContentItemViewModel SelectedTabContentItem
         {

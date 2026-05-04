@@ -37,8 +37,6 @@ namespace Aksl.TabBits.ViewModels
         public ObservableCollection<TabHeaderItemViewModel> ActiveTabHeaderItems { get; }
         public List<TabHeaderItemViewModel> StoreTabHeaderItems { get; }
 
-      //  public ObservableCollection<TabHeaderItemViewModel> TabHeaderItems { get; set; }
-
         private TabHeaderItemViewModel _selectedTabHeaderItem;
         public TabHeaderItemViewModel SelectedTabHeaderItem
         {
@@ -47,7 +45,43 @@ namespace Aksl.TabBits.ViewModels
         }
         #endregion
 
+        #region Event Handler
         public event EventHandler RequestClose;
+        private void OnTabHeaderItemRequestClose(object sender, EventArgs e)
+        {
+            if (sender is TabHeaderItemViewModel tabHeaderItemViewModel)
+            {
+                TabHeaderItemViewModel nextTabHeaderItemViewModel = default;
+                if (ActiveTabHeaderItems.Any())
+                {
+                    nextTabHeaderItemViewModel = GetNextActiveTabHeaderItemByInfo(tabHeaderItemViewModel.TabInformation);
+                }
+
+                Remove(tabHeaderItemViewModel);
+
+                RequestClose?.Invoke(sender, EventArgs.Empty);
+
+                if (nextTabHeaderItemViewModel is not null)
+                {
+                    if (SelectedTabHeaderItem is null)
+                    {
+                        //SelectedTabHeaderItem.IsSelected = false;
+                       nextTabHeaderItemViewModel.IsSelected = true;
+                    }
+
+                    //if (SelectedTabHeaderItem is not null && SelectedTabHeaderItem == nextTabHeaderItemViewModel)
+                    //{
+                    //    SelectedTabHeaderItem.IsSelected = false;
+                    //}
+
+                    //nextTabHeaderItemViewModel.IsSelected = true;
+                    // nextTabHeaderItemViewModel.IsSelected = true;
+                    // SelectedTabHeaderItem = nextTabHeaderItemViewModel;
+                    // SelectedTabHeaderItem.IsSelected = true;
+                }
+            }
+        }
+        #endregion
 
         #region Methods
         public void Add(TabInformation tabInformation)
@@ -106,48 +140,23 @@ namespace Aksl.TabBits.ViewModels
             }
         }
 
-        private void OnTabHeaderItemRequestClose(object sender, EventArgs e)
-        {
-            if (sender is TabHeaderItemViewModel tabHeaderItemViewModel)
-            {
-                TabHeaderItemViewModel nextTabHeaderItemViewModel=default;
-                if (ActiveTabHeaderItems.Any())
-                {
-                    nextTabHeaderItemViewModel = GetNextActiveTabHeaderItemByInfo(tabHeaderItemViewModel.TabInformation);
-                }
-
-                Remove(tabHeaderItemViewModel);
-
-                RequestClose?.Invoke(sender, EventArgs.Empty);
-
-                if (nextTabHeaderItemViewModel is not null)
-                {
-                    if (SelectedTabHeaderItem is not null)
-                    {
-                        SelectedTabHeaderItem.IsSelected = false;
-                    }
-
-                    SelectedTabHeaderItem = nextTabHeaderItemViewModel;
-                   // SelectedTabHeaderItem.IsSelected = true;
-                }
-            }
-        }
-
         private void SetActiveTabHeaderItem(TabHeaderItemViewModel tabHeaderItemViewModel)
         {
             if (tabHeaderItemViewModel is not null && !IsEqualsTabHeaderItemViewModel(tabHeaderItemViewModel, SelectedTabHeaderItem))
             {
                 if (SelectedTabHeaderItem is null)
                 {
-                    SelectedTabHeaderItem = tabHeaderItemViewModel;
+                    tabHeaderItemViewModel.IsSelected = true;
+                    // SelectedTabHeaderItem = tabHeaderItemViewModel;
                     //SelectedTabHeaderItem.IsSelected = true;
                 }
 
                 if (SelectedTabHeaderItem is not null && tabHeaderItemViewModel != SelectedTabHeaderItem)
                 {
-                    SelectedTabHeaderItem.IsSelected = false;
+                    tabHeaderItemViewModel.IsSelected = true;
+                    //SelectedTabHeaderItem.IsSelected = false;
 
-                    SelectedTabHeaderItem = tabHeaderItemViewModel;
+                  //  SelectedTabHeaderItem = tabHeaderItemViewModel;
                   //  SelectedTabHeaderItem.IsSelected = true;
 
                     //tabHeaderItemViewModel.IsSelected = true;

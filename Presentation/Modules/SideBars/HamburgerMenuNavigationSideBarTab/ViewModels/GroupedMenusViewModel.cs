@@ -150,7 +150,7 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
                 {
                     //_selectedMenuItemItem = null;
                      _previewSelectedMenuItem = null;
-                   // SelectedMenuItem = null;
+                    SelectedMenuItem = null;
 
                     groupedMenu.MenuContent.ClearSelectedMenuItem();
                     _currentGroupeIndex = -1;
@@ -292,7 +292,7 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
 
                                         _currentGroupeIndex = matchGroupedMenu.MenuContent.GroupIndex;
                                         matchGroupedMenu.MenuItemItem.IsSelected = true;
-                                        SelectedMenuItem = matchGroupedMenu.MenuItemItem;
+                                        //SelectedMenuItem = matchGroupedMenu.MenuItemItem;
                                     }
                                 }
                                 else if (SelectedNoGroupedMenuItem is not null)
@@ -310,7 +310,7 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
 
                                     _currentGroupeIndex = matchGroupedMenu.MenuContent.GroupIndex;
                                     matchGroupedMenu.MenuItemItem.IsSelected = true;
-                                    SelectedMenuItem = matchGroupedMenu.MenuItemItem;
+                                   // SelectedMenuItem = matchGroupedMenu.MenuItemItem;
                                     // ClearSelectedNoGroupedMenuItem();
                                 }
                             }
@@ -329,7 +329,9 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
                                 {
                                     if (matchNoGroupedMenu != SelectedNoGroupedMenuItem)
                                     {
-                                        SelectedNoGroupedMenuItem = matchNoGroupedMenu;
+                                       //SelectedNoGroupedMenuItem.IsSelected = false;
+                                        matchNoGroupedMenu.IsSelected = true;
+                                        //SelectedNoGroupedMenuItem = matchNoGroupedMenu;
                                     }
                                 }
                                 else if (SelectedMenuItem is not null)
@@ -337,9 +339,6 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
                                     matchNoGroupedMenu.IsSelected = true;
                                     SelectedNoGroupedMenuItem = matchNoGroupedMenu;
                                 }
-                                //SetSelectedGroupedMenuMenuItem();
-
-                                //SetSelectedNoGroupedMenuMenuItem();
                             }
                         }
                     }
@@ -396,7 +395,7 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
                                     if (_currentGroupeIndex == gmvm.GroupIndex)
                                     {
                                         //SelectedMenuItem = gmvm.MenuContent.SelectedMenuItem;
-                                        if (SelectedMenuItem != gmvm.SelectedMenuItem)
+                                        if ((gmvm.SelectedMenuItem is not null && gmvm.SelectedMenuItem.IsSelected) && SelectedMenuItem != gmvm.SelectedMenuItem)
                                         {
                                             SelectedMenuItem = gmvm.SelectedMenuItem;
                                         }
@@ -415,7 +414,7 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
                                         }
 
                                         _currentGroupeIndex = gmvm.GroupIndex;
-                                        if (SelectedMenuItem != gmvm.SelectedMenuItem)
+                                        if ((gmvm.SelectedMenuItem is not null && gmvm.SelectedMenuItem.IsSelected) && SelectedMenuItem != gmvm.SelectedMenuItem)
                                         {
                                             SelectedMenuItem = gmvm.SelectedMenuItem;
                                         }
@@ -452,12 +451,14 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
 
                                 if (e.PropertyName == nameof(NoGroupedMenuViewModel.SelectedNoGroupedMenuItem))
                                 {
-                                    if (SelectedNoGroupedMenuItem is null)
+                                    if (SelectedNoGroupedMenuItem is null && 
+                                       (ngmvm.SelectedNoGroupedMenuItem is not null && ngmvm.SelectedNoGroupedMenuItem.IsSelected && ngmvm.SelectedNoGroupedMenuItem != SelectedNoGroupedMenuItem))
                                     {
                                         SelectedNoGroupedMenuItem = ngmvm.SelectedNoGroupedMenuItem;
                                     }
 
-                                    if (SelectedNoGroupedMenuItem is not null && (ngmvm.SelectedNoGroupedMenuItem is not null  && ngmvm.SelectedNoGroupedMenuItem.IsSelected && ngmvm.SelectedNoGroupedMenuItem != SelectedNoGroupedMenuItem))
+                                    if (SelectedNoGroupedMenuItem is not null &&
+                                        (ngmvm.SelectedNoGroupedMenuItem is not null  && ngmvm.SelectedNoGroupedMenuItem.IsSelected && ngmvm.SelectedNoGroupedMenuItem != SelectedNoGroupedMenuItem))
                                     {
                                         SelectedNoGroupedMenuItem.IsSelected = false;
 

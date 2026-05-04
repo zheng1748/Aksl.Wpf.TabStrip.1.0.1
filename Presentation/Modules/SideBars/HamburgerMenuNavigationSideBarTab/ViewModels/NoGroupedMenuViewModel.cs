@@ -52,12 +52,12 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
             }
         }
 
-        private bool _isLoading;
-        public bool IsLoading
-        {
-            get => _isLoading;
-            set => SetProperty<bool>(ref _isLoading, value);
-        }
+        //private bool _isLoading;
+        //public bool IsLoading
+        //{
+        //    get => _isLoading;
+        //    set => SetProperty<bool>(ref _isLoading, value);
+        //}
         #endregion
 
         #region Clear Selected NoGroupeMenuItem Method
@@ -66,7 +66,7 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
             if (SelectedNoGroupedMenuItem is not null)
             {
                 SelectedNoGroupedMenuItem.IsSelected = false;
-                SelectedNoGroupedMenuItem = null;
+               // SelectedNoGroupedMenuItem = null;
             }
         }
 
@@ -82,13 +82,13 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
         #region Create MenuItem ViewModel Method
         internal void CreateMenuItemViewModels()
         {
-            IsLoading = true;
+            //IsLoading = true;
 
             NoGroupedMenuItemViewModel noGroupedMenuItemViewModel = new(Index, _menuItem);
 
             NoGroupedMenuItems.Add(noGroupedMenuItemViewModel);
 
-            IsLoading = false;
+            //IsLoading = false;
         }
         #endregion
     }
