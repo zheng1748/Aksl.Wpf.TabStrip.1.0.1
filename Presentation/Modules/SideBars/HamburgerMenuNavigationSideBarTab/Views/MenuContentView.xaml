@@ -71,8 +71,9 @@
             </Style.Triggers>
         </Style>
     </UserControl.Resources>
- 
-    <ListView x:Name="menuListView" IsSynchronizedWithCurrentItem="False"
+
+    <ListView x:Name="menuListView"
+              IsSynchronizedWithCurrentItem="False"
               ItemContainerStyle="{StaticResource menuListViewItemStyle}"
               ItemsSource="{Binding Source={StaticResource menuSource}}"
               ItemTemplate="{Binding Source={StaticResource menuDataTemplate}}"

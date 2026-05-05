@@ -75,8 +75,8 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Aksl.Modules.HamburgerMenuNavigationSideBarTab;component/navigations/industry/th" +
-                    "ermometerview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Aksl.Modules.HamburgerMenuNavigationSideBarTab;V1.0.0.0;component/navigations/in" +
+                    "dustry/thermometerview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Navigations\Industry\ThermometerView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
