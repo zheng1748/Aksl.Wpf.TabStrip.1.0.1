@@ -190,7 +190,7 @@ namespace Aksl.TabBits.ViewModels
             {
                 if (IsExistsActivTabContentItems(tabContentItemViewModel.Name, tabContentItemViewModel.Title))
                 {
-                    if (tabContentItemViewModel.IsSelected)
+                    if (SelectedTabContentItem == tabContentItemViewModel ||  tabContentItemViewModel.IsSelected)
                     {
                         tabContentItemViewModel.IsSelected = false;
                         SelectedTabContentItem = null;

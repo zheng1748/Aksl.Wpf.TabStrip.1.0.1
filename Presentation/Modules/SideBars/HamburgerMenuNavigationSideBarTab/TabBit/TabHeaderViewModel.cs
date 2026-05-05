@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -178,9 +179,15 @@ namespace Aksl.TabBits.ViewModels
             {
                 if (IsExistsActivTabHeaderItems(tabHeaderItemViewModel.Name, tabHeaderItemViewModel.Title))
                 {
-                    if (tabHeaderItemViewModel.IsSelected)
+                    if (SelectedTabHeaderItem == tabHeaderItemViewModel || tabHeaderItemViewModel.IsSelected)
                     {
                         tabHeaderItemViewModel.IsSelected = false;
+
+                        var isIsSelectedToActive= ActiveTabHeaderItems.Any(ti => ti.IsSelected && (IsEqualsNameOrTitle(ti.Name, tabHeaderItemViewModel.Name) || IsEqualsNameOrTitle(ti.Title, tabHeaderItemViewModel.Title)));
+                        var isIsSelectedToStore = StoreTabHeaderItems.Any(ti => ti.IsSelected && (IsEqualsNameOrTitle(ti.Name, tabHeaderItemViewModel.Name) || IsEqualsNameOrTitle(ti.Title, tabHeaderItemViewModel.Title)));
+
+                        Debug.Assert(isIsSelectedToActive is false);
+                        Debug.Assert(isIsSelectedToStore is false);
                     }
 
                     ActiveTabHeaderItems.Remove(tabHeaderItemViewModel);

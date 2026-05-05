@@ -231,6 +231,19 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
 
                 try
                 {
+                    Aksl.TabBits.TabInformation tabInformation = new()
+                    {
+                        Name = currentMenuItem.Name,
+                        Title = currentMenuItem.Title,
+                        IconKind = currentMenuItem.IconKind,
+                        ViewName = currentMenuItem.ViewName
+                    };
+
+                    if (TabHubViewModel.IsActiveTabItem(tabInformation))
+                    {
+                        return;
+                    }
+
                     IEnumerable<MenuItem> subMenus = null;
                     Aksl.Tabs.Views.TabView subTabView = default;
 
@@ -305,24 +318,10 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
 
                     bool IsExistsViewInSubMenu(MenuItem mi) => (mi is not null) && mi.SubMenus.Any(sm => !string.IsNullOrEmpty(sm.ViewName));
 
-                    Aksl.TabBits.TabInformation tabInformation = new()
-                    {
-                        Name = currentMenuItem.Name,
-                        Title = currentMenuItem.Title,
-                        IconKind = currentMenuItem.IconKind,
-                        ViewName = currentMenuItem.ViewName
-                    };
-
                     if (subTabView is not null)
                     {
                         tabInformation.ViewElement = subTabView;
                     }
-
-                    if (TabHubViewModel.IsActiveTabItem(tabInformation))
-                    {
-                        return;
-                    }
-
                     await LoadViewAsync();
 
                     #region LoadView Method
