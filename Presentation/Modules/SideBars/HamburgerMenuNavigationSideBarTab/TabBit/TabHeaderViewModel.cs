@@ -57,6 +57,11 @@ namespace Aksl.TabBits.ViewModels
                     nextTabHeaderItemViewModel = GetNextActiveTabHeaderItemByInfo(tabHeaderItemViewModel.TabInformation);
                 }
 
+                //if (SelectedTabHeaderItem == tabHeaderItemViewModel)
+                //{
+                //    SelectedTabHeaderItem.IsSelected = false;
+                //}
+
                 Remove(tabHeaderItemViewModel);
 
                 RequestClose?.Invoke(sender, EventArgs.Empty);
@@ -156,7 +161,7 @@ namespace Aksl.TabBits.ViewModels
                 {
                     //tabHeaderItemViewModel.IsSelected = true;
 
-                    SelectedTabHeaderItem.IsSelected = false;
+                    //SelectedTabHeaderItem.IsSelected = false;
 
                     SelectedTabHeaderItem = tabHeaderItemViewModel;
                   //  SelectedTabHeaderItem.IsSelected = true;
@@ -173,6 +178,17 @@ namespace Aksl.TabBits.ViewModels
             {
                 if (IsExistsActivTabHeaderItems(tabHeaderItemViewModel.Name, tabHeaderItemViewModel.Title))
                 {
+                    if (tabHeaderItemViewModel.IsSelected)
+                    {
+                        tabHeaderItemViewModel.IsSelected = false;
+                    }
+
+                    //var storeTabHeaderItem = GetStoreTabHeaderItemViewModelByNameOrTitle(tabHeaderItemViewModel.Name, tabHeaderItemViewModel.Title);
+                    //if (storeTabHeaderItem is not null && storeTabHeaderItem.IsSelected)
+                    //{
+                    //    storeTabHeaderItem.IsSelected = false;
+                    //}
+
                     ActiveTabHeaderItems.Remove(tabHeaderItemViewModel);
 
                     tabHeaderItemViewModel.RequestClose -= this.OnTabHeaderItemRequestClose;
@@ -189,6 +205,13 @@ namespace Aksl.TabBits.ViewModels
             }
         }
 
+        private TabHeaderItemViewModel GetStoreTabHeaderItemViewModelByNameOrTitle(string name, string title)
+        {
+            var storeTabHeaderItem = StoreTabHeaderItems.FirstOrDefault(ti => IsEqualsNameOrTitle(ti.Name, name) || IsEqualsNameOrTitle(ti.Title, title));
+
+            return storeTabHeaderItem;
+        }
+
         public void SetTabHeaderItem(TabInformation tabInformation)
         {
             var activeTabHeaderItem = GetActiveTabHeaderItemByInfo(tabInformation);
@@ -198,7 +221,7 @@ namespace Aksl.TabBits.ViewModels
             }
             else
             {
-                var storeTabHeaderItem = GetStoreTabHeaderItemViewModel(tabInformation);
+                var storeTabHeaderItem = GetStoreTabHeaderItemViewModelByInfo(tabInformation);
                 if (storeTabHeaderItem is not null)
                 {
                     AddCore(storeTabHeaderItem);
@@ -215,7 +238,7 @@ namespace Aksl.TabBits.ViewModels
             }
             else
             {
-                var storeTabHeaderItem = GetStoreTabHeaderItemViewModel(tabInformation);
+                var storeTabHeaderItem = GetStoreTabHeaderItemViewModelByInfo(tabInformation);
                 if (storeTabHeaderItem is not null)
                 {
                     ActiveTabHeaderItems.Add(storeTabHeaderItem);
@@ -233,7 +256,7 @@ namespace Aksl.TabBits.ViewModels
             return activeTabHeaderItem;
         }
 
-        public TabHeaderItemViewModel GetStoreTabHeaderItemViewModel(TabInformation tabInformation)
+        public TabHeaderItemViewModel GetStoreTabHeaderItemViewModelByInfo(TabInformation tabInformation)
         {
             var storeTabHeaderItem = StoreTabHeaderItems.FirstOrDefault(ti => IsEqualsNameOrTitle(ti.Name, tabInformation.Name) || IsEqualsNameOrTitle(ti.Title, tabInformation.Title));
 

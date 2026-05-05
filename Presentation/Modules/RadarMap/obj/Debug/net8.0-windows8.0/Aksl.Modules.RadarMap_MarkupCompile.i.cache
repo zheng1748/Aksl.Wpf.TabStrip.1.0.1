@@ -16,5 +16,5 @@ TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 207-745646164
 RadarMap\Views\RadarMapHubView.xaml;RadarMap\Views\RadarMapView.xaml;Radar\Views\RadarHubView.xaml;Radar\Views\RadarItemView.xaml;Radar\Views\RadarView.xaml;
 
-True
+False
 

@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="Aksl.Modules.HamburgerMenuNavigationSideBarTab.Views.PipelinesView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:ei="http://schemas.microsoft.com/xaml/behaviors"
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:views="clr-namespace:Aksl.Modules.HamburgerMenuNavigationSideBarTab.Views"
+             xmlns:tabBitViews="clr-namespace:Aksl.TabBits.Views"
+             xmlns:a="clr-namespace:Aksl.Modules.HamburgerMenuNavigationSideBarTab"
+             xmlns:sv="clr-namespace:Aksl.Modules.HamburgerMenuNavigationSideBarTab"
+             mc:Ignorable="d"
+             x:Name="IndustryHamburgerMenuNavigationSideBarHuber"
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <UserControl.Resources>
+
+        <Storyboard x:Key="waitingBarStoryboard">
+            <DoubleAnimation Storyboard.TargetName="waitingBar"
+                             Storyboard.TargetProperty="Value"
+                             From="0"
+                             To="100"
+                             Duration="0:0:5" />
+        </Storyboard>
+    </UserControl.Resources>
+
+    <Grid>
+       
+    </Grid>
+</UserControl>

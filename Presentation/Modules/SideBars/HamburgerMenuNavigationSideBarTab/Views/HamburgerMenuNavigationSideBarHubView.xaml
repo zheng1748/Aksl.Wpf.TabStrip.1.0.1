@@ -10,7 +10,7 @@
              xmlns:tabBitViews="clr-namespace:Aksl.TabBits.Views"
              xmlns:a="clr-namespace:Aksl.Modules.HamburgerMenuNavigationSideBarTab"
              xmlns:sv="clr-namespace:Aksl.Modules.HamburgerMenuNavigationSideBarTab"
-             x:Name="HamburgerMenuNavigationSideBarContainer"
+             x:Name="HamburgerMenuNavigationSideBarHuber"
              prism:ViewModelLocator.AutoWireViewModel="True">
     <UserControl.Resources>
 

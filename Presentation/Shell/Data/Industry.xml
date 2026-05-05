@@ -11,7 +11,7 @@
 			  IconKind="LineScan"
 			  IsCacheable="True"
 			  ModuleName="HamburgerMenuSideBarTabModule"
-		      ViewName="Aksl.Modules.HamburgerMenuSideBarTab.Views.HamburgerMenuSideBarTabHubView,Aksl.Modules.HamburgerMenuSideBarTab"
+		      ViewName="Aksl.Modules.HamburgerMenuNavigationSideBarTab.Views.PipelinesView,Aksl.Modules.HamburgerMenuNavigationSideBarTab"
 		      IsNextNavigation="False"
 			  NavigationName="Pipelines">
 	</MenuItem>
@@ -22,8 +22,21 @@
 			  ItemType="Item"
 			  IconKind="ThermometerAlert"
 			  ModuleName=""
-			  ViewName=""
-			  NavigationName="Thermometers">
+		      ViewName=""
+		      IsNexOnNotLeaf="True"
+		      NavigationName="Thermometers">
+		<!--ModuleName="HamburgerMenuSideBarTabModule"
+		ViewName="Aksl.Modules.HamburgerMenuNavigationSideBarTab.Views.ThermometerView,Aksl.Modules.HamburgerMenuNavigationSideBarTab"-->
+		<!--<MenuItem Id="2"
+				  Name="ThermometerTry"
+				  Title="温度计测试"
+				  Level="2"
+				  IsCacheable="True"
+				  IconKind="ThermometerAlert"
+				  ItemType="Item"
+				  ModuleName="ThermometerModule"
+				  ViewName="Aksl.Modules.Thermometer.Views.ThermometerHubView,Aksl.Modules.Thermometer">
+		</MenuItem>-->
 	</MenuItem>
 	<MenuItem Id="1"
 			  Name="CoolingTowers"

@@ -226,8 +226,8 @@ namespace Aksl.Modules.HamburgerMenuTreeSideBarTab.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Aksl.Modules.HamburgerMenuTreeSideBarTab;V1.0.0.0;component/views/hamburgermenut" +
-                    "reesidebartabhubview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Aksl.Modules.HamburgerMenuTreeSideBarTab;component/views/hamburgermenutreesideba" +
+                    "rtabhubview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\HamburgerMenuTreeSideBarTabHubView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
