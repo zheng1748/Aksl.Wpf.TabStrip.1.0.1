@@ -183,12 +183,6 @@ namespace Aksl.TabBits.ViewModels
                         tabHeaderItemViewModel.IsSelected = false;
                     }
 
-                    //var storeTabHeaderItem = GetStoreTabHeaderItemViewModelByNameOrTitle(tabHeaderItemViewModel.Name, tabHeaderItemViewModel.Title);
-                    //if (storeTabHeaderItem is not null && storeTabHeaderItem.IsSelected)
-                    //{
-                    //    storeTabHeaderItem.IsSelected = false;
-                    //}
-
                     ActiveTabHeaderItems.Remove(tabHeaderItemViewModel);
 
                     tabHeaderItemViewModel.RequestClose -= this.OnTabHeaderItemRequestClose;
@@ -203,13 +197,6 @@ namespace Aksl.TabBits.ViewModels
 
                 RaisePropertyChanged(nameof(ActiveTabHeaderItems));
             }
-        }
-
-        private TabHeaderItemViewModel GetStoreTabHeaderItemViewModelByNameOrTitle(string name, string title)
-        {
-            var storeTabHeaderItem = StoreTabHeaderItems.FirstOrDefault(ti => IsEqualsNameOrTitle(ti.Name, name) || IsEqualsNameOrTitle(ti.Title, title));
-
-            return storeTabHeaderItem;
         }
 
         public void SetTabHeaderItem(TabInformation tabInformation)
