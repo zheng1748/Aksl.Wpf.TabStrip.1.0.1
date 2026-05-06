@@ -20,6 +20,13 @@
                                                  Background="Transparent"
                                                  HorizontalAlignment="Center"
                                                  VerticalAlignment="Center" />
+                        <TextBlock Text="{Binding Path=Title,Mode=OneWay}"
+                                   IsEnabled="{Binding Path=IsEnabled}"
+                                   Margin="10,0,0,0"
+                                   VerticalAlignment="Center"
+                                   TextTrimming="CharacterEllipsis"
+                                   TextWrapping="NoWrap">
+                        </TextBlock>
                     </StackPanel>
                 </Setter.Value>
             </Setter>
@@ -38,8 +45,47 @@
         </Style>
     </UserControl.Resources>
 
-    <!--<StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">-->
-    <Grid>
+    <StackPanel Orientation="Horizontal">
+        <Label
+               Style="{StaticResource labelStyle}">
+            <ei:Interaction.Triggers>
+                <ei:DataTrigger Binding="{Binding Path=IsTopLevelItem,Mode=OneWay}"
+                                Comparison="Equal"
+                                Value="True">
+                    <ei:ChangePropertyAction PropertyName="FontSize"
+                                             Value="18" />
+                    <ei:ChangePropertyAction PropertyName="FontWeight"
+                                             Value="Bold" />
+                </ei:DataTrigger>
+                <ei:DataTrigger Binding="{Binding Path=IsTopLevelHeader,Mode=OneWay}"
+                                Comparison="Equal"
+                                Value="True">
+                    <ei:ChangePropertyAction PropertyName="FontSize"
+                                             Value="18" />
+                    <ei:ChangePropertyAction PropertyName="FontWeight"
+                                             Value="Bold" />
+                </ei:DataTrigger>
+                <ei:DataTrigger Binding="{Binding Path=IsSubmenuItem,Mode=OneWay}"
+                                Comparison="Equal"
+                                Value="True">
+                    <ei:ChangePropertyAction PropertyName="FontSize"
+                                             Value="16.5" />
+                    <ei:ChangePropertyAction PropertyName="FontWeight"
+                                             Value="Light" />
+                </ei:DataTrigger>
+                <ei:DataTrigger Binding="{Binding Path=IsSubmenuHeader,Mode=OneWay}"
+                                Comparison="Equal"
+                                Value="True">
+                    <ei:ChangePropertyAction PropertyName="FontSize"
+                                             Value="17.5" />
+                    <ei:ChangePropertyAction PropertyName="FontWeight"
+                                             Value="Bold" />
+                </ei:DataTrigger>
+            </ei:Interaction.Triggers>
+        </Label>
+    </StackPanel>
+    
+    <!--<Grid>
         <Grid.RowDefinitions>
             <RowDefinition />
         </Grid.RowDefinitions>
@@ -94,6 +140,6 @@
           </ei:DataTrigger>
            </ei:Interaction.Triggers>
         </TextBlock>
-    </Grid>
+    </Grid>-->
 
 </UserControl>

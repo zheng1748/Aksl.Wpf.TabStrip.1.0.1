@@ -38,11 +38,11 @@
                                        Width="1"
                                        Height="5"
                                        Stroke="Black"
-                                       SnapsToDevicePixels="true" />
+                                       SnapsToDevicePixels="True" />
                             <Rectangle Width="5"
                                        Height="1"
                                        Stroke="Black"
-                                       SnapsToDevicePixels="true" />
+                                       SnapsToDevicePixels="True" />
                         </Grid>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsChecked"
@@ -113,10 +113,10 @@
                                      Value="True">
                                 <Setter Property="Background"
                                         TargetName="Bd"
-                                        Value="Green" />
+                                        Value="WhiteSmoke" />
                                 <Setter Property="Background"
                                         TargetName="Expander"
-                                        Value="Green" />
+                                        Value="WhiteSmoke" />
                             </Trigger>
                             <MultiTrigger>
                                 <MultiTrigger.Conditions>
@@ -127,10 +127,10 @@
                                 </MultiTrigger.Conditions>
                                 <Setter Property="Background"
                                         TargetName="Bd"
-                                        Value="WhiteSmoke" />
+                                        Value="LightSkyBlue" />
                                 <Setter Property="Background"
                                         TargetName="Expander"
-                                        Value="WhiteSmoke" />
+                                        Value="LightSkyBlue" />
                             </MultiTrigger>
                             <Trigger Property="IsEnabled"
                                      Value="False">
