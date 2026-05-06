@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Aksl")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+81667a42e9835774c0eb068424005a50e5f868ce")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Aksl.Modules.CoolingTower")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Aksl.Modules.CoolingTower")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

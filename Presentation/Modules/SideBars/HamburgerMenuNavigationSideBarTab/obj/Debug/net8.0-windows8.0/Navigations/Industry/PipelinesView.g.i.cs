@@ -75,8 +75,8 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Aksl.Modules.HamburgerMenuNavigationSideBarTab;V1.0.0.0;component/navigations/in" +
-                    "dustry/pipelinesview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Aksl.Modules.HamburgerMenuNavigationSideBarTab;component/navigations/industry/pi" +
+                    "pelinesview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Navigations\Industry\PipelinesView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -276,7 +276,7 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
                                 Type viewType = Type.GetType(viewTypeAssemblyQualifiedName);
                                 if (viewType is not null)
                                 {
-                                    var currentView = TabViewModel.GetStoreViewElement(viewType);
+                                    var currentView = TabViewModel.GetStoreViewElementByType(viewType);
                                     //var currentView = TabHubViewModel.GetViewElementByType(viewType);
                                     Aksl.Tabs.TabInformation subTabInformation = new()
                                     {
@@ -291,10 +291,11 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
                                     {
                                         if (smi.IsCacheable)
                                         {
-                                            // TabViewModel.SetTabItem(subTabInformation);
+                                           // TabViewModel.SetTabItem(subTabInformation);
                                         }
                                         else
                                         {
+                                            //TabViewModel.RetsetTabItem(subTabInformation);
                                             TabViewModel.RetsetTabItemOnCacheable(subTabInformation);
                                         }
                                     }
@@ -331,7 +332,7 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
                         Type viewType = Type.GetType(viewTypeAssemblyQualifiedName);
                         if (viewType is not null)
                         {
-                            var currentView = TabHubViewModel.GetViewElementByType(viewType);
+                            var currentView = TabHubViewModel.GetStoreViewElementByType(viewType);
 
                             if (currentView is not null)
                             {
