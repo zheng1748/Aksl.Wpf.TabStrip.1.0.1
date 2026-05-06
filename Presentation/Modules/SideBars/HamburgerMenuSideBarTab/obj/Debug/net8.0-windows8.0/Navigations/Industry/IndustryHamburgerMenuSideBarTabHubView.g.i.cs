@@ -227,8 +227,8 @@ namespace Aksl.Modules.HamburgerMenuSideBarTab.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Aksl.Modules.HamburgerMenuSideBarTab;component/navigations/industry/industryhamb" +
-                    "urgermenusidebartabhubview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Aksl.Modules.HamburgerMenuSideBarTab;V1.0.0.0;component/navigations/industry/ind" +
+                    "ustryhamburgermenusidebartabhubview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Navigations\Industry\IndustryHamburgerMenuSideBarTabHubView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

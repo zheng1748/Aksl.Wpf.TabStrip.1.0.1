@@ -231,6 +231,19 @@ namespace Aksl.Modules.HamburgerMenuSideBarTab.ViewModels
 
                 try
                 {
+                    Aksl.TabBits.TabInformation tabInformation = new()
+                    {
+                        Name = currentMenuItem.Name,
+                        Title = currentMenuItem.Title,
+                        IconKind = currentMenuItem.IconKind,
+                        ViewName = currentMenuItem.ViewName
+                    };
+
+                    if (TabHubViewModel.IsActiveTabItem(tabInformation))
+                    {
+                        return;
+                    }
+
                     IEnumerable<MenuItem> subMenus = null;
                     Tabs.Views.TabView subTabView = default;
 
@@ -263,7 +276,7 @@ namespace Aksl.Modules.HamburgerMenuSideBarTab.ViewModels
                                 Type viewType = Type.GetType(viewTypeAssemblyQualifiedName);
                                 if (viewType is not null)
                                 {
-                                    var currentView = TabViewModel.GetStoreViewElement(viewType);
+                                    var currentView = TabViewModel.GetStoreViewElementByType(viewType);
                                     //var currentView = TabHubViewModel.GetViewElementByType(viewType);
                                     Aksl.Tabs.TabInformation subTabInformation = new()
                                     {
@@ -305,22 +318,9 @@ namespace Aksl.Modules.HamburgerMenuSideBarTab.ViewModels
 
                     bool IsExistsViewInSubMenu(MenuItem mi) => (mi is not null) && mi.SubMenus.Any(sm => !string.IsNullOrEmpty(sm.ViewName));
 
-                    Aksl.TabBits.TabInformation tabInformation = new()
-                    {
-                        Name = currentMenuItem.Name,
-                        Title = currentMenuItem.Title,
-                        IconKind = currentMenuItem.IconKind,
-                        ViewName = currentMenuItem.ViewName
-                    };
-
                     if (subTabView is not null)
                     {
                         tabInformation.ViewElement = subTabView;
-                    }
-
-                    if (TabHubViewModel.IsActiveTabItem(tabInformation))
-                    {
-                        return;
                     }
 
                     await LoadViewAsync();
@@ -332,7 +332,7 @@ namespace Aksl.Modules.HamburgerMenuSideBarTab.ViewModels
                         Type viewType = Type.GetType(viewTypeAssemblyQualifiedName);
                         if (viewType is not null)
                         {
-                            var currentView = TabHubViewModel.GetViewElementByType(viewType);
+                            var currentView = TabHubViewModel.GetStoreViewElementByType(viewType);
 
                             if (currentView is not null)
                             {

@@ -91,14 +91,7 @@ namespace Aksl.TabBits.ViewModels
 
             TabContentViewModel.Add(tabInformation);
         }
-
-        public System.Windows.DependencyObject GetViewElementByType(Type viewType)
-        {
-            var viewElement = TabContentViewModel.GetViewElementByType(viewType);
-
-            return viewElement;
-        }
-
+       
         public void SetTabItem(TabInformation tabInformation)
         {
             TabHeaderViewModel.SetTabHeaderItem(tabInformation);
@@ -111,6 +104,13 @@ namespace Aksl.TabBits.ViewModels
             TabHeaderViewModel.RetsetTabItem(tabInformation);
 
             TabContentViewModel.RetsetTabItem(tabInformation);
+        }
+
+        public System.Windows.DependencyObject GetStoreViewElementByType(Type viewType)
+        {
+            var viewElement = TabContentViewModel.GetStoreViewElementByType(viewType);
+
+            return viewElement;
         }
 
         public bool IsActiveTabItem(TabInformation tabInformation)

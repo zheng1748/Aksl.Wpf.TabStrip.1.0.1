@@ -26,17 +26,12 @@ namespace Aksl.Modules.HamburgerMenuSideBarTab
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<HamburgerMenuSideBarTabHubView>();
-
-            containerRegistry.RegisterForNavigation<IndustryHamburgerMenuSideBarTabHubView>();
         }
 
         public void OnInitialized(IContainerProvider containerProvider)
         {
             ViewModelLocationProvider.Register(typeof(HamburgerMenuSideBarTabHubView).ToString(),
                                                () => this._container.Resolve<HamburgerMenuSideBarTabHubViewModel>());
-
-            ViewModelLocationProvider.Register(typeof(IndustryHamburgerMenuSideBarTabHubView).ToString(),
-                                              () => this._container.Resolve<IndustryHamburgerMenuSideBarTabHubViewModel>());
         }
         #endregion
     }

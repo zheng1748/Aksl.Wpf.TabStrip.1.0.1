@@ -4,10 +4,10 @@ using Aksl.Modules.HamburgerMenuSideBarTab.ViewModels;
 
 namespace Aksl.Modules.HamburgerMenuSideBarTab.ViewModels
 {
-    public class IndustryHamburgerMenuSideBarTabHubViewModel : HamburgerMenuSideBarTabHubViewModel
+    public class PipelinesViewViewModel : HamburgerMenuSideBarTabHubViewModel
     {
         #region Constructors
-        public IndustryHamburgerMenuSideBarTabHubViewModel() :base()
+        public PipelinesViewViewModel() :base()
         {
         }
         #endregion

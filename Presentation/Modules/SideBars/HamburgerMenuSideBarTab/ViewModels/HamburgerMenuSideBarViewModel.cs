@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -47,28 +48,29 @@ namespace Aksl.Modules.HamburgerMenuSideBarTab.ViewModels
         private HamburgerMenuSideBarItemViewModel _previewSelectedHamburgerMenuItem;
       //  internal HamburgerMenuSideBarItemViewModel PreviewSelectedHamburgerMenuItem => _previewSelectedHamburgerMenuItem;
 
-        internal HamburgerMenuSideBarItemViewModel _selectedHamburgerMenuSideBarItem;
+        private HamburgerMenuSideBarItemViewModel _selectedHamburgerMenuSideBarItem;
         public HamburgerMenuSideBarItemViewModel SelectedHamburgerMenuSideBarItem
         {
             get => _selectedHamburgerMenuSideBarItem;
             set
             {
-                _previewSelectedHamburgerMenuItem = _selectedHamburgerMenuSideBarItem;
+                SetProperty(ref _selectedHamburgerMenuSideBarItem, value);
+                //_previewSelectedHamburgerMenuItem = _selectedHamburgerMenuSideBarItem;
 
-                var previewSelectedHamburgerMenuItem = _selectedHamburgerMenuSideBarItem;
+                //var previewSelectedHamburgerMenuItem = _selectedHamburgerMenuSideBarItem;
 
-                if (SetProperty(ref _selectedHamburgerMenuSideBarItem, value))
-                {
-                    if (previewSelectedHamburgerMenuItem is not null && previewSelectedHamburgerMenuItem.IsSelected)
-                    {
-                        previewSelectedHamburgerMenuItem.IsSelected = false;
-                    }
+                //if (SetProperty(ref _selectedHamburgerMenuSideBarItem, value))
+                //{
+                //    if (previewSelectedHamburgerMenuItem is not null && previewSelectedHamburgerMenuItem.IsSelected)
+                //    {
+                //        previewSelectedHamburgerMenuItem.IsSelected = false;
+                //    }
 
-                    if (_selectedHamburgerMenuSideBarItem is not null && !_selectedHamburgerMenuSideBarItem.IsSelected)
-                    {
-                        _selectedHamburgerMenuSideBarItem.IsSelected = true;
-                    }
-                }
+                //    if (_selectedHamburgerMenuSideBarItem is not null && !_selectedHamburgerMenuSideBarItem.IsSelected)
+                //    {
+                //        _selectedHamburgerMenuSideBarItem.IsSelected = true;
+                //    }
+                //}
             }
         }
 
@@ -105,10 +107,9 @@ namespace Aksl.Modules.HamburgerMenuSideBarTab.ViewModels
                 {
                     if (SelectedHamburgerMenuSideBarItem is not null)
                     {
-                        SelectedHamburgerMenuSideBarItem.IsSelected = false;
+                        SelectedHamburgerMenuSideBarItem.IsSelected = false; 
+                        //SelectedHamburgerMenuSideBarItem = null;
                     }
-
-                    SelectedHamburgerMenuSideBarItem = null;
                 }
                 catch (Exception ex)
                 {
@@ -132,13 +133,23 @@ namespace Aksl.Modules.HamburgerMenuSideBarTab.ViewModels
                     #region Set Selected HamburgerMenuItem Method
                     void SetSelectedHamburgerMenuItem()
                     {
-                        var hamburgerMenuSideBarItemViewModel = AllLeafHamburgerMenuSideBarItems.FirstOrDefault(hmi => hmi.Name.Equals(currentTabInfo.Name, StringComparison.InvariantCultureIgnoreCase) ||
-                                                                                                                       hmi.Title.Equals(currentTabInfo.Title, StringComparison.InvariantCultureIgnoreCase));
-                        if (hamburgerMenuSideBarItemViewModel is not null)
+                        //var hamburgerMenuSideBarItemViewModel = AllLeafHamburgerMenuSideBarItems.FirstOrDefault(hmi => hmi.Name.Equals(currentTabInfo.Name, StringComparison.InvariantCultureIgnoreCase) ||
+                        //                                                                                               hmi.Title.Equals(currentTabInfo.Title, StringComparison.InvariantCultureIgnoreCase));
+                        var matchHamburgerMenuSideBartem = AllLeafHamburgerMenuSideBarItems.FirstOrDefault(hmi => IsEqualsNameOrTitle(hmi.Name, currentTabInfo.Name) ||
+                                                                                                                  IsEqualsNameOrTitle(hmi.Title, currentTabInfo.Title));
+
+                        if (matchHamburgerMenuSideBartem is not null)
                         {
-                            if (hamburgerMenuSideBarItemViewModel != SelectedHamburgerMenuSideBarItem)
+                            if (matchHamburgerMenuSideBartem == SelectedHamburgerMenuSideBarItem)
                             {
-                                SelectedHamburgerMenuSideBarItem = hamburgerMenuSideBarItemViewModel;
+                                return;
+                            }
+
+                            if (SelectedHamburgerMenuSideBarItem is not null)
+                            {
+                                matchHamburgerMenuSideBartem.IsSelected = true;
+                                //SelectedHamburgerMenuSideBarItem = matchHamburgerMenuSideBartem;
+                                Debug.Assert(AllLeafHamburgerMenuSideBarItems.Count(hmi => hmi.IsSelected) == 1);
                             }
                         }
                     }

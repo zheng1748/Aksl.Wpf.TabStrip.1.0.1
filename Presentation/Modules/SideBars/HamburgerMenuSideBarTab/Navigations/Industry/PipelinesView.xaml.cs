@@ -13,9 +13,9 @@ using System.Windows.Shapes;
 
 namespace Aksl.Modules.HamburgerMenuSideBarTab.Views
 {
-    public partial class IndustryHamburgerMenuSideBarTabHubView : UserControl
+    public partial class PipelinesView : UserControl
     {
-        public IndustryHamburgerMenuSideBarTabHubView()
+        public PipelinesView()
         {
             InitializeComponent();
         }
