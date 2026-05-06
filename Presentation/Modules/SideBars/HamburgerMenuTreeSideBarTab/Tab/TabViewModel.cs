@@ -12,7 +12,7 @@ using Prism.Mvvm;
 using Prism.Unity;
 using Unity;
 
-namespace Aksl.Modules.HamburgerMenuTreeSideBarTab.ViewModels
+namespace Aksl.Tabs.ViewModels
 {
     public class TabViewModel : BindableBase
     {
@@ -39,28 +39,29 @@ namespace Aksl.Modules.HamburgerMenuTreeSideBarTab.ViewModels
         public TabItemViewModel SelectedTabItem
         {
             get => _selectedTabItem;
-            set
-            {
-                var previewSelectedHamburgerMenuItem = _selectedTabItem;
+            set => SetProperty(ref _selectedTabItem, value);
+            //set
+            //{
+            //    var previewSelectedHamburgerMenuItem = _selectedTabItem;
 
-                if (SetProperty(ref _selectedTabItem, value))
-                {
-                    if (previewSelectedHamburgerMenuItem is not null && previewSelectedHamburgerMenuItem.IsSelected)
-                    {
-                        previewSelectedHamburgerMenuItem.IsSelected = false;
-                    }
+            //    if (SetProperty(ref _selectedTabItem, value))
+            //    {
+            //        if (previewSelectedHamburgerMenuItem is not null && previewSelectedHamburgerMenuItem.IsSelected)
+            //        {
+            //            previewSelectedHamburgerMenuItem.IsSelected = false;
+            //        }
 
-                    if (_selectedTabItem is not null && !_selectedTabItem.IsSelected)
-                    {
-                        _selectedTabItem.IsSelected = true;
-                    }
-                }
-            }
+            //        if (_selectedTabItem is not null && !_selectedTabItem.IsSelected)
+            //        {
+            //            _selectedTabItem.IsSelected = true;
+            //        }
+            //    }
+            //}
         }
 
         public List<TabItemViewModel> StoreTabItems { get; }
 
-        private Dock _tabStripPlacement = Dock.Bottom;
+        private Dock _tabStripPlacement = Dock.Top;
         public Dock TabStripPlacement
         {
             get => _tabStripPlacement;
@@ -149,7 +150,13 @@ namespace Aksl.Modules.HamburgerMenuTreeSideBarTab.ViewModels
             {
                 if (IsExistsActivTabItems(tabItemViewModel.Name, tabItemViewModel.Title))
                 {
+                    if (SelectedTabItem == tabItemViewModel || tabItemViewModel.IsSelected)
+                    {
+                        tabItemViewModel.IsSelected = false;
+                    }
+
                     ActiveTabItems.Remove(tabItemViewModel);
+
                     tabItemViewModel.RequestClose -= this.OnTabItemRequestClose;
                 }
 
@@ -177,7 +184,15 @@ namespace Aksl.Modules.HamburgerMenuTreeSideBarTab.ViewModels
         {
             if (tabItemViewModel is not null && !IsEqualsTabItemViewModel(tabItemViewModel, SelectedTabItem))
             {
-                SelectedTabItem = tabItemViewModel;
+                if (SelectedTabItem is null)
+                {
+                    SelectedTabItem = tabItemViewModel;
+                }
+
+                if (SelectedTabItem is not null && SelectedTabItem != tabItemViewModel)
+                {
+                    SelectedTabItem = tabItemViewModel;
+                }
             }
 
             //if (tabItemViewModel is not null)
@@ -194,14 +209,14 @@ namespace Aksl.Modules.HamburgerMenuTreeSideBarTab.ViewModels
 
         public void SetTabItem(TabInformation tabInformation)
         {
-            var activeTabItem = GetActiveTabItemViewModel(tabInformation);
+            var activeTabItem = GetActiveTabItemViewModelByInfo(tabInformation);
             if (activeTabItem is not null)
             {
                 SetActiveTabItem(activeTabItem);
             }
             else
             {
-                var storeTabItemViewModel = GetStoreTabItemViewModel(tabInformation);
+                var storeTabItemViewModel = GetStoreTabItemViewModelByInfo(tabInformation);
                 if (storeTabItemViewModel is not null)
                 {
                     AddCore(storeTabItemViewModel);
@@ -211,7 +226,7 @@ namespace Aksl.Modules.HamburgerMenuTreeSideBarTab.ViewModels
 
         public void RetsetTabItem(TabInformation tabInformation)
         {
-            var activeTabItem = GetActiveTabItemViewModel(tabInformation);
+            var activeTabItem = GetActiveTabItemViewModelByInfo(tabInformation);
             if (activeTabItem is not null)
             {
                 activeTabItem.ViewElement = null;
@@ -225,7 +240,7 @@ namespace Aksl.Modules.HamburgerMenuTreeSideBarTab.ViewModels
             }
             else
             {
-                var storeTabItemViewModel = GetStoreTabItemViewModel(tabInformation);
+                var storeTabItemViewModel = GetStoreTabItemViewModelByInfo(tabInformation);
                 if (storeTabItemViewModel is not null)
                 {
                     storeTabItemViewModel.ViewElement = null;
@@ -243,23 +258,37 @@ namespace Aksl.Modules.HamburgerMenuTreeSideBarTab.ViewModels
             }
         }
 
-        private TabItemViewModel GetActiveTabItemViewModel(TabInformation tabInformation)
+        public void RetsetTabItemOnCacheable(TabInformation tabInformation)
+        {
+            var activeTabItem = GetActiveTabItemViewModelByInfo(tabInformation);
+            if (activeTabItem is not null)
+            {
+                activeTabItem.ViewElement = null;
+
+                if (tabInformation.ViewElement is not null)
+                {
+                    activeTabItem.ViewElement = tabInformation.ViewElement;
+                }
+            }
+        }
+
+        private TabItemViewModel GetActiveTabItemViewModelByInfo(TabInformation tabInformation)
         {
             var activeTabItemViewModel = ActiveTabItems.FirstOrDefault(ti => IsEqualsNameOrTitle(ti.Name, tabInformation.Name) || IsEqualsNameOrTitle(ti.Title, tabInformation.Title));
 
             return activeTabItemViewModel;
         }
 
-        public TabItemViewModel GetStoreTabItemViewModel(TabInformation tabInformation)
+        public TabItemViewModel GetStoreTabItemViewModelByInfo(TabInformation tabInformation)
         {
-            var storeTabItemViewModel = StoreTabItems.FirstOrDefault(ti => IsEqualsNameOrTitle(ti.Name, tabInformation.Name) || IsEqualsNameOrTitle(ti.Title, tabInformation.Title));
+            var storeTabItemViewModel = StoreTabItems.FirstOrDefault(sti => IsEqualsNameOrTitle(sti.Name, tabInformation.Name) || IsEqualsNameOrTitle(sti.Title, tabInformation.Title));
 
             return storeTabItemViewModel;
         }
 
-        public System.Windows.DependencyObject GetStoreViewElement(Type viewType)
+        public System.Windows.DependencyObject GetStoreViewElementByType(Type viewType)
         {
-            var storeTabItemViewModel = StoreTabItems.FirstOrDefault(ti => ti.ViewElementType == viewType);
+            var storeTabItemViewModel = StoreTabItems.FirstOrDefault(sti => sti.ViewElementType == viewType);
 
             return storeTabItemViewModel?.ViewElement;
         }
@@ -273,12 +302,14 @@ namespace Aksl.Modules.HamburgerMenuTreeSideBarTab.ViewModels
 
         public bool IsActiveTabItem(TabInformation tabInformation)
         {
-            var _isExists = ActiveTabItems.Any(ti => ti.IsSelected && (IsEqualsNameOrTitle(ti.Name, tabInformation.Name) || IsEqualsNameOrTitle(ti.Title, tabInformation.Title)));
+            // var _isExists = ActiveTabItems.Any(ti => ti.IsSelected && (IsEqualsNameOrTitle(ti.Name, tabInformation.Name) || IsEqualsNameOrTitle(ti.Title, tabInformation.Title)));
 
-            var activeTabItemViewModel = ActiveTabItems.FirstOrDefault(ti => ti.IsSelected);
-            var isExists = IsEqualsNameOrTitle(activeTabItemViewModel?.Name, tabInformation.Name) || IsEqualsNameOrTitle(activeTabItemViewModel?.Title, tabInformation.Title);
+            //  var activeTabItemViewModel = ActiveTabItems.FirstOrDefault(ti => ti.IsSelected);
+            //  var isExists = IsEqualsNameOrTitle(activeTabItemViewModel?.Name, tabInformation.Name) || IsEqualsNameOrTitle(activeTabItemViewModel?.Title, tabInformation.Title);
 
-            return isExists;
+            var isAny = ActiveTabItems.Any(ti => ti.IsSelected && (IsEqualsNameOrTitle(ti.Name, tabInformation.Name) || IsEqualsNameOrTitle(ti.Title, tabInformation.Title)));
+
+            return isAny;
         }
         #endregion
 

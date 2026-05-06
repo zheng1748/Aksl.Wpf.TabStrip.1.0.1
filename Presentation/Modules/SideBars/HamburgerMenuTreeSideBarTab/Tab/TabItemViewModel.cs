@@ -12,7 +12,7 @@ using Unity;
 
 using Aksl.Toolkit.Controls;
 
-namespace Aksl.Modules.HamburgerMenuTreeSideBarTab.ViewModels
+namespace Aksl.Tabs.ViewModels
 {
     public class TabItemViewModel : BindableBase
     {

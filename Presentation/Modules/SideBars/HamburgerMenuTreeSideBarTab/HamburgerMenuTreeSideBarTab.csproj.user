@@ -2,6 +2,21 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
+    <Page Update="TabBit\TabContentItemView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TabBit\TabContentView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TabBit\TabHeaderItemView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TabBit\TabHeaderView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TabBit\TabHubView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Tab\TabItemHeaderView.xaml">
       <SubType>Designer</SubType>
     </Page>

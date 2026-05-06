@@ -20,68 +20,80 @@
                                                  Background="Transparent"
                                                  HorizontalAlignment="Center"
                                                  VerticalAlignment="Center" />
-                        <TextBlock Text="{Binding Path=Title,Mode=OneWay}"
-                                   IsEnabled="{Binding Path=IsEnabled}"
-                                   Margin="10,0,0,0"
-                                   VerticalAlignment="Center"
-                                   TextTrimming="CharacterEllipsis"
-                                   TextWrapping="NoWrap">
-                        </TextBlock>
                     </StackPanel>
                 </Setter.Value>
             </Setter>
             <Style.Triggers>
-                <Trigger Property="IsMouseOver"
+                <!--<Trigger Property="IsMouseOver"
                          Value="True">
                     <Setter Property="Background"
-                            Value="Transparent" />
+                            Value="WhiteSmoke" />
                 </Trigger>
                 <DataTrigger Binding="{Binding IsSelected,Mode=TwoWay}"
                              Value="True">
                     <Setter Property="Background"
-                            Value="#EEEEEEEE" />
-                </DataTrigger>
+                            Value="WhiteSmoke" />
+                </DataTrigger>-->
             </Style.Triggers>
         </Style>
     </UserControl.Resources>
 
-    <StackPanel Orientation="Horizontal">
-        <Label x:Name="treeBarItemLabel"
+    <!--<StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">-->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition MinWidth="20"
+                              Width="Auto" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Label Grid.Column="0"
                Style="{StaticResource labelStyle}">
-            <ei:Interaction.Triggers>
-                <ei:DataTrigger Binding="{Binding Path=IsTopLevelItem,Mode=OneWay}"
-                                Comparison="Equal"
-                                Value="True">
-                    <ei:ChangePropertyAction PropertyName="FontSize"
-                                             Value="18" />
-                    <ei:ChangePropertyAction PropertyName="FontWeight"
-                                             Value="Bold" />
-                </ei:DataTrigger>
-                <ei:DataTrigger Binding="{Binding Path=IsTopLevelHeader,Mode=OneWay}"
-                                Comparison="Equal"
-                                Value="True">
-                    <ei:ChangePropertyAction PropertyName="FontSize"
-                                             Value="18" />
-                    <ei:ChangePropertyAction PropertyName="FontWeight"
-                                             Value="Bold" />
-                </ei:DataTrigger>
-                <ei:DataTrigger Binding="{Binding Path=IsSubmenuItem,Mode=OneWay}"
-                                Comparison="Equal"
-                                Value="True">
-                    <ei:ChangePropertyAction PropertyName="FontSize"
-                                             Value="16.5" />
-                    <ei:ChangePropertyAction PropertyName="FontWeight"
-                                             Value="Light" />
-                </ei:DataTrigger>
-                <ei:DataTrigger Binding="{Binding Path=IsSubmenuHeader,Mode=OneWay}"
-                                Comparison="Equal"
-                                Value="True">
-                    <ei:ChangePropertyAction PropertyName="FontSize"
-                                             Value="17.5" />
-                    <ei:ChangePropertyAction PropertyName="FontWeight"
-                                             Value="Bold" />
-                </ei:DataTrigger>
-            </ei:Interaction.Triggers>
         </Label>
-    </StackPanel>
+        
+        <TextBlock Text="{Binding Path=Title,Mode=OneWay}"
+                   IsEnabled="{Binding Path=IsEnabled}"
+                   Grid.Column="1"
+                   Margin="10,0,0,0"
+                   VerticalAlignment="Center"
+                   TextTrimming="CharacterEllipsis"
+                   TextWrapping="NoWrap">
+           <ei:Interaction.Triggers>
+               <ei:DataTrigger Binding="{Binding Path=IsTopLevelItem,Mode=OneWay}"
+                               Comparison="Equal"
+                               Value="True">
+                   <ei:ChangePropertyAction PropertyName="FontSize"
+                                            Value="18" />
+                   <ei:ChangePropertyAction PropertyName="FontWeight"
+                                            Value="Bold" />
+             </ei:DataTrigger>
+               <ei:DataTrigger Binding="{Binding Path=IsTopLevelHeader,Mode=OneWay}"
+                               Comparison="Equal"
+                               Value="True">
+                 <ei:ChangePropertyAction PropertyName="FontSize"
+                                          Value="18" />
+                  <ei:ChangePropertyAction PropertyName="FontWeight"
+                                           Value="Bold" />
+            </ei:DataTrigger>
+               <ei:DataTrigger Binding="{Binding Path=IsSubmenuItem,Mode=OneWay}"
+                               Comparison="Equal"
+                               Value="True">
+               <ei:ChangePropertyAction PropertyName="FontSize"
+                                        Value="16.5" />
+               <ei:ChangePropertyAction PropertyName="FontWeight"
+                                        Value="Light" />
+           </ei:DataTrigger>
+               <ei:DataTrigger Binding="{Binding Path=IsSubmenuHeader,Mode=OneWay}"
+                               Comparison="Equal"
+                              Value="True">
+             <ei:ChangePropertyAction PropertyName="FontSize"
+                                      Value="17.5" />
+             <ei:ChangePropertyAction PropertyName="FontWeight"
+                                      Value="Bold" />
+          </ei:DataTrigger>
+           </ei:Interaction.Triggers>
+        </TextBlock>
+    </Grid>
+
 </UserControl>

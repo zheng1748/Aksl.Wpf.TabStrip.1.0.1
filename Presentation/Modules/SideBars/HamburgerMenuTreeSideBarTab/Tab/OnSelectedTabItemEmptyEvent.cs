@@ -1,7 +1,7 @@
 ﻿
 using Prism.Events;
 
-namespace Aksl.Modules.HamburgerMenuTreeSideBarTab
+namespace Aksl.Tabs
 {
     public class OnSelectedTabItemEmptyEvent : PubSubEvent<OnSelectedTabItemEmptyEvent>
     {
