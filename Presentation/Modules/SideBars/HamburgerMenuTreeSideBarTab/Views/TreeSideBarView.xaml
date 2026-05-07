@@ -127,10 +127,10 @@
                                 </MultiTrigger.Conditions>
                                 <Setter Property="Background"
                                         TargetName="Bd"
-                                        Value="LightSkyBlue" />
+                                        Value="WhiteSmoke" />
                                 <Setter Property="Background"
                                         TargetName="Expander"
-                                        Value="LightSkyBlue" />
+                                        Value="WhiteSmoke" />
                             </MultiTrigger>
                             <Trigger Property="IsEnabled"
                                      Value="False">
@@ -163,10 +163,10 @@
             <views:TreeSideBarItemView />
         </HierarchicalDataTemplate>
     </UserControl.Resources>
-    <!--ItemContainerStyle="{StaticResource treeSideBarTreeViewItemStyle}"WhiteSmoke-->
+
     <TreeView ItemsSource="{Binding Path=AllTreeSideBarItems}" 
               ItemContainerStyle="{StaticResource myTreeViewItemStyle}"
               ItemTemplate="{StaticResource treeSideBarDataTemplate}"
-              Margin="2">
+              Margin="1">
     </TreeView>
 </UserControl>

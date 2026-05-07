@@ -206,10 +206,7 @@ namespace Aksl.Modules.HamburgerMenuTreeSideBarTab.ViewModels
                             }
 
                             matchTreeSideBarItem.IsSelected = true;
-                            if (!matchTreeSideBarItem.IsExpanded)
-                            {
-                                matchTreeSideBarItem.IsExpanded = true;
-                            }
+                            matchTreeSideBarItem.IsExpanded = true;
                         }
                     }
                     #endregion
