@@ -19,8 +19,6 @@ using Aksl.Toolkit.UI;
 
 using Aksl.Infrastructure;
 using Aksl.Infrastructure.Events;
-using Aksl.Modules.HamburgerMenuNavigationSideBarTab.Views;
-using System.Windows.Media;
 
 namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
 {

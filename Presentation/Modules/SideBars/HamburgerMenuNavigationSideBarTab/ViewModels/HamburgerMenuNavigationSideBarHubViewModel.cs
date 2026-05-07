@@ -15,12 +15,12 @@ using Prism.Unity;
 using Unity;
 
 using Aksl.Dialogs.Services;
+using Aksl.Toolkit.UI;
 
 using Aksl.Infrastructure;
 using Aksl.Infrastructure.Events;
 using Aksl.Tabs.ViewModels;
 using Aksl.TabBits.ViewModels;
-using Aksl.Toolkit.UI;
 
 namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
 {

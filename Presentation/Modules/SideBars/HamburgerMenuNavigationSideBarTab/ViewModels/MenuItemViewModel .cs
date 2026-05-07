@@ -3,9 +3,10 @@
 using Prism.Events;
 using Prism.Mvvm;
 
-using Aksl.Infrastructure;
-using Aksl.Infrastructure.Events;
 using Aksl.Toolkit.Controls;
+using Aksl.Infrastructure;
+
+using Aksl.Infrastructure.Events;
 
 namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
 {
