@@ -69,8 +69,8 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Aksl.Modules.HamburgerMenuNavigationSideBarTab;V1.0.0.0;component/views/groupedm" +
-                    "enuview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Aksl.Modules.HamburgerMenuNavigationSideBarTab;component/views/groupedmenuview.x" +
+                    "aml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\GroupedMenuView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
