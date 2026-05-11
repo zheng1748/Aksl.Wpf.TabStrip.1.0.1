@@ -10,7 +10,7 @@
              xmlns:a="clr-namespace:Aksl.Modules.HamburgerMenuSideBarTab"
              xmlns:sv="clr-namespace:Aksl.Modules.HamburgerMenuSideBarTab"
              mc:Ignorable="d"
-             x:Name="HamburgerMenuSideBarContainer"
+             x:Name="HamburgerMenuSideBarTabHubContainer"
              prism:ViewModelLocator.AutoWireViewModel="True">
     <UserControl.Resources>
 
@@ -561,7 +561,6 @@
                         <SolidColorBrush Color="Transparent" />
                     </Grid.Background>
                     <Border>
-                        <!--<views:TabView DataContext="{Binding Path=TabViewModel}" />-->
                         <tabBitViews:TabHubView DataContext="{Binding Path=TabHubViewModel}" />
                     </Border>
                     <Rectangle x:Name="LightDismissLayer"

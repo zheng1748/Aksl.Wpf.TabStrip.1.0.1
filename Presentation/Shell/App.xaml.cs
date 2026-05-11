@@ -40,11 +40,8 @@ using Aksl.Modules.AirCompresser;
 using Aksl.Modules.Others;
 using Aksl.Modules.RadarMap;
 
-namespace Aksl.Wpf.Unity
+namespace Aksl.Wpf.Shell
 {
-    /// <summary>
-    /// Interaction logic for App.xaml
-    /// </summary>
     public partial class App
     {
         protected override void ConfigureViewModelLocator()

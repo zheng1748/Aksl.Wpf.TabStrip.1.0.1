@@ -546,7 +546,6 @@
                 <Grid x:Name="ContentRoot"
                       Grid.ColumnSpan="2">
                     <Border>
-                        <!--<views:TabView DataContext="{Binding Path=TabViewModel}" />-->
                         <tabBitViews:TabHubView DataContext="{Binding Path=TabHubViewModel}" />
                     </Border>
                     <Rectangle x:Name="LightDismissLayer"

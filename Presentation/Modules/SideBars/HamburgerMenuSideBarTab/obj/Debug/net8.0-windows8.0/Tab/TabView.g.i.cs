@@ -54,7 +54,7 @@ namespace Aksl.Tabs.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Aksl.Modules.HamburgerMenuSideBarTab;V1.0.0.0;component/tab/tabview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Aksl.Modules.HamburgerMenuSideBarTab;component/tab/tabview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Tab\TabView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

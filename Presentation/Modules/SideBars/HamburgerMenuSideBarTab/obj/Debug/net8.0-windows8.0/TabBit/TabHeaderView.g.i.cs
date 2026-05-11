@@ -59,8 +59,7 @@ namespace Aksl.TabBits.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Aksl.Modules.HamburgerMenuSideBarTab;V1.0.0.0;component/tabbit/tabheaderview.xam" +
-                    "l", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Aksl.Modules.HamburgerMenuSideBarTab;component/tabbit/tabheaderview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\TabBit\TabHeaderView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

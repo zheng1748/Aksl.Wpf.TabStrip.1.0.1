@@ -17,7 +17,7 @@
     <Grid Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="40" />
-            <RowDefinition Height="8" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
@@ -29,14 +29,13 @@
 
         <Separator Grid.Row="1"
                    Margin="0,0,0,0"
-                   Height="8"
+                   Height="3"
                    HorizontalAlignment="Stretch"
                    BorderBrush="#193441"
                    Visibility="{Binding Path=HasContent,Converter={StaticResource booleanToVisibilityConverter}}" />
-        
+
         <Border Grid.Row="2"
-                Margin="2"
-                Background="White"
+                Margin="0"
                 HorizontalAlignment="Stretch"
                 VerticalAlignment="Stretch"
                 BorderThickness="2"
