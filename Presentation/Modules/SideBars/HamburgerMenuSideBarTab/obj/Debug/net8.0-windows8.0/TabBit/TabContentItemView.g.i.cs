@@ -46,13 +46,14 @@ namespace Aksl.TabBits.Views {
         /// InitializeComponent
         /// </summary>
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "8.0.0.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "10.0.7.0")]
         public void InitializeComponent() {
             if (_contentLoaded) {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Aksl.Modules.HamburgerMenuSideBarTab;component/tabbit/tabcontentitemview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Aksl.Modules.HamburgerMenuSideBarTab;V1.0.0.0;component/tabbit/tabcontentitemvie" +
+                    "w.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\TabBit\TabContentItemView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
@@ -62,7 +63,7 @@ namespace Aksl.TabBits.Views {
         }
         
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "8.0.0.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "10.0.7.0")]
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]

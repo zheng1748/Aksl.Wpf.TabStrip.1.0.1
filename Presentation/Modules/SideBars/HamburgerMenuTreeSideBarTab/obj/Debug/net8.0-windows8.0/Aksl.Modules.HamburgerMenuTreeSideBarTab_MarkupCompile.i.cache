@@ -8,13 +8,13 @@ C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\Sid
 Aksl.Modules.HamburgerMenuTreeSideBarTab
 none
 false
-TRACE;DEBUG;NET;NET8_0;NETCOREAPP
+TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS8_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS8_0_OR_GREATER;WINDOWS7_0_OR_GREATER
 
 111255229402
 
 35-1148485104
-2081129143513
+2081401544225
 TabBit\TabContentItemView.xaml;TabBit\TabContentView.xaml;TabBit\TabHeaderItemView.xaml;TabBit\TabHeaderView.xaml;TabBit\TabHubView.xaml;Tab\TabItemHeaderView.xaml;Tab\TabItemView.xaml;Tab\TabView.xaml;Views\HamburgerMenuTreeSideBarTabHubView.xaml;Views\TreeSideBarItemView.xaml;Views\TreeSideBarView.xaml;
 
-False
+True
 

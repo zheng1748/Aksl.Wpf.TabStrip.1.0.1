@@ -78,5 +78,5 @@ C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\Rad
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\RadarMap\obj\Debug\net8.0-windows8.0\RadarMapView.AssemblyInfo.cs
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\RadarMap\obj\Debug\net8.0-windows8.0\RadarMapView.csproj.CoreCompileInputs.cache
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\RadarMap\obj\Debug\net8.0-windows8.0\RadarMapView.sourcelink.json
-C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\RadarMap\obj\Debug\net8.0-windows8.0\RadarMapView.csproj.CopyComplete
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\RadarMap\obj\Debug\net8.0-windows8.0\ref\Aksl.Modules.RadarMap.dll
+C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\RadarMap\obj\Debug\net8.0-windows8.0\RadarMap.4BE432C1.Up2Date

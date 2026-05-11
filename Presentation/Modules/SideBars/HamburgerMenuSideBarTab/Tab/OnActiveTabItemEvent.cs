@@ -13,7 +13,7 @@ namespace Aksl.Tabs
         #endregion
 
         #region Properties
-        public TabInformation SelectedTabItem { get; set; }
+        public TabInformation SelectedTabInfo { get; set; }
         #endregion
     }
 }

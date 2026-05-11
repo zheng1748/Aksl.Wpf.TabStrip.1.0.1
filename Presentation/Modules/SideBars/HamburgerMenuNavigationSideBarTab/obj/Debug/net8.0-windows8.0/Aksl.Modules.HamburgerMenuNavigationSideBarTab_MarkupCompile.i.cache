@@ -8,12 +8,12 @@ C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\Sid
 Aksl.Modules.HamburgerMenuNavigationSideBarTab
 none
 false
-TRACE;DEBUG;NET;NET8_0;NETCOREAPP
+TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS8_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS8_0_OR_GREATER;WINDOWS7_0_OR_GREATER
 
 18418484833
 
 501502507970
-2081129143513
+2081401544225
 Navigations\Industry\PipelinesView.xaml;Navigations\Industry\ThermometerView.xaml;TabBit\TabContentItemView.xaml;TabBit\TabContentView.xaml;TabBit\TabHeaderItemView.xaml;TabBit\TabHeaderView.xaml;TabBit\TabHubView.xaml;Tab\TabItemHeaderView.xaml;Tab\TabItemView.xaml;Tab\TabView.xaml;Views\GroupedMenusView.xaml;Views\GroupedMenuView.xaml;Views\HamburgerMenuNavigationSideBarHubView.xaml;Views\MenuContentView.xaml;Views\MenuItemHeader.xaml;Views\MenuItemView.xaml;Views\NoGroupedMenuItem.xaml;Views\NoGroupedMenuView.xaml;
 
 True

@@ -50,8 +50,8 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
         public ObservableCollection<GroupedMenuViewModelBase> AllMenus { get; }
         public string WorkspaceViewEventName { get; set; }
 
-        internal MenuItemViewModel _previewSelectedMenuItem;
-        internal MenuItemViewModel PreviewSelectedMenuItem => _previewSelectedMenuItem;
+        //internal MenuItemViewModel _previewSelectedMenuItem;
+        //internal MenuItemViewModel PreviewSelectedMenuItem => _previewSelectedMenuItem;
 
         private MenuItemViewModel _selectedMenuItemItem;
         public MenuItemViewModel SelectedMenuItem
@@ -149,7 +149,7 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
                 if (groupedMenu is not null)
                 {
                     //_selectedMenuItemItem = null;
-                     _previewSelectedMenuItem = null;
+                    // _previewSelectedMenuItem = null;
                     SelectedMenuItem = null;
 
                     groupedMenu.MenuContent.ClearSelectedMenuItem();
@@ -406,7 +406,7 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
                                         {
                                             if (_currentGroupeIndex == gm.GroupIndex)
                                             {
-                                                _previewSelectedMenuItem = gm.MenuContent.SelectedMenuItem;
+                                               // _previewSelectedMenuItem = gm.MenuContent.SelectedMenuItem;
                                                 gm.MenuContent.ClearSelectedMenuItem();
 
                                                 break;

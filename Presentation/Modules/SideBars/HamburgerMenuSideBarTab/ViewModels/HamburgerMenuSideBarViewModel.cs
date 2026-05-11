@@ -45,7 +45,7 @@ namespace Aksl.Modules.HamburgerMenuSideBarTab.ViewModels
         public ObservableCollection<HamburgerMenuSideBarItemViewModel> AllLeafHamburgerMenuSideBarItems { get; private set; }
         public string WorkspaceViewEventName { get; set; }
 
-        private HamburgerMenuSideBarItemViewModel _previewSelectedHamburgerMenuItem;
+       // private HamburgerMenuSideBarItemViewModel _previewSelectedHamburgerMenuItem;
       //  internal HamburgerMenuSideBarItemViewModel PreviewSelectedHamburgerMenuItem => _previewSelectedHamburgerMenuItem;
 
         private HamburgerMenuSideBarItemViewModel _selectedHamburgerMenuSideBarItem;

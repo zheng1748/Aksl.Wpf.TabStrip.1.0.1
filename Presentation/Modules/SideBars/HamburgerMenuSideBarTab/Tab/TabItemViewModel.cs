@@ -99,7 +99,7 @@ namespace Aksl.Tabs.ViewModels
                 {
                     if (_isSelected)
                     {
-                        _eventAggregator.GetEvent<OnActiveTabItemEvent>().Publish(new() { SelectedTabItem = _tabInformation });
+                        _eventAggregator.GetEvent<OnActiveTabItemEvent>().Publish(new() { SelectedTabInfo = _tabInformation });
                     }
                 }
             }

@@ -320,8 +320,8 @@ C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Toolkits\Prism Library\P
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Toolkits\Prism Library\Prism.Wpf\obj\Debug\net8.0-windows\Prism.Wpf.AssemblyInfo.cs
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Toolkits\Prism Library\Prism.Wpf\obj\Debug\net8.0-windows\Prism.Wpf.csproj.CoreCompileInputs.cache
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Toolkits\Prism Library\Prism.Wpf\obj\Debug\net8.0-windows\Prism.Wpf.sourcelink.json
-C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Toolkits\Prism Library\Prism.Wpf\obj\Debug\net8.0-windows\Prism.Wpf.csproj.CopyComplete
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Toolkits\Prism Library\Prism.Wpf\obj\Debug\net8.0-windows\Prism.Wpf.dll
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Toolkits\Prism Library\Prism.Wpf\obj\Debug\net8.0-windows\refint\Prism.Wpf.dll
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Toolkits\Prism Library\Prism.Wpf\obj\Debug\net8.0-windows\Prism.Wpf.pdb
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Toolkits\Prism Library\Prism.Wpf\obj\Debug\net8.0-windows\ref\Prism.Wpf.dll
+C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Toolkits\Prism Library\Prism.Wpf\obj\Debug\net8.0-windows\Prism.Wpf.csproj.Up2Date

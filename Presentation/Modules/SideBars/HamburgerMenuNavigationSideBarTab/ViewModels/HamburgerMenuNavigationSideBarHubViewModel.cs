@@ -16,11 +16,11 @@ using Unity;
 
 using Aksl.Dialogs.Services;
 using Aksl.Toolkit.UI;
+using Aksl.Tabs.ViewModels;
+using Aksl.TabBits.ViewModels;
 
 using Aksl.Infrastructure;
 using Aksl.Infrastructure.Events;
-using Aksl.Tabs.ViewModels;
-using Aksl.TabBits.ViewModels;
 
 namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
 {
@@ -442,7 +442,7 @@ namespace Aksl.Modules.HamburgerMenuNavigationSideBarTab.ViewModels
             {
                 if (parameters.Count == 0)
                 {
-                    CreateGroupedMenusViewModelAsync().GetAwaiter().GetResult();
+                    CreateGroupedMenusViewModelAsync().Await();
                 }
             }
         }

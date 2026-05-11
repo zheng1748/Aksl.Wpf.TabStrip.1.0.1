@@ -136,10 +136,10 @@ C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\Sid
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\SideBars\HamburgerMenuSideBarTab\obj\Debug\net8.0-windows8.0\HamburgerMenuSideBarTab.AssemblyInfo.cs
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\SideBars\HamburgerMenuSideBarTab\obj\Debug\net8.0-windows8.0\HamburgerMenuSideBarTab.csproj.CoreCompileInputs.cache
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\SideBars\HamburgerMenuSideBarTab\obj\Debug\net8.0-windows8.0\HamburgerMenuSideBarTab.sourcelink.json
-C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\SideBars\HamburgerMenuSideBarTab\obj\Debug\net8.0-windows8.0\HamburgerMenuSideBarTab.csproj.CopyComplete
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\SideBars\HamburgerMenuSideBarTab\obj\Debug\net8.0-windows8.0\Aksl.Modules.HamburgerMenuSideBarTab.dll
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\SideBars\HamburgerMenuSideBarTab\obj\Debug\net8.0-windows8.0\refint\Aksl.Modules.HamburgerMenuSideBarTab.dll
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\SideBars\HamburgerMenuSideBarTab\obj\Debug\net8.0-windows8.0\Aksl.Modules.HamburgerMenuSideBarTab.pdb
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\SideBars\HamburgerMenuSideBarTab\obj\Debug\net8.0-windows8.0\ref\Aksl.Modules.HamburgerMenuSideBarTab.dll
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\SideBars\HamburgerMenuSideBarTab\obj\Debug\net8.0-windows8.0\Navigations\Industry\PipelinesView.g.cs
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\SideBars\HamburgerMenuSideBarTab\obj\Debug\net8.0-windows8.0\Navigations\Industry\PipelinesView.baml
+C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\SideBars\HamburgerMenuSideBarTab\obj\Debug\net8.0-windows8.0\Hamburge.40A92EC9.Up2Date

@@ -67,8 +67,8 @@ C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\Oth
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\Others\OthersView\obj\Debug\net8.0-windows8.0\OthersView.AssemblyInfo.cs
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\Others\OthersView\obj\Debug\net8.0-windows8.0\OthersView.csproj.CoreCompileInputs.cache
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\Others\OthersView\obj\Debug\net8.0-windows8.0\OthersView.sourcelink.json
-C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\Others\OthersView\obj\Debug\net8.0-windows8.0\OthersView.csproj.CopyComplete
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\Others\OthersView\obj\Debug\net8.0-windows8.0\Aksl.Modules.Others.dll
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\Others\OthersView\obj\Debug\net8.0-windows8.0\refint\Aksl.Modules.Others.dll
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\Others\OthersView\obj\Debug\net8.0-windows8.0\Aksl.Modules.Others.pdb
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\Others\OthersView\obj\Debug\net8.0-windows8.0\ref\Aksl.Modules.Others.dll
+C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\Others\OthersView\obj\Debug\net8.0-windows8.0\OthersView.csproj.Up2Date

@@ -105,7 +105,6 @@ C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\Sid
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\SideBars\HamburgerMenuNavigationSideBarTab\obj\Debug\net8.0-windows8.0\HamburgerMenuNavigationSideBarTab.AssemblyInfo.cs
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\SideBars\HamburgerMenuNavigationSideBarTab\obj\Debug\net8.0-windows8.0\HamburgerMenuNavigationSideBarTab.csproj.CoreCompileInputs.cache
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\SideBars\HamburgerMenuNavigationSideBarTab\obj\Debug\net8.0-windows8.0\HamburgerMenuNavigationSideBarTab.sourcelink.json
-C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\SideBars\HamburgerMenuNavigationSideBarTab\obj\Debug\net8.0-windows8.0\HamburgerMenuNavigationSideBarTab.csproj.CopyComplete
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\SideBars\HamburgerMenuNavigationSideBarTab\obj\Debug\net8.0-windows8.0\Aksl.Modules.HamburgerMenuNavigationSideBarTab.dll
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\SideBars\HamburgerMenuNavigationSideBarTab\obj\Debug\net8.0-windows8.0\refint\Aksl.Modules.HamburgerMenuNavigationSideBarTab.dll
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\SideBars\HamburgerMenuNavigationSideBarTab\obj\Debug\net8.0-windows8.0\Aksl.Modules.HamburgerMenuNavigationSideBarTab.pdb
@@ -114,3 +113,4 @@ C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\Sid
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\SideBars\HamburgerMenuNavigationSideBarTab\obj\Debug\net8.0-windows8.0\Navigations\Industry\PipelinesView.baml
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\SideBars\HamburgerMenuNavigationSideBarTab\obj\Debug\net8.0-windows8.0\Navigations\Industry\ThermometerView.g.cs
 C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\SideBars\HamburgerMenuNavigationSideBarTab\obj\Debug\net8.0-windows8.0\Navigations\Industry\ThermometerView.baml
+C:\Users\zheng\Documents\GitHub\Aksl.Wpf.TabStrip.1.0.1\Presentation\Modules\SideBars\HamburgerMenuNavigationSideBarTab\obj\Debug\net8.0-windows8.0\Hamburge.38F512A6.Up2Date
