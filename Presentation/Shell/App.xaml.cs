@@ -140,7 +140,6 @@ namespace Aksl.Wpf.Shell
 
             return Task.CompletedTask;
         }
-  
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
