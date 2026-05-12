@@ -33,9 +33,9 @@ namespace Aksl.Modules.Shell
 
         public void OnInitialized(IContainerProvider containerProvider)
         {
-         //_regionManager.RequestNavigate(RegionNames.ShellContentRegion, nameof(Aksl.Modules.HamburgerMenuSideBarTab.Views.HamburgerMenuSideBarTabHubView));
+         _regionManager.RequestNavigate(RegionNames.ShellContentRegion, nameof(Aksl.Modules.HamburgerMenuSideBarTab.Views.HamburgerMenuSideBarTabHubView));
         // _regionManager.RequestNavigate(RegionNames.ShellContentRegion, nameof(HamburgerMenuNavigationSideBarTab.Views.HamburgerMenuNavigationSideBarHubView));
-         _regionManager.RequestNavigate(RegionNames.ShellContentRegion, nameof(Aksl.Modules.HamburgerMenuTreeSideBarTab.Views.HamburgerMenuTreeSideBarTabHubView));
+        // _regionManager.RequestNavigate(RegionNames.ShellContentRegion, nameof(Aksl.Modules.HamburgerMenuTreeSideBarTab.Views.HamburgerMenuTreeSideBarTabHubView));
 
             _regionManager.RequestNavigate(RegionNames.ShellLoginRegion, nameof(Aksl.Modules.Account.Views.LoginStatusView));
         }

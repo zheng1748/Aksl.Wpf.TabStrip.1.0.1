@@ -75,9 +75,13 @@ namespace Aksl.Modules.HamburgerMenuSideBarTab.ViewModels
         public bool IsSelectedOnInitialize => _menuItem.IsSelectedOnInitialize;
         public HamburgerMenuSideBarItemViewModel Parent { get; set; }
         public ObservableCollection<HamburgerMenuSideBarItemViewModel> Children => _children;
-        public bool HasChildren => (_children is not null) && _children.Any();
         public bool HasTitle => !string.IsNullOrEmpty(_menuItem.Title);
+        public bool HasChildren => (_children is not null) && _children.Any();
         public bool IsLeaf => (_children is not null) && _children.Count <= 0;
+        public bool IsTopLevelItem => (Parent is null) && IsLeaf;
+        public bool IsTopLevelHeader => (Parent is null) && !IsLeaf;
+        public bool IsSubmenuItem => (Parent is not null) && IsLeaf;
+        public bool IsSubmenuHeader => (Parent is not null) && !IsLeaf;
 
         private bool _isSelected = false;
         public bool IsSelected
