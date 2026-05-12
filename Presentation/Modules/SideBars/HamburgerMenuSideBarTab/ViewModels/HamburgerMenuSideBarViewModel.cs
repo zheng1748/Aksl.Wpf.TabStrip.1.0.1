@@ -28,11 +28,11 @@ namespace Aksl.Modules.HamburgerMenuSideBarTab.ViewModels
         #endregion
 
         #region Constructors
-        public HamburgerMenuSideBarViewModel(IEventAggregator eventAggregator, IMenuService menuService)
+        public HamburgerMenuSideBarViewModel()
         {
-            _eventAggregator = eventAggregator;
+            _eventAggregator = (PrismApplication.Current as PrismApplicationBase).Container.Resolve<IEventAggregator>();
             _dialogViewService = (PrismApplication.Current as PrismApplicationBase).Container.Resolve<IDialogViewService>();
-            _menuService = menuService;
+            _menuService = (PrismApplication.Current as PrismApplicationBase).Container.Resolve<IMenuService>();
 
             AllLeafHamburgerMenuSideBarItems = new();
 

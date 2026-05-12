@@ -16,12 +16,11 @@ using Prism.Unity;
 using Unity;
 
 using Aksl.Dialogs.Services;
-using Aksl.Toolkit.UI;
+using Aksl.Tabs.ViewModels;
+using Aksl.TabBits.ViewModels;
 
 using Aksl.Infrastructure;
 using Aksl.Infrastructure.Events;
-using Aksl.Tabs.ViewModels;
-using Aksl.TabBits.ViewModels;
 
 namespace Aksl.Modules.HamburgerMenuSideBarTab.ViewModels
 {
@@ -264,10 +263,11 @@ namespace Aksl.Modules.HamburgerMenuSideBarTab.ViewModels
                         if (subMenus is not null && subMenus.Any())
                         {
                             //TabViewModel subTtabViewModel = new();
-                            subTabView = new Tabs.Views.TabView();
-                            VisualTreeFinder visualTreeFinder = new();
-                            //subTabView.DataContext = subTtabViewModel;
-                            subTabView.DataContext = TabViewModel;
+                            subTabView = new Tabs.Views.TabView
+                            {
+                                //subTabView.DataContext = subTtabViewModel;
+                                DataContext = TabViewModel
+                            };
                             bool isSetFirst = false;
 
                             foreach (var smi in subMenus)
@@ -399,7 +399,7 @@ namespace Aksl.Modules.HamburgerMenuSideBarTab.ViewModels
 
             try
             {
-                HamburgerMenuSideBar = new(_eventAggregator, _menuService);
+                HamburgerMenuSideBar = new();
                 AddPropertyChanged();
 
                 void AddPropertyChanged()

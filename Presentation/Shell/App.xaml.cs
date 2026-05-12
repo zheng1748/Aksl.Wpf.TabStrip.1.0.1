@@ -86,16 +86,13 @@ namespace Aksl.Wpf.Shell
             #endregion
 
             var serviceProvider = services.BuildServiceProvider();
-
             containerRegistry.RegisterInstance<IServiceProvider>(serviceProvider);
 
             containerRegistry.RegisterDialogWindow<Dialogs.Views.FixedSizeDialogWindow>(name: nameof(Dialogs.Views.FixedSizeDialogWindow));
             containerRegistry.RegisterDialog<Dialogs.Views.ConfirmView, Dialogs.ViewModels.ConfirmViewModel>();
-
             containerRegistry.RegisterSingleton(typeof(Dialogs.Services.IDialogViewService), typeof(Dialogs.Services.DialogViewService));
 
             RegisterMenuFactoryAsync(containerRegistry).Await();
-
             RegisterBuildWorkspaceViewEventAsync().Await();
         }
 
