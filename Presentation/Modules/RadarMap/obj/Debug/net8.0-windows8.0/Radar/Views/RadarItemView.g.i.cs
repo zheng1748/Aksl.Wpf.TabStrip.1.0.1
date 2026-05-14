@@ -57,7 +57,7 @@ namespace Aksl.Modules.RadarMap.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Aksl.Modules.RadarMap;V1.0.0.0;component/radar/views/radaritemview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Aksl.Modules.RadarMap;component/radar/views/radaritemview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Radar\Views\RadarItemView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

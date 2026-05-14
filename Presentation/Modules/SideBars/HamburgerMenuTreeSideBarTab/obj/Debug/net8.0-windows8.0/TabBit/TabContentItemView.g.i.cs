@@ -52,8 +52,8 @@ namespace Aksl.TabBits.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Aksl.Modules.HamburgerMenuTreeSideBarTab;V1.0.0.0;component/tabbit/tabcontentite" +
-                    "mview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Aksl.Modules.HamburgerMenuTreeSideBarTab;component/tabbit/tabcontentitemview.xam" +
+                    "l", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\TabBit\TabContentItemView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

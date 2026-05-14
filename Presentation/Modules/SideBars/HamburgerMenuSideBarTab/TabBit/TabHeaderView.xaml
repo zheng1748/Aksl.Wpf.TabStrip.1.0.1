@@ -38,10 +38,10 @@
                     <ControlTemplate TargetType="{x:Type ListView}">
                         <Border CornerRadius="2"
                                 BorderThickness="2">
-                            <ScrollViewer VerticalScrollBarVisibility="Disabled"
-                                          HorizontalScrollBarVisibility="Auto">
+                            <!--<ScrollViewer VerticalScrollBarVisibility="Disabled"
+                                          HorizontalScrollBarVisibility="Auto">-->
                                 <ItemsPresenter />
-                            </ScrollViewer>
+                            <!--</ScrollViewer>-->
                         </Border>
                     </ControlTemplate>
                 </Setter.Value>

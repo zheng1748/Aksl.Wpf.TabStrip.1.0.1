@@ -12,9 +12,9 @@ TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR
 
 3-919623239
 
-26195037732
+27-658845799
 205-69721421
 Dialogs\ConfirmView.xaml;Dialogs\FixedSizeDialogWindow.xaml;Dialogs\FixedSizeDialogWindowIconButtonView.xaml;
 
-True
+False
 

@@ -45,8 +45,8 @@ namespace Aksl.Modules.HamburgerMenuTreeSideBarTab.ViewModels
         public ObservableCollection<TreeSideBarItemViewModel> AllTreeSideBarItems { get; }
         public string WorkspaceViewEventName { get; set; }
 
-       // internal TreeSideBarItemViewModel _previewSelectedTreeSideBarItem;
-       // internal TreeSideBarItemViewModel PreviewSelectedTreeSideBarItem => _previewSelectedTreeSideBarItem;
+        // internal TreeSideBarItemViewModel _previewSelectedTreeSideBarItem;
+        // internal TreeSideBarItemViewModel PreviewSelectedTreeSideBarItem => _previewSelectedTreeSideBarItem;
 
         private TreeSideBarItemViewModel _selectedTreeSideBarItem;
         public TreeSideBarItemViewModel SelectedTreeSideBarItem
@@ -115,7 +115,7 @@ namespace Aksl.Modules.HamburgerMenuTreeSideBarTab.ViewModels
         #endregion
 
         #region Findt TreeSideBarItemViewModel Method
-        private TreeSideBarItemViewModel FindtTreeSideBarItemViewModel(TabBits.TabInformation tabInformation )
+        private TreeSideBarItemViewModel FindtTreeSideBarItemViewModel(TabBits.TabInformation tabInformation)
         {
             TreeSideBarItemViewModel findTreeSideBarItemViewModel = null;
 
@@ -241,7 +241,7 @@ namespace Aksl.Modules.HamburgerMenuTreeSideBarTab.ViewModels
                     _selectedTreeSideBarItem.IsSelected = false;
                 }
 
-               // _previewSelectedTreeSideBarItem = null;
+                // _previewSelectedTreeSideBarItem = null;
                 _selectedTreeSideBarItem = selectedTreeSideBarItem;
                 _selectedTreeSideBarItem.IsSelected = true;
             }
@@ -258,8 +258,7 @@ namespace Aksl.Modules.HamburgerMenuTreeSideBarTab.ViewModels
             var subMenuItems = rootMenuItem.SubMenus;
             foreach (var smi in subMenuItems)
             {
-                List<MenuItem> allTravelMenuItems = new();
-                var treeSideBarItemViewModel = await GetAllTreeSideBarItemViewModelsByMenuItem(smi, allTravelMenuItems);
+                var treeSideBarItemViewModel = await GetAllTreeSideBarItemViewModelsByMenuItem(smi);
                 AllTreeSideBarItems.Add(treeSideBarItemViewModel);
             }
 
@@ -281,7 +280,7 @@ namespace Aksl.Modules.HamburgerMenuTreeSideBarTab.ViewModels
                         treeSideBarItemViewModel.WorkspaceViewEventName = this.WorkspaceViewEventName;
                     }
 
-                    if (HasChild(treeSideBarItemViewModel))
+                    if (treeSideBarItemViewModel.HasChildren)
                     {
                         foreach (var smi in treeSideBarItemViewModel.Children)
                         {
@@ -325,15 +324,16 @@ namespace Aksl.Modules.HamburgerMenuTreeSideBarTab.ViewModels
                 };
             }
 
-            bool HasChild(TreeSideBarItemViewModel tsbivm) => (tsbivm is not null) && tsbivm.Children.Any();
+            //bool HasChild(TreeSideBarItemViewModel tsbivm) => (tsbivm is not null) && tsbivm.Children.Any();
 
             IsLoading = false;
         }
         #endregion
 
         #region Get All TreeSideBarItemViewModels Method
-        internal async Task<TreeSideBarItemViewModel> GetAllTreeSideBarItemViewModelsByMenuItem(MenuItem menuItem, IList<MenuItem> travelMenuItems)
+        internal async Task<TreeSideBarItemViewModel> GetAllTreeSideBarItemViewModelsByMenuItem(MenuItem menuItem)
         {
+            List<MenuItem> travelMenuItems = new();
             TreeSideBarItemViewModel virtualParent = new();
 
             await RecursiveSubMenuItem(menuItem, virtualParent);
@@ -375,21 +375,21 @@ namespace Aksl.Modules.HamburgerMenuTreeSideBarTab.ViewModels
 
             bool IsNexOnNotLeaf(MenuItem mi) => (mi is not null) && mi.IsNexOnNotLeaf;
 
-            var child = virtualParent.Children.FirstOrDefault();
-            if (child is not null)
+            var topHeaderItem = virtualParent.Children.FirstOrDefault();
+            if (topHeaderItem is not null)
             {
-                child.Parent = null;
+                topHeaderItem.Parent = null;
             }
-            return child;
+            return topHeaderItem;
         }
         #endregion
 
         #region Contain Methods
         private bool AnyEqualsMenuItems(IEnumerable<MenuItem> menuItems, MenuItem menuItem)
         {
-            var isEquals = menuItems.Any(mi => IsEqualsNameOrTitle(mi.Title, menuItem.Title) || IsEqualsNameOrTitle(mi.Name, menuItem.Name));
+            var isAny = menuItems.Any(mi => IsEqualsNameOrTitle(mi.Title, menuItem.Title) || IsEqualsNameOrTitle(mi.Name, menuItem.Name));
 
-            return isEquals;
+            return isAny;
         }
 
         private bool IsEqualsNameOrTitle(string nameOrTitle, string otherNameOrTitle)
@@ -399,10 +399,10 @@ namespace Aksl.Modules.HamburgerMenuTreeSideBarTab.ViewModels
                 return false;
             }
 
-            var isEquals = (!string.IsNullOrEmpty(nameOrTitle) && nameOrTitle.Equals(otherNameOrTitle, StringComparison.InvariantCultureIgnoreCase)) ||
-                           (!string.IsNullOrEmpty(otherNameOrTitle) && otherNameOrTitle.Equals(nameOrTitle, StringComparison.InvariantCultureIgnoreCase));
+            var isAny = (!string.IsNullOrEmpty(nameOrTitle) && nameOrTitle.Equals(otherNameOrTitle, StringComparison.InvariantCultureIgnoreCase)) ||
+                        (!string.IsNullOrEmpty(otherNameOrTitle) && otherNameOrTitle.Equals(nameOrTitle, StringComparison.InvariantCultureIgnoreCase));
 
-            return isEquals;
+            return isAny;
         }
         #endregion
     }

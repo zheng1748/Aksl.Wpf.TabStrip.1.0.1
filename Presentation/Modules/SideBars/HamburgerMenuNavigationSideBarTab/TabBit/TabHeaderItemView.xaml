@@ -24,11 +24,11 @@
                     BorderBrush="Transparent"
                     Width="Auto"
                     Visibility="Visible">
-                <ContentPresenter  x:Name="contentPresenter"
-                                   Margin="3"
-                                   Content="{TemplateBinding Content}"
-                                   Width="Auto"
-                                   Height="Auto" />
+                <ContentPresenter x:Name="contentPresenter"
+                                  Margin="3"
+                                  Content="{TemplateBinding Content}"
+                                  Width="Auto"
+                                  Height="Auto" />
             </Border>
             <ControlTemplate.Triggers>
                 <Trigger Property="IsMouseOver"
@@ -37,9 +37,12 @@
                             Property="Background"
                             Value="#FF4F0000" />
                     <Setter TargetName="contentPresenter"
-                            Property="BitmapEffect">
+                            Property="Effect">
                         <Setter.Value>
-                            <OuterGlowBitmapEffect GlowColor="#FFFFFFFF" />
+                            <DropShadowEffect Color="#FFFFFFFF"
+                                              BlurRadius="8"
+                                              ShadowDepth="0"
+                                              Opacity="1" />
                         </Setter.Value>
                     </Setter>
                 </Trigger>
